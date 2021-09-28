@@ -16,7 +16,7 @@ class PlayerViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         let sampleTheme = ThemeMaker.getTheme()
         
         summerPlayerView = SummerPlayerView(configuration: defaultConfig, theme: sampleTheme,targetView: view)
@@ -32,6 +32,14 @@ class PlayerViewController: UIViewController  {
         summerPlayerView?.pinEdges(targetView: view)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
 extension PlayerViewController : SummerPlayerViewDelegate {

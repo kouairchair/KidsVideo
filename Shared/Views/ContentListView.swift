@@ -98,9 +98,7 @@ class ContentListView: UIView {
         bottomControlsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         bottomControlsStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
         
-        
         addPlayList()
-        
         
         applyTheme(theme)
     }
@@ -108,7 +106,6 @@ class ContentListView: UIView {
     private func applyTheme(_ theme: SummerPlayerViewTheme) {
         activityView.color = theme.activityViewColor
         collectionView.backgroundColor = theme.contentsListviewBackground
-        
     }
     
     private func setHeaderView(_ header: UIView) {
