@@ -21,6 +21,18 @@
 		1B73FCDE2700539700B6BCE1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73FCB02700539500B6BCE1 /* Persistence.swift */; };
 		1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B73FCB12700539700B6BCE1 /* Assets.xcassets */; };
 		1B73FCE02700539700B6BCE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B73FCB12700539700B6BCE1 /* Assets.xcassets */; };
+		1B78A49B27035A0800B2A670 /* レオくん.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49727035A0600B2A670 /* レオくん.jpeg */; };
+		1B78A49C27035A0800B2A670 /* レオくん.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49727035A0600B2A670 /* レオくん.jpeg */; };
+		1B78A49D27035A0800B2A670 /* リトルエンジェル.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49827035A0700B2A670 /* リトルエンジェル.jpeg */; };
+		1B78A49E27035A0800B2A670 /* リトルエンジェル.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49827035A0700B2A670 /* リトルエンジェル.jpeg */; };
+		1B78A49F27035A0800B2A670 /* MeruChan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49927035A0700B2A670 /* MeruChan.png */; };
+		1B78A4A027035A0800B2A670 /* MeruChan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49927035A0700B2A670 /* MeruChan.png */; };
+		1B78A4A127035A0800B2A670 /* 鈴川綾子.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49A27035A0700B2A670 /* 鈴川綾子.png */; };
+		1B78A4A227035A0800B2A670 /* 鈴川綾子.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A49A27035A0700B2A670 /* 鈴川綾子.png */; };
+		1B78A4A42703640F00B2A670 /* View+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B78A4A32703640F00B2A670 /* View+Animation.swift */; };
+		1B78A4A52703640F00B2A670 /* View+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B78A4A32703640F00B2A670 /* View+Animation.swift */; };
+		1B78A4AD2703689800B2A670 /* PenguinAttack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A4AC2703689800B2A670 /* PenguinAttack.ttf */; };
+		1B78A4AE2703689800B2A670 /* PenguinAttack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B78A4AC2703689800B2A670 /* PenguinAttack.ttf */; };
 		1BE696F927005A1D008E7E56 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE696F827005A1D008E7E56 /* PlayerViewController.swift */; };
 		1BE696FA27005A1D008E7E56 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE696F827005A1D008E7E56 /* PlayerViewController.swift */; };
 		1BE696FC27005A95008E7E56 /* PlayerViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE696FB27005A95008E7E56 /* PlayerViewControllerWrapper.swift */; };
@@ -109,6 +121,12 @@
 		1B73FCCF2700539700B6BCE1 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B73FCD32700539700B6BCE1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		1B73FCD52700539700B6BCE1 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		1B78A49727035A0600B2A670 /* レオくん.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "レオくん.jpeg"; sourceTree = "<group>"; };
+		1B78A49827035A0700B2A670 /* リトルエンジェル.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "リトルエンジェル.jpeg"; sourceTree = "<group>"; };
+		1B78A49927035A0700B2A670 /* MeruChan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeruChan.png; sourceTree = "<group>"; };
+		1B78A49A27035A0700B2A670 /* 鈴川綾子.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "鈴川綾子.png"; sourceTree = "<group>"; };
+		1B78A4A32703640F00B2A670 /* View+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Animation.swift"; sourceTree = "<group>"; };
+		1B78A4AC2703689800B2A670 /* PenguinAttack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PenguinAttack.ttf; sourceTree = "<group>"; };
 		1BE696F827005A1D008E7E56 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		1BE696FB27005A95008E7E56 /* PlayerViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerWrapper.swift; sourceTree = "<group>"; };
 		1BE6970027005B65008E7E56 /* DefaultConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultConfig.swift; sourceTree = "<group>"; };
@@ -233,6 +251,14 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		1B78A4AB2703689800B2A670 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1B78A4AC2703689800B2A670 /* PenguinAttack.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1BE696F7270059F6008E7E56 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +290,7 @@
 				1BE6972727005C19008E7E56 /* VideoCollectionViewCell.swift */,
 				1BE6971727005BF8008E7E56 /* SummerPlayerView.swift */,
 				1BE6971827005BF8008E7E56 /* SummerPlayerViewTheme.swift */,
+				1B78A4A32703640F00B2A670 /* View+Animation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +336,11 @@
 		1BE6973A27005EF1008E7E56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B78A4AB2703689800B2A670 /* Fonts */,
+				1B78A49927035A0700B2A670 /* MeruChan.png */,
+				1B78A49827035A0700B2A670 /* リトルエンジェル.jpeg */,
+				1B78A49727035A0600B2A670 /* レオくん.jpeg */,
+				1B78A49A27035A0700B2A670 /* 鈴川綾子.png */,
 				BF0DE73127028CA80029CE17 /* アンパンマンxレオくん.jpeg */,
 				BF0DE724270283760029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.mp4 */,
 				BF0DE7272702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.png */,
@@ -454,12 +486,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B78A4AD2703689800B2A670 /* PenguinAttack.ttf in Resources */,
 				BF0DE72C2702837A0029CE17 /* レオくんがアンパンマンのおしゃべりすいはんきと元気100ばい和食セットであそぶよ！レオスマイル.mp4 in Resources */,
+				1B78A49F27035A0800B2A670 /* MeruChan.png in Resources */,
+				1B78A4A127035A0800B2A670 /* 鈴川綾子.png in Resources */,
 				BF0DE72A2702837A0029CE17 /* レオくんがアンパンマンのおしゃべりすいはんきと元気100ばい和食セットであそぶよ！レオスマイル.png in Resources */,
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
 				BF0DE7282702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.mp4 in Resources */,
+				1B78A49D27035A0800B2A670 /* リトルエンジェル.jpeg in Resources */,
 				BF0DE72E2702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.png in Resources */,
 				BF0DE73227028CA80029CE17 /* アンパンマンxレオくん.jpeg in Resources */,
+				1B78A49B27035A0800B2A670 /* レオくん.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,12 +504,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B78A4AE2703689800B2A670 /* PenguinAttack.ttf in Resources */,
 				BF0DE72D2702837A0029CE17 /* レオくんがアンパンマンのおしゃべりすいはんきと元気100ばい和食セットであそぶよ！レオスマイル.mp4 in Resources */,
+				1B78A4A027035A0800B2A670 /* MeruChan.png in Resources */,
+				1B78A4A227035A0800B2A670 /* 鈴川綾子.png in Resources */,
 				BF0DE72B2702837A0029CE17 /* レオくんがアンパンマンのおしゃべりすいはんきと元気100ばい和食セットであそぶよ！レオスマイル.png in Resources */,
 				1B73FCE02700539700B6BCE1 /* Assets.xcassets in Resources */,
 				BF0DE7292702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.mp4 in Resources */,
+				1B78A49E27035A0800B2A670 /* リトルエンジェル.jpeg in Resources */,
 				BF0DE72F2702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.png in Resources */,
 				BF0DE73327028CA80029CE17 /* アンパンマンxレオくん.jpeg in Resources */,
+				1B78A49C27035A0800B2A670 /* レオくん.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +556,7 @@
 				1BE6972027005C0D008E7E56 /* CMTime+extension.swift in Sources */,
 				1BE6971527005BEA008E7E56 /* Content.swift in Sources */,
 				1BE6973727005CB3008E7E56 /* ThemeMaker.swift in Sources */,
+				1B78A4A42703640F00B2A670 /* View+Animation.swift in Sources */,
 				1BE6971B27005BF8008E7E56 /* SummerPlayerViewTheme.swift in Sources */,
 				1BE6970827005BA7008E7E56 /* SummerPlayerViewConfig.swift in Sources */,
 				1BE6972227005C0D008E7E56 /* Utills.swift in Sources */,
@@ -547,6 +590,7 @@
 				1BE6972127005C0D008E7E56 /* CMTime+extension.swift in Sources */,
 				1BE6971627005BEA008E7E56 /* Content.swift in Sources */,
 				1BE6973827005CB3008E7E56 /* ThemeMaker.swift in Sources */,
+				1B78A4A52703640F00B2A670 /* View+Animation.swift in Sources */,
 				1BE6971C27005BF8008E7E56 /* SummerPlayerViewTheme.swift in Sources */,
 				1BE6970927005BA7008E7E56 /* SummerPlayerViewConfig.swift in Sources */,
 				1BE6972327005C0D008E7E56 /* Utills.swift in Sources */,
@@ -714,10 +758,12 @@
 				DEVELOPMENT_TEAM = NJAK8X6XT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "KidsVideo--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -744,10 +790,12 @@
 				DEVELOPMENT_TEAM = NJAK8X6XT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "KidsVideo--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

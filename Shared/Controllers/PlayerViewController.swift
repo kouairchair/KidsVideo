@@ -46,7 +46,7 @@ extension PlayerViewController : SummerPlayerViewDelegate {
     func didFinishVideo() {
         
         if self.defaultConfig.playbackMode == .quit {
-            moveViewController()
+            goBackViewController()
         }
     }
     
@@ -58,7 +58,7 @@ extension PlayerViewController : SummerPlayerViewDelegate {
         
     }
     func didPressBackButton() {
-        moveViewController()
+        goBackViewController()
     }
     
     func didPressNextButton() {
@@ -96,10 +96,7 @@ extension PlayerViewController : SummerPlayerViewDelegate {
 
 extension PlayerViewController {
     
-    fileprivate func moveViewController() {
-        // TODO: to be implemented
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "MainVC")
-//        self.present(controller, animated: true, completion: nil)
+    fileprivate func goBackViewController() {
+        self.navigationController?.popViewController(animated: true)
     }
 }

@@ -10,7 +10,9 @@ import CoreData
 
 struct ContentView: View {
     private let menuImages = MenuImageMaker.getImages()
-    
+    private var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 250, maximum: 280), spacing: CGFloat(30.0) ), count: 3)
+    @State var isAnimating: Bool = false
+      
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -20,21 +22,35 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ForEach(menuImages) { menuImage in
-                if let image = menuImage.image {
-                    VStack {
-                        NavigationLink(destination: PlayerViewControllerWrapper()) {
-                                Image(uiImage: image)
-                        }
-                        .clipShape(Circle())
-                        .padding(.horizontal, 50)
-                        .padding(.vertical, 50)                        Text(menuImage.fileName)
-                    }
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns, alignment: .center, spacing: 30) {
+                    ForEach(menuImages) { menuImage in
+                        if let image = menuImage.image {
+                            VStack {
+                                NavigationLink(destination: PlayerViewControllerWrapper()) {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 280, height: 280)
+                                        .clipShape(Circle())
+                                        .wiggle(isActive: isAnimating)
+                                }
+                                
+                                Text(menuImage.fileName)
+                                //TOOD: custom fontが適用されない！
+                                    .font(.custom("PenguinAttack", size: 22))
+                            }
 
+                        }
+                    }
+                    .onAppear {
+                        isAnimating = true
+                    }
                 }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarHidden(true)
 //            List {
 //                ForEach(items) { item in
 //                    NavigationLink(destination: Text("Item at \(item.timestamp!, formatter: itemFormatter)")) {
