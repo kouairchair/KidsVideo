@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct PlayerViewControllerWrapper : UIViewControllerRepresentable {
+    let selectedChannel: Channel
+    let action: (() -> Void)
     
     func makeUIViewController(context: Context) -> PlayerViewController {
-        return PlayerViewController()
+        action()
+        let playerVC = PlayerViewController()
+        playerVC.selectedChannel = selectedChannel
+        return playerVC
     }
     
     func updateUIViewController(_ uiViewController: PlayerViewController, context: Context) {

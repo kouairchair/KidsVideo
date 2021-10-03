@@ -122,10 +122,7 @@ class PlayerScreenView: UIView {
         playerTimeLabel.text = seekTime.description
         delegate?.seekToTime(seekTime)
         delegate?.didChangeSliderValue(seekTime)
-        
     }
-    
-    
     
     func videoDidChange(_ time: CMTime) {
         playerTimeLabel.text = time.description
@@ -144,8 +141,6 @@ class PlayerScreenView: UIView {
         fullTimeLabel.text = delegate?.totalDuration?.description ?? CMTime.zero.description
         
         headerTitle.text = title
-        
-        
     }
     
     public func applyTheme(_ theme: SummerPlayerViewTheme) {
@@ -163,7 +158,6 @@ class PlayerScreenView: UIView {
         headerTitle.textColor = theme.playerScreenTitleLabelTextColor
         headerTitle.font = theme.playerScreenTitleLabelTextFont
         headerTitle.backgroundColor = theme.playerScreenTitleLabelBackground
-        
     }
     
     lazy var bottomView: UIView = {
@@ -196,7 +190,6 @@ class PlayerScreenView: UIView {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        
         if(isTapped) {
             isTapped = !isTapped
             hideAllUIComponents(false)
@@ -206,7 +199,6 @@ class PlayerScreenView: UIView {
         }
         
         delegate?.didTappedPlayerScreenView(isTapped)
-        
     }
     
     private func setupView() {

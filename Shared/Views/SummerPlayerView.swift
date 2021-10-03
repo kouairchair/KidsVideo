@@ -108,15 +108,11 @@ public class SummerPlayerView: UIView {
         
         self.contents = items
         self.currentVideoIndex = 0
-        
-        guard let path = Bundle.main.path(forResource: currentItem.fileName, ofType:currentItem.fileExt) else {
-            debugPrint("\(currentItem.fileName).\(currentItem.fileExt) not found")
-            return
+
+        if let url = currentItem.getUrl() {
+            didLoadVideo(url)
+            contentsListView.setPlayList(currentItem: currentItem, items: items)
         }
-        let url = URL(fileURLWithPath: path)
-        didLoadVideo(url)
-        
-        contentsListView.setPlayList(currentItem: currentItem, items: items)
     }
     
     private func setupSummerPlayerView( _ viewRect: CGRect?) {
@@ -194,14 +190,21 @@ extension SummerPlayerView:PlayerControlViewDelegate {
     }
     
     private func playPreviousContent() {
-        if let latestItems = contents {
-            if(currentVideoIndex == 0) {
-                currentVideoIndex = latestItems.count-1
-            } else if(currentVideoIndex > 0) {
-                currentVideoIndex -= 1
+        if (currentTime?.asDouble ?? 0) > 10 {
+            // 再生後10秒以上たってたら、前の動画に戻るのではなく、動画の最初に戻す
+            seekToTime(CMTime.zero)
+        } else {
+            if let latestItems = contents {
+                if(currentVideoIndex == 0) {
+                    currentVideoIndex = latestItems.count-1
+                } else if(currentVideoIndex > 0) {
+                    currentVideoIndex -= 1
+                }
+                
+                if let previousMovieUrl = latestItems[currentVideoIndex].getUrl() {
+                    resetPlayer(previousMovieUrl)
+                }
             }
-            let newURL = URL(string: latestItems[currentVideoIndex].fileName)
-            resetPlayer(newURL!)
         }
     }
     
@@ -213,22 +216,23 @@ extension SummerPlayerView:PlayerControlViewDelegate {
     }
     
     private func loopPlayContent() {
-        if let latestItems = contents {
-            let newURL = URL(string: latestItems[currentVideoIndex].fileName)
-            resetPlayer(newURL!)
+        if let latestItems = contents,
+           let newURL = latestItems[currentVideoIndex].getUrl() {
+            resetPlayer(newURL)
         }
     }
     
-    
     private func playNextContent() {
         if let latestItems = contents {
-            if(currentVideoIndex >= 0 && currentVideoIndex < latestItems.count-1) {
+            if (currentVideoIndex >= 0 && currentVideoIndex < latestItems.count-1) {
                 currentVideoIndex += 1
             } else if(currentVideoIndex == latestItems.count-1 ) {
                 currentVideoIndex = 0
             }
-            let newURL = URL(string: latestItems[currentVideoIndex].fileName)
-            resetPlayer(newURL!)
+            
+            if let nextMovieUrl = latestItems[currentVideoIndex].getUrl() {
+                resetPlayer(nextMovieUrl)
+            }
         }
     }
     

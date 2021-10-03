@@ -38,6 +38,7 @@ class ContentListView: UIView {
     
     private lazy var collectionView: UICollectionView =  {
         let layout = UICollectionViewFlowLayout()
+        // TODO:サイズをもう少し大きくする？
         layout.itemSize = CGSize(width: 200, height: 100)
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)

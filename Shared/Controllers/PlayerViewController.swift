@@ -12,7 +12,10 @@ class PlayerViewController: UIViewController  {
     
     let defaultConfig = DefaultConfig()
     var summerPlayerView: SummerPlayerView?
-    let contents = ContentsMaker.getContents()
+    var contents: [Content] {
+        ContentsMaker.getContents().filter { $0.channel == selectedChannel }
+    }
+    var selectedChannel: Channel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,5 +101,6 @@ extension PlayerViewController {
     
     fileprivate func goBackViewController() {
         self.navigationController?.popViewController(animated: true)
+        // TODO:ここで音楽の再生を再開する？
     }
 }
