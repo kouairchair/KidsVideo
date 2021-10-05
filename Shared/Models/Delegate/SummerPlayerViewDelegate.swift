@@ -13,6 +13,7 @@ public protocol SummerPlayerViewDelegate {
     func didPressBackButton()
     func didPressNextButton()
     func didPressPreviousButton()
+    func didLongPressPreviousButton(isRepeating: Bool)
     func didPressAirPlayButton()
     func didPressMoreButton()
     func didPressContentsListView(index:Int)

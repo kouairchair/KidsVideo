@@ -44,26 +44,27 @@ class VideoCollectionViewCell: UICollectionViewCell {
         totalTimeLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5).isActive = true
         totalTimeLabel.trailingAnchor.constraint(equalTo:trailingAnchor, constant: -10).isActive = true
     }
+    
     private func applyTheme(_ theme: SummerPlayerViewTheme) {
         totalTimeLabel.textColor = theme.totalTimeLabelTextColor
         totalTimeLabel.font = theme.totalTimeLableTextFont
         totalTimeLabel.backgroundColor = theme.totalTimeLableBackground
     }
+    
     func setData(_ playListItem: Content?, theme: SummerPlayerViewTheme) {
         guard let playListItem = playListItem else {
             return
         }
         totalTimeLabel.text = playListItem.totalTime
         
-        guard let path = Bundle.main.path(forResource: playListItem.fileName, ofType:"png") else {
+        if let path = Bundle.main.path(forResource: playListItem.fileName, ofType:"png") ?? Bundle.main.path(forResource: playListItem.fileName, ofType:"jpeg") {
+            if let image = UIImage(contentsOfFile: path) {
+                videoThumbnail.image = image
+            }
+            
+            applyTheme(theme)
+        } else {
             debugPrint("\(playListItem.fileName).png not found")
-            return
         }
-        
-        if let image = UIImage(contentsOfFile: path) {
-            videoThumbnail.image = image
-        }
-        
-        applyTheme(theme)
     }
 }

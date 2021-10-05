@@ -43,7 +43,7 @@ public class SummerPlayerView: UIView {
     
     private var playerScreenView = PlayerScreenView()
     
-    private var playerControlView = PlayerControllView()
+    var playerControlView: PlayerControllView?
     
     private var configuration: SummerPlayerViewConfig = InternalConfiguration()
     
@@ -52,6 +52,8 @@ public class SummerPlayerView: UIView {
     private var playerScreenDelegate: PlayerScreenViewDelegate?
     
     internal var playerCellForItem: ((UICollectionView, IndexPath)->(UICollectionViewCell))? = nil
+    
+    private var isRepeatMode = false
     
     required public init(configuration: SummerPlayerViewConfig, theme: SummerPlayerViewTheme, targetView: UIView) {
         
@@ -115,17 +117,18 @@ public class SummerPlayerView: UIView {
         }
     }
     
-    private func setupSummerPlayerView( _ viewRect: CGRect?) {
-        if(viewRect != nil) {
-            let wholeViewRect = Utills.getWholeViewRect(viewRect!)
+    private func setupSummerPlayerView(_ viewRect: CGRect?) {
+        if let viewRect = viewRect {
+            let wholeViewRect = Utills.getWholeViewRect(viewRect)
             
             setupInsideViews(wholeViewRect , wholeRect: viewRect)
             
             bringSubviewToFront(contentsListView)
-            bringSubviewToFront(playerControlView)
+            if let playerControlView = playerControlView {
+                bringSubviewToFront(playerControlView)
+            }
             bringSubviewToFront(playerScreenView)
         }
-        
     }
     
     private func setupPlayer() {
@@ -157,8 +160,8 @@ public class SummerPlayerView: UIView {
     private func setupPlayerControllView(_ wholeRect: CGRect?) {
         let quarterViewRect = Utills.getQuarterViewRect(wholeRect!)
         self.playerControlView = PlayerControllView(frame: CGRect(x: quarterViewRect!.origin.x, y: 0, width: quarterViewRect!.width, height: quarterViewRect!.height))
-        self.playerControlView.delegate = self
-        addSubview(self.playerControlView)
+        self.playerControlView!.delegate = self
+        addSubview(self.playerControlView!)
     }
     
     private func setupContentsListView(_ wholeRect: CGRect?) {
@@ -184,13 +187,13 @@ public class SummerPlayerView: UIView {
     
 }
 
-extension SummerPlayerView:PlayerControlViewDelegate {
+extension SummerPlayerView: PlayerControlViewDelegate {
     func didPressedAirPlayButton() {
         delegate?.didPressAirPlayButton()
     }
     
-    private func playPreviousContent() {
-        if (currentTime?.asDouble ?? 0) > 10 {
+    private func playPreviousContent(_ forceBack: Bool) {
+        if forceBack || (currentTime?.asDouble ?? 0) > 10 {
             // 再生後10秒以上たってたら、前の動画に戻るのではなく、動画の最初に戻す
             seekToTime(CMTime.zero)
         } else {
@@ -211,8 +214,20 @@ extension SummerPlayerView:PlayerControlViewDelegate {
      func didPressedPreviousButton() {
         playerScreenView.resetPlayerUI()
         
-        playPreviousContent()
+        playPreviousContent(false)
         delegate?.didPressPreviousButton()
+    }
+    
+    func didLongPressPreviousButton() {
+        isRepeatMode = !isRepeatMode
+        if isRepeatMode {
+            playerScreenView.repeatSeakTime = currentTime
+            playerScreenView.resetPlayerUI()
+            playPreviousContent(true)
+        } else {
+            playerScreenView.repeatSeakTime = nil
+        }
+        delegate?.didLongPressPreviousButton(isRepeating: isRepeatMode)
     }
     
     private func loopPlayContent() {
@@ -282,13 +297,13 @@ extension SummerPlayerView: PlayerScreenViewDelegate {
         if self.hideControl {
             
             self.contentsListView.isHidden = true
-            self.playerControlView.isHidden = true
+            self.playerControlView?.isHidden = true
             
             isTouched = true
             
         } else {
             self.contentsListView.isHidden = false
-            self.playerControlView.isHidden = false
+            self.playerControlView?.isHidden = false
             isTouched = false
             
             
@@ -319,6 +334,12 @@ extension SummerPlayerView: PlayerScreenViewDelegate {
     }
     
     private func resetPlayer(_ url: URL) {
+        if isRepeatMode {
+            isRepeatMode = false
+            playerScreenView.repeatSeakTime = nil
+            delegate?.didLongPressPreviousButton(isRepeating: false)
+        }
+        
         queuePlayer.removeAllItems()
         
         let playerItem = AVPlayerItem(url: url)
@@ -363,4 +384,3 @@ extension UIView {
     }
     
 }
-

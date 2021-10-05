@@ -14,6 +14,8 @@ class PlayerControllView: UIView {
     
     var delegate: PlayerControlViewDelegate?
     
+    let longPressRecognizer = UILongPressGestureRecognizer()
+    
     lazy private var backButton: UIButton = {
         let backwardButton = UIButton()
         backwardButton.translatesAutoresizingMaskIntoConstraints = false
@@ -26,12 +28,16 @@ class PlayerControllView: UIView {
     }()
     
     lazy private var previousButton: UIButton = {
-        let nextButton = UIButton()
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setImage(UIImage(named: "previous", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
-        nextButton.tintColor = UIColor(white:1, alpha:1)
-        nextButton.addTarget(self, action: #selector(self.clickPreviousButton(_:)), for: .touchUpInside)
-        return nextButton
+        let previousButton = UIButton()
+        previousButton.translatesAutoresizingMaskIntoConstraints = false
+        previousButton.setImage(UIImage(named: "previous", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
+        
+        previousButton.tintColor = UIColor(white:1, alpha:1)
+        previousButton.addTarget(self, action: #selector(self.clickPreviousButton(_:)), for: .touchUpInside)
+        longPressRecognizer.addTarget(self, action: #selector(self.longPressPreviousButton(_:)))
+        
+        previousButton.addGestureRecognizer(longPressRecognizer)
+        return previousButton
     }()
     
     lazy private var airplayButton: UIButton = {
@@ -44,13 +50,13 @@ class PlayerControllView: UIView {
     }()
     
     lazy private var nextButton: UIButton = {
-        let previousButton = UIButton()
-        previousButton.translatesAutoresizingMaskIntoConstraints = false
-        previousButton.setImage(UIImage(named: "next", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
+        let nextButton = UIButton()
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.setImage(UIImage(named: "next", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
         
-        previousButton.tintColor = UIColor(white:1, alpha:1)
-        previousButton.addTarget(self, action: #selector(self.clickNextButton(_:)), for: .touchUpInside)
-        return previousButton
+        nextButton.tintColor = UIColor(white:1, alpha:1)
+        nextButton.addTarget(self, action: #selector(self.clickNextButton(_:)), for: .touchUpInside)
+        return nextButton
     }()
     
     override init(frame: CGRect) {
@@ -81,10 +87,10 @@ class PlayerControllView: UIView {
             airplayButton.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -50),
             
             nextButton.topAnchor.constraint(equalTo: self.topAnchor ,constant: self.bounds.size.height - 30),
-            nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -50),
+            nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -20),
             
             previousButton.topAnchor.constraint(equalTo: self.topAnchor ,constant: self.bounds.size.height - 30),
-            previousButton.leadingAnchor.constraint(equalTo: self.leadingAnchor , constant: 30)
+            previousButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
         ])
     }
     
@@ -94,6 +100,14 @@ class PlayerControllView: UIView {
     
     @objc func clickPreviousButton(_ sender: UIButton) {
         delegate?.didPressedPreviousButton()
+    }
+    
+    @objc func longPressPreviousButton(_ gestureReconizer: UILongPressGestureRecognizer) {
+        if gestureReconizer.state != UIGestureRecognizer.State.ended {
+            //When lognpress is start or running
+        } else {
+            delegate?.didLongPressPreviousButton()
+        }
     }
     
     @objc func clickAirPlayButton(_ sender: UIButton) {

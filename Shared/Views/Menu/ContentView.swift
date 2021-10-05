@@ -25,7 +25,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
-                LazyVGrid(columns: columns, alignment: .center, spacing: 30) {
+                LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
                     ForEach(menuImages) { menuImage in
                         if let image = menuImage.image {
                             VStack {
@@ -58,11 +58,17 @@ struct ContentView: View {
         .onAppear {
             do {
                 try self.BDPlayer = AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!) /// make the audio player
-                self.BDPlayer?.volume = 5
+                //self.BDPlayer?.volume = 5
                 self.BDPlayer?.play()
             } catch {
                 print("Couldn't play audio. Error: \(error)")
             }
+        }
+//        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+//
+//        }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
+            self.BDPlayer?.play()
         }
 //            List {
 //                ForEach(items) { item in

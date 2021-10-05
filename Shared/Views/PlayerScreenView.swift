@@ -14,6 +14,8 @@ class PlayerScreenView: UIView {
     public var isPlaying: Bool = true
     private var isTapped: Bool = false
     
+    var repeatSeakTime: CMTime?
+
     var delegate: PlayerScreenViewDelegate?
     
     lazy private var playerTimeLabel: UILabel = {
@@ -43,15 +45,15 @@ class PlayerScreenView: UIView {
         slider.addTarget(self, action: #selector(self.changeSeekSlider(_:)), for: .valueChanged)
         return slider
     }()
-    
-    lazy private var moreButton: UIButton = {
-        let moreButton = UIButton()
-        moreButton.setImage(UIImage(named: "more", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
-        moreButton.tintColor = UIColor(white: 1, alpha: 1)
-        moreButton.translatesAutoresizingMaskIntoConstraints = false
-        moreButton.addTarget(self, action: #selector(self.clickMoreButton(_:)), for: .touchUpInside)
-        return moreButton
-    }()
+
+//    lazy private var moreButton: UIButton = {
+//        let moreButton = UIButton()
+//        moreButton.setImage(UIImage(named: "more", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
+//        moreButton.tintColor = UIColor(white: 1, alpha: 1)
+//        moreButton.translatesAutoresizingMaskIntoConstraints = false
+//        moreButton.addTarget(self, action: #selector(self.clickMoreButton(_:)), for: .touchUpInside)
+//        return moreButton
+//    }()
     
     lazy private var headerTitle: UILabel = {
         let headerTitle = UILabel()
@@ -68,7 +70,7 @@ class PlayerScreenView: UIView {
         headerView.backgroundColor = UIColor.clear
         headerView.alpha = 0.9
         headerView.addSubview(headerTitle)
-        headerView.addSubview(moreButton)
+//        headerView.addSubview(moreButton)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         return headerView
     }()
@@ -126,6 +128,14 @@ class PlayerScreenView: UIView {
     
     func videoDidChange(_ time: CMTime) {
         playerTimeLabel.text = time.description
+        //TODO: need to convert CMTime to UISlider.value
+        //playerSlider.value = time.asDouble
+        if let repeatSeakTime = repeatSeakTime,
+            time > repeatSeakTime {
+            resetPlayerUI()
+            delegate?.seekToTime(CMTime.zero)
+            delegate?.didChangeSliderValue(CMTime.zero)
+        }
     }
     
     func resetPlayerUI() {
@@ -182,7 +192,7 @@ class PlayerScreenView: UIView {
     }
     fileprivate func hideAllUIComponents(_ willHide:Bool) {
         self.playerSlider.isHidden = willHide
-        self.moreButton.isHidden = willHide
+//        self.moreButton.isHidden = willHide
         self.playButton.isHidden = willHide
         self.fullTimeLabel.isHidden = willHide
         self.playerTimeLabel.isHidden = willHide
@@ -221,8 +231,8 @@ class PlayerScreenView: UIView {
             headerTitle.leadingAnchor.constraint(equalTo: topView.leadingAnchor , constant: 30),
             headerTitle.trailingAnchor.constraint(equalTo: topView.trailingAnchor),
             
-            moreButton.centerYAnchor.constraint(equalTo: topView.centerYAnchor),
-            moreButton.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -10),
+//            moreButton.centerYAnchor.constraint(equalTo: topView.centerYAnchor),
+//            moreButton.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -10),
             
             topView.topAnchor.constraint(equalTo: topAnchor , constant: 25),
             topView.leadingAnchor.constraint(equalTo: leadingAnchor),

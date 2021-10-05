@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class PlayerViewController: UIViewController  {
+class PlayerViewController: UIViewController, UIGestureRecognizerDelegate  {
     
     let defaultConfig = DefaultConfig()
     var summerPlayerView: SummerPlayerView?
@@ -22,7 +22,10 @@ class PlayerViewController: UIViewController  {
                 
         let sampleTheme = ThemeMaker.getTheme()
         
+        print("view.frame\(view.frame)")
+        // Remark: 2021/10/5段階では、view.frameは画面全体のframeで、iPad 6thなら(0.0, 0.0, 1024.0, 768.0)
         summerPlayerView = SummerPlayerView(configuration: defaultConfig, theme: sampleTheme,targetView: view)
+        summerPlayerView?.playerControlView?.longPressRecognizer.delegate = self
         
         summerPlayerView?.delegate = self
         
@@ -72,6 +75,15 @@ extension PlayerViewController : SummerPlayerViewDelegate {
         
     }
     
+    func didLongPressPreviousButton(isRepeating: Bool) {
+        let font = UIFont(name: "HiraginoSans-W3", size: 17)
+        if isRepeating {
+            self.showToast(message: "繰り返し再生:ON", font: font, type: .notice)
+        } else {
+            self.showToast(message: "繰り返し再生:OFF", font: font, type: .alert)
+        }
+    }
+    
     func didPressAirPlayButton() {
         
     }
@@ -101,6 +113,6 @@ extension PlayerViewController {
     
     fileprivate func goBackViewController() {
         self.navigationController?.popViewController(animated: true)
-        // TODO:ここで音楽の再生を再開する？
+        NotificationCenter.default.post(name: .backToMenuNotification, object: nil)
     }
 }

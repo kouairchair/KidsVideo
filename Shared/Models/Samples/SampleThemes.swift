@@ -30,9 +30,9 @@ public struct LightTheme: SummerPlayerViewTheme {
 
 
 public struct DarkTheme: SummerPlayerViewTheme {
-    public var backgroundViewColor: UIColor = .systemGray6
+    public var backgroundViewColor: UIColor = .black
     public var totalTimeLableTextFont = UIFont.boldSystemFont(ofSize: 13)
-    public var contentsListviewBackground: UIColor = .systemGray5
+    public var contentsListviewBackground: UIColor = .black
     public var activityViewColor: UIColor = .white
     public var totalTimeLabelTextColor: UIColor = .systemOrange
     public var totalTimeLableBackground: UIColor = .systemGray6

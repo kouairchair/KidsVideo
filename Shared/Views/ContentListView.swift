@@ -6,6 +6,8 @@ import AVKit
 
 class ContentListView: UIView {
     
+    private let itemSize = CGSize(width: 300, height: 150)
+    
     lazy private var activityView: UIActivityIndicatorView = {
         let activity = UIActivityIndicatorView(style: .large)
         activity.translatesAutoresizingMaskIntoConstraints = false
@@ -38,8 +40,7 @@ class ContentListView: UIView {
     
     private lazy var collectionView: UICollectionView =  {
         let layout = UICollectionViewFlowLayout()
-        // TODO:サイズをもう少し大きくする？
-        layout.itemSize = CGSize(width: 200, height: 100)
+        layout.itemSize = itemSize
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +48,7 @@ class ContentListView: UIView {
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         return collectionView
     }()
     
@@ -155,9 +157,8 @@ class ContentListView: UIView {
         
         contentListStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         contentListStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        contentListStackView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        contentListStackView.heightAnchor.constraint(equalToConstant: itemSize.height).isActive = true
         contentListStackView.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -15).isActive = true
-        
         
         contentListStackView.addSubview(collectionView)
         collectionView.pinEdges(targetView: contentListStackView)
@@ -195,6 +196,11 @@ extension ContentListView: UICollectionViewDelegate {
             
         }
     }
+  
+    // TODO:不規則なマージンを整えたいが...
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+//    }
     
 }
 
