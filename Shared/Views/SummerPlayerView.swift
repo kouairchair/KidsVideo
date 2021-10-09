@@ -124,10 +124,10 @@ public class SummerPlayerView: UIView {
             setupInsideViews(wholeViewRect , wholeRect: viewRect)
             
             bringSubviewToFront(contentsListView)
+            bringSubviewToFront(playerScreenView)
             if let playerControlView = playerControlView {
                 bringSubviewToFront(playerControlView)
             }
-            bringSubviewToFront(playerScreenView)
         }
     }
     
@@ -218,16 +218,18 @@ extension SummerPlayerView: PlayerControlViewDelegate {
         delegate?.didPressPreviousButton()
     }
     
-    func didLongPressPreviousButton() {
+    func didPressedRepeatButton() -> (isRepeatMode: Bool, repeatTime: CMTime?) {
         isRepeatMode = !isRepeatMode
+        delegate?.didPressRepeatButton(isRepeating: isRepeatMode)
         if isRepeatMode {
             playerScreenView.repeatSeakTime = currentTime
             playerScreenView.resetPlayerUI()
             playPreviousContent(true)
+            return (true, currentTime)
         } else {
             playerScreenView.repeatSeakTime = nil
+            return (false, nil)
         }
-        delegate?.didLongPressPreviousButton(isRepeating: isRepeatMode)
     }
     
     private func loopPlayContent() {
@@ -337,7 +339,8 @@ extension SummerPlayerView: PlayerScreenViewDelegate {
         if isRepeatMode {
             isRepeatMode = false
             playerScreenView.repeatSeakTime = nil
-            delegate?.didLongPressPreviousButton(isRepeating: false)
+            delegate?.didPressRepeatButton(isRepeating: false)
+            playerControlView?.changeRepeatStatus(isRepeatMode: false, repeatTime: nil)
         }
         
         queuePlayer.removeAllItems()

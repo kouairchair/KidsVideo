@@ -6,7 +6,7 @@ import AVKit
 
 class ContentListView: UIView {
     
-    private let itemSize = CGSize(width: 300, height: 150)
+    private let itemSize = CGSize(width: 280, height: 140)
     
     lazy private var activityView: UIActivityIndicatorView = {
         let activity = UIActivityIndicatorView(style: .large)

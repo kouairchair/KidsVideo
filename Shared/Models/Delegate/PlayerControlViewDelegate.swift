@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import AVKit
 
 protocol PlayerControlViewDelegate  {
     func didPressedBackButton()
     func didPressedPreviousButton()
-    func didLongPressPreviousButton()
+    func didPressedRepeatButton() -> (isRepeatMode: Bool, repeatTime: CMTime?)
     func didPressedNextButton()
     func didPressedAirPlayButton()
 }

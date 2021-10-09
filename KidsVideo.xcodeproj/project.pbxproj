@@ -214,6 +214,8 @@
 		1BAB1E2E2703DBCB007FBD25 /* MusicMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB1E2C2703DBCB007FBD25 /* MusicMaker.swift */; };
 		1BAB1E322704183C007FBD25 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB1E312704183C007FBD25 /* Channel.swift */; };
 		1BAB1E332704183C007FBD25 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB1E312704183C007FBD25 /* Channel.swift */; };
+		1BC317EF2711B946003B66F5 /* PlayerControlCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */; };
+		1BC317F02711B946003B66F5 /* PlayerControlCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */; };
 		1BC9605C270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */; };
 		1BC9605D270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */; };
 		1BC9605F270C9A3F00DF2E69 /* ToastMessageShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9605E270C9A3F00DF2E69 /* ToastMessageShadow.swift */; };
@@ -403,6 +405,7 @@
 		1BAB1E292703DB3E007FBD25 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		1BAB1E2C2703DBCB007FBD25 /* MusicMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaker.swift; sourceTree = "<group>"; };
 		1BAB1E312704183C007FBD25 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlCommonButton.swift; sourceTree = "<group>"; };
 		1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 		1BC9605E270C9A3F00DF2E69 /* ToastMessageShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageShadow.swift; sourceTree = "<group>"; };
 		1BE696F827005A1D008E7E56 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -716,6 +719,7 @@
 				1B1903EC270998F70085E71F /* Menu */,
 				1BE6972527005C19008E7E56 /* ContentListView.swift */,
 				1BE6972427005C19008E7E56 /* PlayerControlView.swift */,
+				1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */,
 				1BE6972627005C19008E7E56 /* PlayerScreenView.swift */,
 				1BE6972727005C19008E7E56 /* VideoCollectionViewCell.swift */,
 				1BE6971727005BF8008E7E56 /* SummerPlayerView.swift */,
@@ -1157,6 +1161,7 @@
 				1BE696FC27005A95008E7E56 /* PlayerViewControllerWrapper.swift in Sources */,
 				1BC9605F270C9A3F00DF2E69 /* ToastMessageShadow.swift in Sources */,
 				1B73FCDD2700539700B6BCE1 /* Persistence.swift in Sources */,
+				1BC317EF2711B946003B66F5 /* PlayerControlCommonButton.swift in Sources */,
 				BF0DE73527028D1A0029CE17 /* MenuImageMaker.swift in Sources */,
 				BF0DE73827028D480029CE17 /* MenuImage.swift in Sources */,
 				1BAB1E2A2703DB3E007FBD25 /* Music.swift in Sources */,
@@ -1218,6 +1223,7 @@
 				1BE6970227005B65008E7E56 /* DefaultConfig.swift in Sources */,
 				1BE6970F27005BCC008E7E56 /* PlayerControlViewDelegate.swift in Sources */,
 				1BE696FA27005A1D008E7E56 /* PlayerViewController.swift in Sources */,
+				1BC317F02711B946003B66F5 /* PlayerControlCommonButton.swift in Sources */,
 				1BE6973527005CA6008E7E56 /* SampleThemes.swift in Sources */,
 				1BE6972927005C19008E7E56 /* PlayerControlView.swift in Sources */,
 			);
@@ -1373,6 +1379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NJAK8X6XT3;
@@ -1393,6 +1400,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.headspinnerd.Kids-Video";
 				PRODUCT_NAME = KidsVideo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1405,6 +1413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NJAK8X6XT3;
@@ -1425,6 +1434,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.headspinnerd.Kids-Video";
 				PRODUCT_NAME = KidsVideo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

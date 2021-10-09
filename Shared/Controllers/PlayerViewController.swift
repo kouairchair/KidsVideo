@@ -75,7 +75,7 @@ extension PlayerViewController : SummerPlayerViewDelegate {
         
     }
     
-    func didLongPressPreviousButton(isRepeating: Bool) {
+    func didPressRepeatButton(isRepeating: Bool) {
         let font = UIFont(name: "HiraginoSans-W3", size: 17)
         if isRepeating {
             self.showToast(message: "繰り返し再生:ON", font: font, type: .notice)

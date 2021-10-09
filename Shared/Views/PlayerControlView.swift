@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class PlayerControllView: UIView {
     
@@ -16,49 +17,20 @@ class PlayerControllView: UIView {
     
     let longPressRecognizer = UILongPressGestureRecognizer()
     
-    lazy private var backButton: UIButton = {
-        let backwardButton = UIButton()
-        backwardButton.translatesAutoresizingMaskIntoConstraints = false
-        backwardButton.setImage(UIImage(named: "back", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
-        
-        backwardButton.tintColor = UIColor(white:1, alpha:1)
-        backwardButton.translatesAutoresizingMaskIntoConstraints = false
-        backwardButton.addTarget(self, action: #selector(self.clickBackButton(_:)), for: .touchUpInside)
-        return backwardButton
+    lazy private var backButton = PlayerControlCommonButton(systemImageName: "arrow.left", size: CGSize(width: 70, height: 70))
+    lazy private var previousButtonLeft = PlayerControlCommonButton(systemImageName: "backward.end.fill", size: CGSize(width: 70, height: 70))
+    lazy private var previousButtonRight = PlayerControlCommonButton(systemImageName: "backward.end.fill", size: CGSize(width: 50, height: 50))
+    lazy private var repeatButton = PlayerControlCommonButton(systemImageName: "repeat", size: CGSize(width: 70, height: 70))
+    lazy private var nextButton = PlayerControlCommonButton(systemImageName: "forward.end.fill", size: CGSize(width: 70, height: 70))
+    lazy private var airplayButton = PlayerControlCommonButton(systemImageName: "airplayaudio", size: CGSize(width: 30, height: 30))
+    lazy private var repeatTimeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 20)
+        return label
     }()
-    
-    lazy private var previousButton: UIButton = {
-        let previousButton = UIButton()
-        previousButton.translatesAutoresizingMaskIntoConstraints = false
-        previousButton.setImage(UIImage(named: "previous", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
-        
-        previousButton.tintColor = UIColor(white:1, alpha:1)
-        previousButton.addTarget(self, action: #selector(self.clickPreviousButton(_:)), for: .touchUpInside)
-        longPressRecognizer.addTarget(self, action: #selector(self.longPressPreviousButton(_:)))
-        
-        previousButton.addGestureRecognizer(longPressRecognizer)
-        return previousButton
-    }()
-    
-    lazy private var airplayButton: UIButton = {
-        let airplayButton = UIButton()
-        airplayButton.translatesAutoresizingMaskIntoConstraints = false
-        airplayButton.setImage(UIImage(named: "airplay", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
-        airplayButton.tintColor = UIColor(white:1, alpha:1)
-        airplayButton.addTarget(self, action: #selector(self.clickAirPlayButton(_:)), for: .touchUpInside)
-        return airplayButton
-    }()
-    
-    lazy private var nextButton: UIButton = {
-        let nextButton = UIButton()
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setImage(UIImage(named: "next", in: Bundle(for: PlayerControllView.self), compatibleWith: nil), for: .normal)
-        
-        nextButton.tintColor = UIColor(white:1, alpha:1)
-        nextButton.addTarget(self, action: #selector(self.clickNextButton(_:)), for: .touchUpInside)
-        return nextButton
-    }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -71,26 +43,47 @@ class PlayerControllView: UIView {
     
     private func setupView() {
         addSubview(backButton)
-        addSubview(previousButton)
+        addSubview(previousButtonLeft)
+        addSubview(previousButtonRight)
+        addSubview(repeatButton)
         addSubview(airplayButton)
         addSubview(nextButton)
+        addSubview(repeatTimeLabel)
+        backButton.addTarget(self, action: #selector(self.clickBackButton(_:)), for: .touchUpInside)
+        previousButtonLeft.addTarget(self, action: #selector(self.clickPreviousButton(_:)), for: .touchUpInside)
+        previousButtonRight.addTarget(self, action: #selector(self.clickPreviousButton(_:)), for: .touchUpInside)
+        previousButtonRight.alpha = 0.3
+        repeatButton.addTarget(self, action: #selector(self.clickRepeatButton(_:)), for: .touchUpInside)
+        repeatButton.tintColor = .red
+        nextButton.addTarget(self, action: #selector(self.clickNextButton(_:)), for: .touchUpInside)
+        airplayButton.addTarget(self, action: #selector(self.clickAirPlayButton(_:)), for: .touchUpInside)
         
         setupLayout()
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
+            // TODO: need to deal with the constraint warning
             backButton.topAnchor.constraint(equalTo: self.topAnchor , constant: 15),
             backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor , constant: 30),
             
             airplayButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
             airplayButton.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -50),
             
-            nextButton.topAnchor.constraint(equalTo: self.topAnchor ,constant: self.bounds.size.height - 30),
+            previousButtonLeft.bottomAnchor.constraint(equalTo: self.bottomAnchor ,constant: 0),
+            previousButtonLeft.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            
+            previousButtonLeft.topAnchor.constraint(equalTo: repeatButton.bottomAnchor, constant: 30),
+            repeatButton.leadingAnchor.constraint(equalTo: previousButtonLeft.leadingAnchor, constant: 0),
+            
+            repeatButton.topAnchor.constraint(equalTo: repeatTimeLabel.bottomAnchor, constant: 15),
+            repeatTimeLabel.leadingAnchor.constraint(equalTo: repeatButton.leadingAnchor, constant: 0),
+            
+            nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor ,constant: 0),
             nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -20),
             
-            previousButton.topAnchor.constraint(equalTo: self.topAnchor ,constant: self.bounds.size.height - 30),
-            previousButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            nextButton.topAnchor.constraint(equalTo: previousButtonRight.bottomAnchor, constant: 30),
+            previousButtonRight.trailingAnchor.constraint(equalTo: nextButton.trailingAnchor, constant: 0),
         ])
     }
     
@@ -102,12 +95,15 @@ class PlayerControllView: UIView {
         delegate?.didPressedPreviousButton()
     }
     
-    @objc func longPressPreviousButton(_ gestureReconizer: UILongPressGestureRecognizer) {
-        if gestureReconizer.state != UIGestureRecognizer.State.ended {
-            //When lognpress is start or running
-        } else {
-            delegate?.didLongPressPreviousButton()
+    @objc func clickRepeatButton(_ sender: UIButton) {
+        if let result = delegate?.didPressedRepeatButton() {
+            changeRepeatStatus(isRepeatMode: result.isRepeatMode, repeatTime: result.repeatTime)
         }
+    }
+    
+    func changeRepeatStatus(isRepeatMode: Bool, repeatTime: CMTime?) {
+        repeatButton.tintColor = isRepeatMode ? .yellow : .red
+        repeatTimeLabel.text = repeatTime?.description ?? ""
     }
     
     @objc func clickAirPlayButton(_ sender: UIButton) {
