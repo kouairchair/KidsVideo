@@ -124,10 +124,10 @@ public class SummerPlayerView: UIView {
             setupInsideViews(wholeViewRect , wholeRect: viewRect)
             
             bringSubviewToFront(contentsListView)
-            bringSubviewToFront(playerScreenView)
             if let playerControlView = playerControlView {
                 bringSubviewToFront(playerControlView)
             }
+            bringSubviewToFront(playerScreenView)
         }
     }
     
@@ -198,10 +198,14 @@ extension SummerPlayerView: PlayerControlViewDelegate {
             seekToTime(CMTime.zero)
         } else {
             if let latestItems = contents {
-                if(currentVideoIndex == 0) {
-                    currentVideoIndex = latestItems.count-1
+                if (currentVideoIndex == 0) {
+                    currentVideoIndex = latestItems.count - 1
                 } else if(currentVideoIndex > 0) {
                     currentVideoIndex -= 1
+                }
+                if let contents = contents {
+                    let currentItem = contents[currentVideoIndex]
+                    contentsListView.setPlayList(currentItem: currentItem, items: contents)
                 }
                 
                 if let previousMovieUrl = latestItems[currentVideoIndex].getUrl() {
@@ -241,10 +245,14 @@ extension SummerPlayerView: PlayerControlViewDelegate {
     
     private func playNextContent() {
         if let latestItems = contents {
-            if (currentVideoIndex >= 0 && currentVideoIndex < latestItems.count-1) {
+            if (currentVideoIndex >= 0 && currentVideoIndex < latestItems.count - 1) {
                 currentVideoIndex += 1
-            } else if(currentVideoIndex == latestItems.count-1 ) {
+            } else if(currentVideoIndex == latestItems.count - 1 ) {
                 currentVideoIndex = 0
+            }
+            if let contents = contents {
+                let currentItem = contents[currentVideoIndex]
+                contentsListView.setPlayList(currentItem: currentItem, items: contents)
             }
             
             if let nextMovieUrl = latestItems[currentVideoIndex].getUrl() {
@@ -316,7 +324,6 @@ extension SummerPlayerView: PlayerScreenViewDelegate {
     }
     
     func currentVideoIndex(_ index: Int, _ url: URL) {
-        
         currentVideoIndex = index
         resetPlayer(url)
     }

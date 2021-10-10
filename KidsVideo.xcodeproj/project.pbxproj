@@ -121,8 +121,6 @@
 		1B1904602709AE620085E71F /* 夏か冬どっちが最高？_-_夏のうた_冬のうた_|_はんたいことば_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B19043D2709AE610085E71F /* 夏か冬どっちが最高？_-_夏のうた_冬のうた_|_はんたいことば_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */; };
 		1B1904612709AE620085E71F /* あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B19043E2709AE610085E71F /* あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */; };
 		1B1904622709AE620085E71F /* あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B19043E2709AE610085E71F /* あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */; };
-		1B1904632709AE620085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B19043F2709AE610085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg */; };
-		1B1904642709AE620085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B19043F2709AE610085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg */; };
 		1B1904672709AE620085E71F /* ちびっこ消防士さんの体験_|_消防車_|_乗り物の歌_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904412709AE610085E71F /* ちびっこ消防士さんの体験_|_消防車_|_乗り物の歌_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 */; };
 		1B1904682709AE620085E71F /* ちびっこ消防士さんの体験_|_消防車_|_乗り物の歌_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904412709AE610085E71F /* ちびっこ消防士さんの体験_|_消防車_|_乗り物の歌_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 */; };
 		1B1904692709AE620085E71F /* カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904422709AE610085E71F /* カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.jpeg */; };
@@ -170,8 +168,6 @@
 		1B19049C2709C19D0085E71F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19049B2709C19D0085E71F /* Constants.swift */; };
 		1B19049E270A73D50085E71F /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19049D270A73D50085E71F /* Notification+Name.swift */; };
 		1B19049F270A73D50085E71F /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19049D270A73D50085E71F /* Notification+Name.swift */; };
-		1B1904A1270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904A0270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg */; };
-		1B1904A2270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904A0270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg */; };
 		1B1904A5270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904A3270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.mp4 */; };
 		1B1904A6270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904A3270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.mp4 */; };
 		1B1904A7270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1B1904A4270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.jpeg */; };
@@ -216,6 +212,12 @@
 		1BAB1E332704183C007FBD25 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB1E312704183C007FBD25 /* Channel.swift */; };
 		1BC317EF2711B946003B66F5 /* PlayerControlCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */; };
 		1BC317F02711B946003B66F5 /* PlayerControlCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */; };
+		1BC317F22713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1BC317F12713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg */; };
+		1BC317F32713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1BC317F12713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg */; };
+		1BC317F527131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1BC317F427131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg */; };
+		1BC317F627131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1BC317F427131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg */; };
+		1BC317F827132510003B66F5 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC317F727132510003B66F5 /* UIView+Animation.swift */; };
+		1BC317F927132510003B66F5 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC317F727132510003B66F5 /* UIView+Animation.swift */; };
 		1BC9605C270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */; };
 		1BC9605D270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */; };
 		1BC9605F270C9A3F00DF2E69 /* ToastMessageShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9605E270C9A3F00DF2E69 /* ToastMessageShadow.swift */; };
@@ -351,7 +353,6 @@
 		1B19043C2709AE610085E71F /* カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
 		1B19043D2709AE610085E71F /* 夏か冬どっちが最高？_-_夏のうた_冬のうた_|_はんたいことば_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "夏か冬どっちが最高？_-_夏のうた_冬のうた_|_はんたいことば_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
 		1B19043E2709AE610085E71F /* あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
-		1B19043F2709AE610085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg"; sourceTree = "<group>"; };
 		1B1904412709AE610085E71F /* ちびっこ消防士さんの体験_|_消防車_|_乗り物の歌_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ちびっこ消防士さんの体験_|_消防車_|_乗り物の歌_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
 		1B1904422709AE610085E71F /* カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.jpeg"; sourceTree = "<group>"; };
 		1B1904432709AE610085E71F /* 痛いっ～助けてママ_-_赤ちゃんが好きな歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "痛いっ～助けてママ_-_赤ちゃんが好きな歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
@@ -376,7 +377,6 @@
 		1B1904962709B7F40085E71F /* たのしい一日のはじまり_スクーターにのってゴーゴー！|_子供が好きなアニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "たのしい一日のはじまり_スクーターにのってゴーゴー！|_子供が好きなアニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
 		1B19049B2709C19D0085E71F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B19049D270A73D50085E71F /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
-		1B1904A0270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg"; path = "MeruChan/メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg"; sourceTree = "<group>"; };
 		1B1904A3270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "１０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.mp4"; sourceTree = "<group>"; };
 		1B1904A4270A75940085E71F /* １０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "１０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語.jpeg"; sourceTree = "<group>"; };
 		1B73FCAD2700539500B6BCE1 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -406,6 +406,9 @@
 		1BAB1E2C2703DBCB007FBD25 /* MusicMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaker.swift; sourceTree = "<group>"; };
 		1BAB1E312704183C007FBD25 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		1BC317EE2711B946003B66F5 /* PlayerControlCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlCommonButton.swift; sourceTree = "<group>"; };
+		1BC317F12713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg"; sourceTree = "<group>"; };
+		1BC317F427131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg"; path = "MeruChan/メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg"; sourceTree = "<group>"; };
+		1BC317F727132510003B66F5 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 		1BC9605E270C9A3F00DF2E69 /* ToastMessageShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageShadow.swift; sourceTree = "<group>"; };
 		1BE696F827005A1D008E7E56 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -499,8 +502,8 @@
 				1B1903F02709AE460085E71F /* メルちゃん_おままごと_納豆ごはん_お味噌汁_朝ごはんお料理__Mellchan_Natto_Fermented_Soybeans_Cooking_Toy_Playset.mp4 */,
 				1B1903F52709AE460085E71F /* メルちゃん_お誕生日会_プレゼント_バースデイパーティー_:_Mell-chan_Birthday_Party.jpeg */,
 				1B1903F12709AE460085E71F /* メルちゃん_お誕生日会_プレゼント_バースデイパーティー_:_Mell-chan_Birthday_Party.mp4 */,
-				1B1904A0270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg */,
 				1B1903FD2709AE470085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.mp4 */,
+				1BC317F427131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg */,
 				1B1904042709AE470085E71F /* メルちゃん_学校ごっこ_化石掘り_宝石掘り_:_Mell-chan_School_Digging_for_Fossil_Mermaid.jpeg */,
 				1B1903F22709AE460085E71F /* メルちゃん_学校ごっこ_化石掘り_宝石掘り_:_Mell-chan_School_Digging_for_Fossil_Mermaid.mp4 */,
 				1B1903FB2709AE470085E71F /* メルちゃんおいしゃさん_いちごクリニック_ネネちゃん_ばんそうこうだらけ_:_Mell-chan_Hospital_Playset_|_Doctor_Toys.jpeg */,
@@ -678,7 +681,7 @@
 				1B1904442709AE620085E71F /* ママ、はやく元気になってね_お医者さんごっこ_子供の歌メドレー_童謡_Little_Angel-リトルエンジェル日本語.mp4 */,
 				1B19044C2709AE620085E71F /* ママ、はやく元気になってね_お医者さんごっこ_子供の歌メドレー_童謡_Little_Angel-リトルエンジェル日本語.png */,
 				1B1904372709AE610085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 */,
-				1B19043F2709AE610085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg */,
+				1BC317F12713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg */,
 				1B19044E2709AE620085E71F /* ロケットにのって宇宙を探検だ！☆_|_宇宙飛行士_|_子供が喜ぶアニメ_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.jpeg */,
 				1B1904382709AE610085E71F /* ロケットにのって宇宙を探検だ！☆_|_宇宙飛行士_|_子供が喜ぶアニメ_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 */,
 				1B1904472709AE620085E71F /* 夏か冬どっちが最高？_-_夏のうた_冬のうた_|_はんたいことば_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg */,
@@ -758,6 +761,7 @@
 				1B19049D270A73D50085E71F /* Notification+Name.swift */,
 				1BC9605B270C99F200DF2E69 /* UIViewController+Toast.swift */,
 				1BC9605E270C9A3F00DF2E69 /* ToastMessageShadow.swift */,
+				1BC317F727132510003B66F5 /* UIView+Animation.swift */,
 			);
 			path = Utills;
 			sourceTree = "<group>";
@@ -944,7 +948,6 @@
 				1B1904092709AE470085E71F /* まぜまぜアイス屋さん_ロールアイス_Mixing_Ice_Cream_Flavor_Ice_Cream_Shop.png in Resources */,
 				1B1904252709AE470085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.mp4 in Resources */,
 				1B1904272709AE470085E71F /* リーメント_ハローキティ_スーパーマーケット_ミニチュア_:_Hello_Kitty_Supermarket_Re-ment_Miniature_Food.jpeg in Resources */,
-				1B1904A1270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg in Resources */,
 				1B1903CC270965A10085E71F /* レオくんがきょうりゅうをやっつける戦隊ヒーローをあらってあげよう_トイキッズ.png in Resources */,
 				1B1904192709AE470085E71F /* ドラえもん_のび太の部屋_リーメント_毎日が大冒険_:_Doraemon_Miniature_Nobita's_Room!_Re-ment.mp4 in Resources */,
 				1B1904152709AE470085E71F /* メルちゃん_お誕生日会_プレゼント_バースデイパーティー_:_Mell-chan_Birthday_Party.jpeg in Resources */,
@@ -981,6 +984,7 @@
 				1B19042F2709AE470085E71F /* ハッピーセット_なりきりマクドナルド_大量_開封_ミニチュア_:_McDonalds_Happy_Meal_Toys_|_Miniature_McDonalds_Toy.jpeg in Resources */,
 				1B1904592709AE620085E71F /* ひこうきではシートベルトをしよう！_-_子供向け安全教育_|_教育アニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */,
 				1B1904872709AFB50085E71F /* プラレール博2018in東京に行ってきた_Toy_Model_Trains_Museum_2018.mp4 in Resources */,
+				1BC317F22713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */,
 				1B1904772709AE620085E71F /* ジュース屋さんごっこして遊ぼう！_-_色のうた_|_教育アニメ_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */,
 				BF0DE7282702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.mp4 in Resources */,
 				1B1904132709AE470085E71F /* ドラえもん_のび太の部屋_リーメント_毎日が大冒険_:_Doraemon_Miniature_Nobita's_Room!_Re-ment.jpeg in Resources */,
@@ -995,9 +999,9 @@
 				1B1904232709AE470085E71F /* リーメント_リラックマルーム_スッキリいい気分♪_バスルーム_:_Rilakkuma_Bathroom!_Miniature_Toy_Re-ment.jpeg in Resources */,
 				1B1904752709AE620085E71F /* ジュース屋さんごっこして遊ぼう！_-_色のうた_|_教育アニメ_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */,
 				1B19045D2709AE620085E71F /* カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.mp4 in Resources */,
+				1BC317F527131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg in Resources */,
 				1B19047F2709AE620085E71F /* 泣かないでベイビーしゅん_-_きもちの歌_|_教育アニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */,
 				1B1903CA270965A10085E71F /* レオくんがヘビのラジコンであそぶよ！逃げたヘビを追いかけよう！_トイキッズ.png in Resources */,
-				1B1904632709AE620085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg in Resources */,
 				1BAB1E252703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
 				1B1903A92709601F0085E71F /* レオくんがアンパンマンのどこでもすなばであそぶよ！こうえんにいってすなあそびをするよ！_トイキッズ.mp4 in Resources */,
 				1B19041D2709AE470085E71F /* メルちゃん_おままごと_納豆ごはん_お味噌汁_朝ごはんお料理__Mellchan_Natto_Fermented_Soybeans_Cooking_Toy_Playset.jpeg in Resources */,
@@ -1047,7 +1051,6 @@
 				1B19040A2709AE470085E71F /* まぜまぜアイス屋さん_ロールアイス_Mixing_Ice_Cream_Flavor_Ice_Cream_Shop.png in Resources */,
 				1B1904262709AE470085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.mp4 in Resources */,
 				1B1904282709AE470085E71F /* リーメント_ハローキティ_スーパーマーケット_ミニチュア_:_Hello_Kitty_Supermarket_Re-ment_Miniature_Food.jpeg in Resources */,
-				1B1904A2270A752B0085E71F /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mell-chan_kindergarten_Teacher_Playset.jpeg in Resources */,
 				1B1903CD270965A10085E71F /* レオくんがきょうりゅうをやっつける戦隊ヒーローをあらってあげよう_トイキッズ.png in Resources */,
 				1B19041A2709AE470085E71F /* ドラえもん_のび太の部屋_リーメント_毎日が大冒険_:_Doraemon_Miniature_Nobita's_Room!_Re-ment.mp4 in Resources */,
 				1B1904162709AE470085E71F /* メルちゃん_お誕生日会_プレゼント_バースデイパーティー_:_Mell-chan_Birthday_Party.jpeg in Resources */,
@@ -1084,6 +1087,7 @@
 				1B1904302709AE470085E71F /* ハッピーセット_なりきりマクドナルド_大量_開封_ミニチュア_:_McDonalds_Happy_Meal_Toys_|_Miniature_McDonalds_Toy.jpeg in Resources */,
 				1B19045A2709AE620085E71F /* ひこうきではシートベルトをしよう！_-_子供向け安全教育_|_教育アニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */,
 				1B1904882709AFB50085E71F /* プラレール博2018in東京に行ってきた_Toy_Model_Trains_Museum_2018.mp4 in Resources */,
+				1BC317F32713187B003B66F5 /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */,
 				1B1904782709AE620085E71F /* ジュース屋さんごっこして遊ぼう！_-_色のうた_|_教育アニメ_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */,
 				BF0DE7292702837A0029CE17 /* レオくんがアンパンマンたちと遊ぶよ！ビーズの中からペロペロキャンディ！レオスマイル.mp4 in Resources */,
 				1B1904142709AE470085E71F /* ドラえもん_のび太の部屋_リーメント_毎日が大冒険_:_Doraemon_Miniature_Nobita's_Room!_Re-ment.jpeg in Resources */,
@@ -1098,9 +1102,9 @@
 				1B1904242709AE470085E71F /* リーメント_リラックマルーム_スッキリいい気分♪_バスルーム_:_Rilakkuma_Bathroom!_Miniature_Toy_Re-ment.jpeg in Resources */,
 				1B1904762709AE620085E71F /* ジュース屋さんごっこして遊ぼう！_-_色のうた_|_教育アニメ_|_子供の歌メドレー_|_童謡_|_Little_Angel_-_リトルエンジェル日本語.jpeg in Resources */,
 				1B19045E2709AE620085E71F /* カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語.mp4 in Resources */,
+				1BC317F627131923003B66F5 /* メルちゃん_ようちえんの先生_ほいくしさんセット__Mellchan_kindergarten_Teacher_Playset.jpeg in Resources */,
 				1B1904802709AE620085E71F /* 泣かないでベイビーしゅん_-_きもちの歌_|_教育アニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4 in Resources */,
 				1B1903CB270965A10085E71F /* レオくんがヘビのラジコンであそぶよ！逃げたヘビを追いかけよう！_トイキッズ.png in Resources */,
-				1B1904642709AE620085E71F /* ようこそ、ちびっこ洗車屋さんへ！_|_子供が喜ぶアニメ_|_ごっこ遊び_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語.mp4.jpeg in Resources */,
 				1BAB1E262703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
 				1B1903AA2709601F0085E71F /* レオくんがアンパンマンのどこでもすなばであそぶよ！こうえんにいってすなあそびをするよ！_トイキッズ.mp4 in Resources */,
 				1B19041E2709AE470085E71F /* メルちゃん_おままごと_納豆ごはん_お味噌汁_朝ごはんお料理__Mellchan_Natto_Fermented_Soybeans_Cooking_Toy_Playset.jpeg in Resources */,
@@ -1177,6 +1181,7 @@
 				1BC9605C270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */,
 				1BAB1E2D2703DBCB007FBD25 /* MusicMaker.swift in Sources */,
 				1BE6970827005BA7008E7E56 /* SummerPlayerViewConfig.swift in Sources */,
+				1BC317F827132510003B66F5 /* UIView+Animation.swift in Sources */,
 				1BE6972227005C0D008E7E56 /* Utills.swift in Sources */,
 				1B73FCDB2700539700B6BCE1 /* ContentView.swift in Sources */,
 				1BE6970127005B65008E7E56 /* DefaultConfig.swift in Sources */,
@@ -1220,6 +1225,7 @@
 				1BE6970927005BA7008E7E56 /* SummerPlayerViewConfig.swift in Sources */,
 				1BE6972327005C0D008E7E56 /* Utills.swift in Sources */,
 				1B73FCDC2700539700B6BCE1 /* ContentView.swift in Sources */,
+				1BC317F927132510003B66F5 /* UIView+Animation.swift in Sources */,
 				1BE6970227005B65008E7E56 /* DefaultConfig.swift in Sources */,
 				1BE6970F27005BCC008E7E56 /* PlayerControlViewDelegate.swift in Sources */,
 				1BE696FA27005A1D008E7E56 /* PlayerViewController.swift in Sources */,

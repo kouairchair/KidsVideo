@@ -48,7 +48,7 @@ struct ContentsMaker {
             // little Angel
             Content(fileName: "痛いっ～助けてママ_-_赤ちゃんが好きな歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語", fileExt: "mp4", totalTime: "3:19", channel: .littleAngel),
             Content(fileName: "ひとりでできるよ！_-_成長のうた_|_子供が喜ぶアニメ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語", fileExt: "mp4", totalTime: "3:21", channel: .littleAngel),
-            Content(fileName: "１０このカップケーキ_-_すうじの歌_|_数字を学ぶ_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語", fileExt: "mp4", totalTime: "3:33", channel: .littleAngel),
+            Content(fileName: "１０このカップケーキ_すうじの歌_数字を学ぶ_童謡と子供の歌_Little_Angel-リトルエンジェル日本語", fileExt: "mp4", totalTime: "3:33", channel: .littleAngel),
             Content(fileName: "あぶない！火事だ！_-_火と戦う消防隊！_-_消防士と消防車_|_乗り物の歌_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語", fileExt: "mp4", totalTime: "3:33", channel: .littleAngel),
             Content(fileName: "夏か冬どっちが最高？_-_夏のうた_冬のうた_|_はんたいことば_|_童謡と子供の歌_|_Little_Angel_-_リトルエンジェル日本語", fileExt: "mp4", totalTime: "4:16", channel: .littleAngel),
             Content(fileName: "カラフルな列車のおもちゃ___色を学ぼう__おもちゃで学ぶ__乗り物__教育アニメ__童謡と子供の歌__Little_Angel__リトルエンジェル日本語", fileExt: "mp4", totalTime: "3:41", channel: .littleAngel),

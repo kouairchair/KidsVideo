@@ -15,8 +15,6 @@ class PlayerControllView: UIView {
     
     var delegate: PlayerControlViewDelegate?
     
-    let longPressRecognizer = UILongPressGestureRecognizer()
-    
     lazy private var backButton = PlayerControlCommonButton(systemImageName: "arrow.left", size: CGSize(width: 70, height: 70))
     lazy private var previousButtonLeft = PlayerControlCommonButton(systemImageName: "backward.end.fill", size: CGSize(width: 70, height: 70))
     lazy private var previousButtonRight = PlayerControlCommonButton(systemImageName: "backward.end.fill", size: CGSize(width: 50, height: 50))

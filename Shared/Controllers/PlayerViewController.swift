@@ -25,7 +25,6 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate  {
         print("view.frame\(view.frame)")
         // Remark: 2021/10/5段階では、view.frameは画面全体のframeで、iPad 6thなら(0.0, 0.0, 1024.0, 768.0)
         summerPlayerView = SummerPlayerView(configuration: defaultConfig, theme: sampleTheme,targetView: view)
-        summerPlayerView?.playerControlView?.longPressRecognizer.delegate = self
         
         summerPlayerView?.delegate = self
         

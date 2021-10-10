@@ -5,9 +5,7 @@ import AVKit
 
 
 class ContentListView: UIView {
-    
-    private let itemSize = CGSize(width: 280, height: 140)
-    
+        
     lazy private var activityView: UIActivityIndicatorView = {
         let activity = UIActivityIndicatorView(style: .large)
         activity.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +38,7 @@ class ContentListView: UIView {
     
     private lazy var collectionView: UICollectionView =  {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = itemSize
+        layout.itemSize = Constants.contentListitemSize
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -84,7 +82,6 @@ class ContentListView: UIView {
         contents = items
         self.currentContent = currentItem
         collectionView.reloadData()
-        
     }
     
     func createOverlayViewWith(wholeViewWidth: CGFloat,configuration: SummerPlayerViewConfig, theme: SummerPlayerViewTheme) {
@@ -157,7 +154,7 @@ class ContentListView: UIView {
         
         contentListStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         contentListStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        contentListStackView.heightAnchor.constraint(equalToConstant: itemSize.height).isActive = true
+        contentListStackView.heightAnchor.constraint(equalToConstant: Constants.contentListitemSize.height).isActive = true
         contentListStackView.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -15).isActive = true
         
         contentListStackView.addSubview(collectionView)
@@ -173,34 +170,37 @@ extension ContentListView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = delegate?.playerCellForItem {
+            // TODO: ここ使われていない？
             return cell(collectionView, indexPath)
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? VideoCollectionViewCell else {
                 return UICollectionViewCell()
             }
             cell.setData(contents?[indexPath.row], theme: self.theme)
+            
+            if contents?[indexPath.row].fileName == currentContent?.fileName {
+                // TODO: 「次へ」「前へ」ボタンを何回も押したときに機能しない
+                cell.videoThumbnail.addRainbowBorderAnimation()
+            }
+            
             return cell
         }
     }
+    
     
 }
 
 extension ContentListView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         delegate?.didSelectItem(indexPath.row)
-        if let item = contents?[indexPath.row], let url = URL(string: item.fileName) {
+        if let item = contents?[indexPath.row], let url = item.getUrl() {
             delegate?.didLoadVideo(url)
             delegate?.currentVideoIndex(indexPath.row,url)
-            
+            // TODO: 「次へ」「前へ」ボタンを押したときに機能しない
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
-  
-    // TODO:不規則なマージンを整えたいが...
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-//    }
     
 }
 

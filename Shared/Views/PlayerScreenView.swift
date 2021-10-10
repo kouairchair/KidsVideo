@@ -129,12 +129,14 @@ class PlayerScreenView: UIView {
     func videoDidChange(_ time: CMTime) {
         playerTimeLabel.text = time.description
         //TODO: need to convert CMTime to UISlider.value
-        //playerSlider.value = time.asDouble
         if let repeatSeakTime = repeatSeakTime,
             time > repeatSeakTime {
             resetPlayerUI()
             delegate?.seekToTime(CMTime.zero)
             delegate?.didChangeSliderValue(CMTime.zero)
+        }
+        if let totalDuration = delegate?.totalDuration {
+            playerSlider.value = time.asFloat / totalDuration.asFloat
         }
     }
     
