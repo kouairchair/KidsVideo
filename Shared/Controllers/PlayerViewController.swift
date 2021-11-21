@@ -17,14 +17,14 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate  {
     }
     var selectedChannel: Channel?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-                
-        let sampleTheme = ThemeMaker.getTheme()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
         
-        print("view.frame\(view.frame)")
-        // Remark: 2021/10/5段階では、view.frameは画面全体のframeで、iPad 6thなら(0.0, 0.0, 1024.0, 768.0)
-        summerPlayerView = SummerPlayerView(configuration: defaultConfig, theme: sampleTheme,targetView: view)
+        let sampleTheme = ThemeMaker.getTheme()
+        print("testtest view.frame:\(view.frame)")
+        // Remark: 2021/10/5段階では、view.frameは画面全体のframeで、iPad 6thなら(0.0, 0.0, 1024.0, 768.0), 34インチモニタ全画面では(0.0, 0.0, 4468.0, 1871.0)
+        summerPlayerView = SummerPlayerView(configuration: defaultConfig, theme: sampleTheme, targetView: view)
         
         summerPlayerView?.delegate = self
         
@@ -35,11 +35,6 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate  {
         view.addSubview(summerPlayerView!)
 
         summerPlayerView?.pinEdges(targetView: view)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
     }
     
     override var prefersStatusBarHidden: Bool {

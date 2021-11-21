@@ -14,7 +14,7 @@ struct ContentsMaker {
         let contents = [
             // Reo x Anpanman
             Content(fileName: "おでかけ_福岡アンパンマンこどもミュージアムアンパンマン顔ボールで遊ぼう_トイキッズ", fileExt: "mp4", totalTime: "14:27", channel: .reo_anpanman),
-            Content(fileName: "レオくんがアンパンマンのおしゃべりすいはんきと元気100ばい和食セットであそぶよ！レオスマイル", fileExt: "mp4", totalTime: "11:30", channel: .reo_anpanman),
+            Content(fileName: " .       レオくんがアンパンマンのおしゃべりすいはんきと元気100ばい和食セットであそぶよ！レオスマイル", fileExt: "mp4", totalTime: "11:30", channel: .reo_anpanman),
             Content(fileName: "レオくんがこうえんでアンパンマンのカプセルをさがすよ！_トイキッズ", fileExt: "mp4", totalTime: "11:25", channel: .reo_anpanman),
             Content(fileName: "レオくんがコンビニごっこをしてあそぶよ！コキンちゃんがお客さん！_レオスマイル", fileExt: "mp4", totalTime: "14:38", channel: .reo_anpanman),
             Content(fileName: "レオくんがマックイーンでこうえんにいくよ！アンパンマンたちの顔をさがそう！_トイキッズ", fileExt: "mp4", totalTime: "13:41", channel: .reo_anpanman),
@@ -28,6 +28,7 @@ struct ContentsMaker {
             Content(fileName: "レオくんがヘビのラジコンであそぶよ！逃げたヘビを追いかけよう！_トイキッズ", fileExt: "mp4", totalTime: "10:32", channel: .reo_anpanman),
             Content(fileName: "レオくんが公園でこんちゅうをつかまえるよ！たくさん昆虫つかまえられるかな？_トイキッズ", fileExt: "mp4", totalTime: "14:04", channel: .reo_anpanman),
             // Suzukawa Ayako
+            Content(fileName: "レゴシティ_ハイスピードトレインであそんでみた", fileExt: "mp4", totalTime: "12:13", channel: .suzukawaAyako),
             Content(fileName: "プラレール博2018in東京に行ってきた_Toy_Model_Trains_Museum_2018", fileExt: "mp4", totalTime: "12:15", channel: .suzukawaAyako),
             Content(fileName: "自作の踏切を電装化してみた", fileExt: "mp4", totalTime: "16:49", channel: .suzukawaAyako),
             Content(fileName: "みずのくにのきかんしゃトーマス:_Thomas_in_water_world", fileExt: "mp4", totalTime: "6:06", channel: .suzukawaAyako),

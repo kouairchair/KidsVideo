@@ -11,12 +11,15 @@ import UIKit
 import Foundation
 class Utills {
      
-    public static func getWholeViewRect(_ viewRect:CGRect) -> CGRect? {
+    public static func getWholeViewRect(_ viewRect:CGRect) -> CGRect? {        
         let xAxis = viewRect.size.width / 4 / 2
         let yAxis: CGFloat = 0.0
         let width = viewRect.size.width / 4 * 3
         let height = viewRect.size.height * 0.75
         
+        // Remark: 2021/11/21段階では、これは動画と再生バー等を含むviewのframeで、
+        //         iPad 6thでは(128.0, 0.0, 768.0, 576.0)（画面全体は(0.0, 0.0, 1024.0, 768.0)）、
+        //         34インチモニタ全画面では(558.5, 0.0, 3351.0, 1403.25)（画面全体は(0.0, 0.0, 4468.0, 1871.0)）
         return CGRect(x: xAxis, y: yAxis, width: width, height: height)
     }
     

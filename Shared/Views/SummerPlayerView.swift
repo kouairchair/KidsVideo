@@ -151,10 +151,11 @@ public class SummerPlayerView: UIView {
     }
     
     private func setupPlayerScreenView(_ standardRect: CGRect?) {
-        self.playerScreenView = PlayerScreenView(frame: CGRect(x: standardRect!.origin.x, y: 0, width: standardRect!.width, height: standardRect!.height))
-        self.playerScreenView.applyTheme(self.theme)
-        self.playerScreenView.delegate = self
-        addSubview(self.playerScreenView)
+        playerScreenView = PlayerScreenView(frame: CGRect(x: standardRect!.origin.x, y: 0, width: standardRect!.width, height: standardRect!.height))
+        print("testtest playerScreenView.frame:\(playerScreenView.frame)")
+        playerScreenView.applyTheme(self.theme)
+        playerScreenView.delegate = self
+        addSubview(playerScreenView)
     }
     
     private func setupPlayerControllView(_ wholeRect: CGRect?) {

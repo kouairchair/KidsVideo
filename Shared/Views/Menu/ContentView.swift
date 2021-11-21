@@ -14,6 +14,7 @@ struct ContentView: View {
     private var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 250, maximum: 280), spacing: CGFloat(30.0) ), count: 3)
     @State var isAnimating: Bool = false
     @State var BDPlayer: AVAudioPlayer?
+    @State private var currentAlphaValue: Double = 3
       
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -51,12 +52,23 @@ struct ContentView: View {
                         isAnimating = true
                     }
                 }
+#if targetEnvironment(macCatalyst)
+                // macOS環境でのみアプリ全体の明るさを調整できるようにする
+                Spacer()
+                Slider(value: $currentAlphaValue,
+                       in: 1...10,
+                       onEditingChanged: { _ in
+                           changeBrightness()
+                       })
+                    .frame(width: 500, alignment: .center)
+#endif
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
         .onAppear {
             do {
+                changeBrightness()
                 try self.BDPlayer = AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!) /// make the audio player
                 //self.BDPlayer?.volume = 5
                 self.BDPlayer?.play()
@@ -70,58 +82,16 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
             self.BDPlayer?.play()
         }
-//            List {
-//                ForEach(items) { item in
-//                    NavigationLink(destination: Text("Item at \(item.timestamp!, formatter: itemFormatter)")) {
-//                        Text(item.timestamp!, formatter: itemFormatter)
-//                    }
-//                }
-//                .onDelete(perform: deleteItems)
-//            }
-//            .toolbar {
-//#if os(iOS)
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
-//#endif
-//                ToolbarItem {
-//                    Button(action: addItem) {
-//                        Label("Add Item", systemImage: "plus")
-//                    }
-//                }
-//            }
-//            Text("Select an item")
-//        }
-
-//    private func addItem() {
-//        withAnimation {
-//            let newItem = Item(context: viewContext)
-//            newItem.timestamp = Date()
-//
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
-//    }
-//
-//    private func deleteItems(offsets: IndexSet) {
-//        withAnimation {
-//            offsets.map { items[$0] }.forEach(viewContext.delete)
-//
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
+    }
+    
+    private func changeBrightness() {
+        guard let keyWindow = UIApplication.shared.connectedScenes
+                .filter({$0.activationState == .foregroundActive})
+                .map({$0 as? UIWindowScene})
+                .compactMap({$0})
+                .first?.windows
+                .filter({$0.isKeyWindow}).first else { fatalError("failed to get keyWindow") }
+        keyWindow.alpha = currentAlphaValue * 0.1
     }
 }
 //
