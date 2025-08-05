@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import AVFoundation
 
 class PlayerControllView: UIView {
     
@@ -20,7 +21,16 @@ class PlayerControllView: UIView {
     lazy private var previousButtonRight = PlayerControlCommonButton(systemImageName: "backward.end.fill", size: CGSize(width: 50, height: 50))
     lazy private var repeatButton = PlayerControlCommonButton(systemImageName: "repeat", size: CGSize(width: 70, height: 70))
     lazy private var nextButton = PlayerControlCommonButton(systemImageName: "forward.end.fill", size: CGSize(width: 70, height: 70))
-    lazy private var airplayButton = PlayerControlCommonButton(systemImageName: "airplayaudio", size: CGSize(width: 30, height: 30))
+    
+    // AVRoutePickerViewを使用したAirPlayボタン
+    lazy private var airplayRoutePicker: AVRoutePickerView = {
+        let routePicker = AVRoutePickerView()
+        routePicker.translatesAutoresizingMaskIntoConstraints = false
+        routePicker.tintColor = .white
+        routePicker.activeTintColor = .white
+        return routePicker
+    }()
+    
     lazy private var repeatTimeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +54,7 @@ class PlayerControllView: UIView {
         addSubview(previousButtonLeft)
         addSubview(previousButtonRight)
         addSubview(repeatButton)
-        addSubview(airplayButton)
+        addSubview(airplayRoutePicker)
         addSubview(nextButton)
         addSubview(repeatTimeLabel)
         backButton.addTarget(self, action: #selector(self.clickBackButton(_:)), for: .touchUpInside)
@@ -54,7 +64,6 @@ class PlayerControllView: UIView {
         repeatButton.addTarget(self, action: #selector(self.clickRepeatButton(_:)), for: .touchUpInside)
         repeatButton.tintColor = .red
         nextButton.addTarget(self, action: #selector(self.clickNextButton(_:)), for: .touchUpInside)
-        airplayButton.addTarget(self, action: #selector(self.clickAirPlayButton(_:)), for: .touchUpInside)
         
         setupLayout()
     }
@@ -65,8 +74,10 @@ class PlayerControllView: UIView {
             backButton.topAnchor.constraint(equalTo: self.topAnchor , constant: 15),
             backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor , constant: 30),
             
-            airplayButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
-            airplayButton.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -50),
+            airplayRoutePicker.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
+            airplayRoutePicker.trailingAnchor.constraint(equalTo: self.trailingAnchor , constant: -50),
+            airplayRoutePicker.widthAnchor.constraint(equalToConstant: 30),
+            airplayRoutePicker.heightAnchor.constraint(equalToConstant: 30),
             
             previousButtonLeft.bottomAnchor.constraint(equalTo: self.bottomAnchor ,constant: 0),
             previousButtonLeft.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
@@ -104,12 +115,17 @@ class PlayerControllView: UIView {
         repeatTimeLabel.text = repeatTime?.description ?? ""
     }
     
-    @objc func clickAirPlayButton(_ sender: UIButton) {
-        delegate?.didPressedAirPlayButton()
-    }
-    
     @objc func clickNextButton(_ sender: UIButton) {
         delegate?.didPressedNextButton()
+    }
+    
+    // MARK: - AirPlay Support
+    func setAirPlayRoutePickerDelegate(_ delegate: AVRoutePickerViewDelegate?) {
+        airplayRoutePicker.delegate = delegate
+    }
+    
+    func getAirPlayRoutePicker() -> AVRoutePickerView {
+        return airplayRoutePicker
     }
     
 }

@@ -11,5 +11,12 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>AirPlay機能を使用するために、ローカルネットワークへのアクセスが必要です。</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_airplay._tcp</string>
+		<string>_raop._tcp</string>
+	</array>
 </dict>
 </plist>

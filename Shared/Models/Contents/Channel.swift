@@ -8,5 +8,5 @@
 import Foundation
 
 public enum Channel {
-    case reo_anpanman, reo, suzukawaAyako, meruchan, littleAngel
+    case shinkalion, minecraft
 }

@@ -7,8 +7,9 @@
 
 import UIKit
 import AVKit
+import AVFoundation
 
-class PlayerViewController: UIViewController, UIGestureRecognizerDelegate  {
+class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRoutePickerViewDelegate  {
     
     let defaultConfig = DefaultConfig()
     var summerPlayerView: SummerPlayerView?
@@ -35,10 +36,26 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate  {
         view.addSubview(summerPlayerView!)
 
         summerPlayerView?.pinEdges(targetView: view)
+        
+        // AirPlay機能の設定
+        setupAirPlay()
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    // MARK: - AirPlay Setup
+    private func setupAirPlay() {
+        // AVRoutePickerViewのデリゲートを設定
+        if let summerPlayerView = summerPlayerView {
+            summerPlayerView.setupAirPlayRoutePickerDelegate(self)
+        }
+    }
+    
+    private func setupAirPlayRoutePicker() {
+        // SummerPlayerViewからAVRoutePickerViewにアクセスしてデリゲートを設定
+        // この実装はSummerPlayerViewの構造に依存します
     }
 }
 
@@ -79,7 +96,8 @@ extension PlayerViewController : SummerPlayerViewDelegate {
     }
     
     func didPressAirPlayButton() {
-        
+        // AVRoutePickerViewが自動的にAirPlay機能を処理するため、
+        // このメソッドは空のままにしておきます
     }
     
     func didPressMoreButton() {
@@ -101,6 +119,19 @@ extension PlayerViewController : SummerPlayerViewDelegate {
         
     }
     
+}
+
+// MARK: - AVRoutePickerViewDelegate
+extension PlayerViewController {
+    func routePickerViewDidEndPresentingRoutes(_ routePickerView: AVRoutePickerView) {
+        // AirPlayルート選択が終了した時の処理
+        print("AirPlay route selection ended")
+    }
+    
+    func routePickerViewWillBeginPresentingRoutes(_ routePickerView: AVRoutePickerView) {
+        // AirPlayルート選択が開始される時の処理
+        print("AirPlay route selection will begin")
+    }
 }
 
 extension PlayerViewController {

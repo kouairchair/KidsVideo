@@ -85,13 +85,25 @@ struct ContentView: View {
     }
     
     private func changeBrightness() {
-        guard let keyWindow = UIApplication.shared.connectedScenes
+        let keyWindow: UIWindow?
+        
+        if #available(iOS 15.0, *) {
+            keyWindow = UIApplication.shared.connectedScenes
                 .filter({$0.activationState == .foregroundActive})
                 .map({$0 as? UIWindowScene})
                 .compactMap({$0})
-                .first?.windows
-                .filter({$0.isKeyWindow}).first else { fatalError("failed to get keyWindow") }
-        keyWindow.alpha = currentAlphaValue * 0.1
+                .first?.keyWindow
+        } else {
+            // Fallback for older iOS versions
+            keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
+        }
+        
+        guard let window = keyWindow else {
+            print("Warning: Could not get key window, skipping brightness adjustment")
+            return
+        }
+        
+        window.alpha = currentAlphaValue * 0.1
     }
 }
 //

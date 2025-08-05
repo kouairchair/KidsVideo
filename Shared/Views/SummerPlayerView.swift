@@ -165,6 +165,22 @@ public class SummerPlayerView: UIView {
         addSubview(self.playerControlView!)
     }
     
+    // MARK: - AirPlay Support
+    func setupAirPlayRoutePickerDelegate(_ delegate: AVRoutePickerViewDelegate?) {
+        // PlayerControlViewからAVRoutePickerViewにアクセスしてデリゲートを設定
+        if let playerControlView = self.playerControlView {
+            playerControlView.setAirPlayRoutePickerDelegate(delegate)
+        }
+    }
+    
+    func getAirPlayRoutePicker() -> AVRoutePickerView? {
+        // PlayerControlViewからAVRoutePickerViewを取得
+        if let playerControlView = self.playerControlView {
+            return playerControlView.getAirPlayRoutePicker()
+        }
+        return nil
+    }
+    
     private func setupContentsListView(_ wholeRect: CGRect?) {
         contentsListView.createOverlayViewWith(wholeViewWidth: wholeRect!.size.width,configuration: configuration, theme: self.theme)
         contentsListView.delegate = self
