@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 @main
 struct KidsVideoApp: App {
@@ -15,6 +16,14 @@ struct KidsVideoApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didReceiveMemoryWarningNotification)) { _ in
+                    // メモリ警告時にサムネイルキャッシュをクリア
+                    VideoCollectionViewCell.clearThumbnailCache()
+                }
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in
+                    // バックグラウンド移行時にサムネイルキャッシュをクリア
+                    VideoCollectionViewCell.clearThumbnailCache()
+                }
         }
     }
 }
