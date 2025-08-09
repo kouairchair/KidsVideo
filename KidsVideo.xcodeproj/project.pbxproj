@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -57,6 +57,13 @@
 		C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */; };
 		C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9A2E424E720003530B /* シンカリオン.jpeg */; };
 		C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9B2E424E720003530B /* マイクラ.jpeg */; };
+		C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */; };
+		C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */; };
+		C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */; };
+		C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */; };
+		C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CE2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 */; };
+		C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CF2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 */; };
+		C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C451F4D32E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,29 +130,30 @@
 		C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4"; sourceTree = "<group>"; };
 		C4348F9A2E424E720003530B /* シンカリオン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "シンカリオン.jpeg"; sourceTree = "<group>"; };
 		C4348F9B2E424E720003530B /* マイクラ.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マイクラ.jpeg"; sourceTree = "<group>"; };
+		C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KidsVideo--iOS--Info.plist"; sourceTree = "<group>"; };
+		C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
+		C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KidsVideo_(iOS).entitlements"; sourceTree = "<group>"; };
+		C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ジョブレイバー.jpeg"; sourceTree = "<group>"; };
+		C451F4CE2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4"; sourceTree = "<group>"; };
+		C451F4CF2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4"; sourceTree = "<group>"; };
+		C451F4D32E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B73FCB32700539700B6BCE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B73FCC02700539700B6BCE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B73FCCC2700539700B6BCE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -164,6 +172,8 @@
 				1B73FCAB2700539500B6BCE1 /* Shared */,
 				1B73FCC62700539700B6BCE1 /* Tests iOS */,
 				1B73FCB72700539700B6BCE1 /* Products */,
+				C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */,
+				C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				1B78A4AC2703689800B2A670 /* PenguinAttack.ttf */,
+				C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -224,6 +235,7 @@
 			children = (
 				C4348F912E424C400003530B /* シンカリオン */,
 				C4348F952E424C400003530B /* マイクラ */,
+				C451F4D02E44C89D00574C4F /* ジョブレイバー */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -317,6 +329,7 @@
 				1B78A4AB2703689800B2A670 /* Fonts */,
 				C4348F9A2E424E720003530B /* シンカリオン.jpeg */,
 				C4348F9B2E424E720003530B /* マイクラ.jpeg */,
+				C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -353,6 +366,16 @@
 			path = "マイクラ";
 			sourceTree = "<group>";
 		};
+		C451F4D02E44C89D00574C4F /* ジョブレイバー */ = {
+			isa = PBXGroup;
+			children = (
+				C451F4CE2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 */,
+				C451F4CF2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 */,
+				C451F4D32E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg */,
+			);
+			path = "ジョブレイバー";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,8 +388,6 @@
 				1B73FCB42700539700B6BCE1 /* Resources */,
 			);
 			buildRules = (
-			);
-			dependencies = (
 			);
 			name = "KidsVideo (iOS)";
 			productName = "KidsVideo (iOS)";
@@ -401,8 +422,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = "Tests macOS";
 			productName = "Tests macOS";
 			productReference = 1B73FCCF2700539700B6BCE1 /* Tests macOS.xctest */;
@@ -432,7 +451,6 @@
 				};
 			};
 			buildConfigurationList = 1B73FCAA2700539500B6BCE1 /* Build configuration list for PBXProject "KidsVideo" */;
-			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -440,6 +458,7 @@
 				Base,
 			);
 			mainGroup = 1B73FCA62700539500B6BCE1;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = 1B73FCB72700539700B6BCE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -454,42 +473,42 @@
 /* Begin PBXResourcesBuildPhase section */
 		1B73FCB42700539700B6BCE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
+				C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */,
 				C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */,
+				C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */,
 				C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */,
+				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,
 				1B78A4AD2703689800B2A670 /* PenguinAttack.ttf in Resources */,
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
+				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
 				1BAB1E252703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
 				1BAB1E232703DAC2007FBD25 /* baby-game-mane-8780.mp3 in Resources */,
+				C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */,
+				C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */,
 				C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */,
 				C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */,
+				C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */,
 				C4348F982E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 in Resources */,
 				C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B73FCC12700539700B6BCE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B73FCCD2700539700B6BCE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B73FCB22700539700B6BCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				1BE6972E27005C19008E7E56 /* VideoCollectionViewCell.swift in Sources */,
 				1BAB1E322704183C007FBD25 /* Channel.swift in Sources */,
@@ -529,23 +548,18 @@
 				1BE6973427005CA6008E7E56 /* SampleThemes.swift in Sources */,
 				1BE6972827005C19008E7E56 /* PlayerControlView.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B73FCBF2700539700B6BCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				1B73FCCA2700539700B6BCE1 /* Tests_iOSLaunchTests.swift in Sources */,
 				1B73FCC82700539700B6BCE1 /* Tests_iOS.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B73FCCB2700539700B6BCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -558,7 +572,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1B73FCE12700539700B6BCE1 /* Debug */ = {
+		1B73FCE12700539700B6BCE1 /* Debug configuration for PBXProject "KidsVideo" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -614,10 +628,11 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "";
 			};
 			name = Debug;
 		};
-		1B73FCE22700539700B6BCE1 /* Release */ = {
+		1B73FCE22700539700B6BCE1 /* Release configuration for PBXProject "KidsVideo" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -666,22 +681,24 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "";
 			};
 			name = Release;
 		};
-		1B73FCE42700539700B6BCE1 /* Debug */ = {
+		1B73FCE42700539700B6BCE1 /* Debug configuration for PBXNativeTarget "KidsVideo (iOS)" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "KidsVideo (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N9L2U78Y64;
+				DEVELOPMENT_TEAM = NJAK8X6XT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KidsVideo--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AirPlay機能を使用するために、ローカルネットワークへのアクセスが必要です。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -692,23 +709,23 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.headspinnerd.Kids-Video";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toranomon.KidsVideo;
 				PRODUCT_NAME = KidsVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1B73FCE52700539700B6BCE1 /* Release */ = {
+		1B73FCE52700539700B6BCE1 /* Release configuration for PBXNativeTarget "KidsVideo (iOS)" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "KidsVideo (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -716,6 +733,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KidsVideo--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AirPlay機能を使用するために、ローカルネットワークへのアクセスが必要です。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -733,12 +751,12 @@
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		1B73FCEA2700539700B6BCE1 /* Debug */ = {
+		1B73FCEA2700539700B6BCE1 /* Debug configuration for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -763,7 +781,7 @@
 			};
 			name = Debug;
 		};
-		1B73FCEB2700539700B6BCE1 /* Release */ = {
+		1B73FCEB2700539700B6BCE1 /* Release configuration for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -789,7 +807,7 @@
 			};
 			name = Release;
 		};
-		1B73FCED2700539700B6BCE1 /* Debug */ = {
+		1B73FCED2700539700B6BCE1 /* Debug configuration for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -814,7 +832,7 @@
 			};
 			name = Debug;
 		};
-		1B73FCEE2700539700B6BCE1 /* Release */ = {
+		1B73FCEE2700539700B6BCE1 /* Release configuration for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -845,37 +863,33 @@
 		1B73FCAA2700539500B6BCE1 /* Build configuration list for PBXProject "KidsVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B73FCE12700539700B6BCE1 /* Debug */,
-				1B73FCE22700539700B6BCE1 /* Release */,
+				1B73FCE12700539700B6BCE1 /* Debug configuration for PBXProject "KidsVideo" */,
+				1B73FCE22700539700B6BCE1 /* Release configuration for PBXProject "KidsVideo" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		1B73FCE32700539700B6BCE1 /* Build configuration list for PBXNativeTarget "KidsVideo (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B73FCE42700539700B6BCE1 /* Debug */,
-				1B73FCE52700539700B6BCE1 /* Release */,
+				1B73FCE42700539700B6BCE1 /* Debug configuration for PBXNativeTarget "KidsVideo (iOS)" */,
+				1B73FCE52700539700B6BCE1 /* Release configuration for PBXNativeTarget "KidsVideo (iOS)" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		1B73FCE92700539700B6BCE1 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B73FCEA2700539700B6BCE1 /* Debug */,
-				1B73FCEB2700539700B6BCE1 /* Release */,
+				1B73FCEA2700539700B6BCE1 /* Debug configuration for PBXNativeTarget "Tests iOS" */,
+				1B73FCEB2700539700B6BCE1 /* Release configuration for PBXNativeTarget "Tests iOS" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		1B73FCEC2700539700B6BCE1 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B73FCED2700539700B6BCE1 /* Debug */,
-				1B73FCEE2700539700B6BCE1 /* Release */,
+				1B73FCED2700539700B6BCE1 /* Debug configuration for PBXNativeTarget "Tests macOS" */,
+				1B73FCEE2700539700B6BCE1 /* Release configuration for PBXNativeTarget "Tests macOS" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

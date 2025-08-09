@@ -25,50 +25,47 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
-                LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                    ForEach(menuImages) { menuImage in
-                        if let image = menuImage.image {
-                            VStack {
-                                NavigationLink(destination: PlayerViewControllerWrapper(selectedChannel:menuImage.channel ,action: {
-                                    self.BDPlayer?.stop()
-                                })) {
-                                    Image(uiImage: image)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 280, height: 280)
-                                        .clipShape(Circle())
-                                        .wiggle(isActive: isAnimating)
-                                }
-                                
-                                Text(menuImage.fileName)
-                                //TOOD: custom fontが適用されない！
-                                    .font(.custom("PenguinAttack", size: 22))
-                            }
-
+            ZStack {
+                // Background image
+                Image("menu_background_image_ryoma")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .opacity(0.2)
+                
+                // Content
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
+                        ForEach(menuImages) { menuImage in
+                            MenuCellView(menuImage: menuImage, isAnimating: isAnimating, onNavigate: {
+                                self.BDPlayer?.stop()
+                            })
                         }
                     }
                     .onAppear {
                         isAnimating = true
                     }
-                }
 #if targetEnvironment(macCatalyst)
-                // macOS環境でのみアプリ全体の明るさを調整できるようにする
-                Spacer()
-                Slider(value: $currentAlphaValue,
-                       in: 1...10,
-                       onEditingChanged: { _ in
-                           changeBrightness()
-                       })
-                    .frame(width: 500, alignment: .center)
+                    // macOS環境でのみアプリ全体の明るさを調整できるようにする
+                    Spacer()
+                    Slider(value: $currentAlphaValue,
+                           in: 1...10,
+                           onEditingChanged: { _ in
+                               changeBrightness()
+                           })
+                        .frame(width: 500, alignment: .center)
 #endif
+                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
         .onAppear {
             do {
-                changeBrightness()
+                // Delaying brightness change slightly to ensure the window is available.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    changeBrightness()
+                }
                 try self.BDPlayer = AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!) /// make the audio player
                 //self.BDPlayer?.volume = 5
                 self.BDPlayer?.play()
@@ -104,6 +101,30 @@ struct ContentView: View {
         }
         
         window.alpha = currentAlphaValue * 0.1
+    }
+}
+
+struct MenuCellView: View {
+    let menuImage: MenuImage
+    let isAnimating: Bool
+    var onNavigate: () -> Void
+
+    var body: some View {
+        if let image = menuImage.image {
+            VStack {
+                NavigationLink(destination: PlayerViewControllerWrapper(selectedChannel: menuImage.channel, action: onNavigate)) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 280, height: 280)
+                        .clipShape(Circle())
+                        .wiggle(isActive: isAnimating)
+                }
+                
+                Text(menuImage.fileName)
+                    .font(.custom("KiwiMaru-Light", size: 22))
+            }
+        }
     }
 }
 //

@@ -98,7 +98,7 @@ class VideoCollectionViewCell: UICollectionViewCell {
         totalTimeLabel.text = playListItem.totalTime
         
         // まず画像ファイルを探す
-        if let path = Bundle.main.path(forResource: playListItem.fileName, ofType:"png") ?? Bundle.main.path(forResource: playListItem.fileName, ofType:"jpeg") {
+        if let path = Bundle.main.path(forResource: playListItem.fileName, ofType:"png") ?? Bundle.main.path(forResource: playListItem.fileName, ofType:"jpeg") ?? Bundle.main.path(forResource: playListItem.fileName, ofType:"jpg") {
             if let image = UIImage(contentsOfFile: path) {
                 videoThumbnail.image = image
             }

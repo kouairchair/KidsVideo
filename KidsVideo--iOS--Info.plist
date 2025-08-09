@@ -2,21 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_airplay._tcp</string>
+		<string>_raop._tcp</string>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Fonts/PenguinAttack.ttf</string>
+		<string>PenguinAttack.ttf</string>
+		<string>KiwiMaru-Light.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>AirPlay機能を使用するために、ローカルネットワークへのアクセスが必要です。</string>
-	<key>NSBonjourServices</key>
+	<key>UIBackgroundModes</key>
 	<array>
-		<string>_airplay._tcp</string>
-		<string>_raop._tcp</string>
+		<string>audio</string>
 	</array>
 </dict>
 </plist>

@@ -23,8 +23,9 @@ touch $workFile
 ls $workFile
 cat /dev/null > $workFile
 
-process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/シンカリオン" "shinkalion"
-process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/マイクラ" "minecraft"
+# process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/シンカリオン" "shinkalion"
+# process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/マイクラ" "minecraft"
+process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/ジョブレイバー" "jobraver"
 
 cat $workFile | pbcopy
 rm -rf $workFile
