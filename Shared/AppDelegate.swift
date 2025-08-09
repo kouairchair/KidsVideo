@@ -16,18 +16,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     // MARK: UISceneSession Lifecycle
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         
+        print("Connecting scene with role: \(connectingSceneSession.role.rawValue)")
+        
         let sceneConfiguration: UISceneConfiguration
         
         if connectingSceneSession.role == .windowExternalDisplay {
             // 外部ディスプレイ用のシーン設定
+            print("✅ Configuring for external display.")
             sceneConfiguration = UISceneConfiguration(name: "External Display", sessionRole: connectingSceneSession.role)
             sceneConfiguration.delegateClass = ExternalSceneDelegate.self
-            print("Configuring external display scene")
         } else {
             // メインディスプレイ用のシーン設定
+            print("✅ Configuring for main display.")
             sceneConfiguration = UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
             sceneConfiguration.delegateClass = SceneDelegate.self
-            print("Configuring main display scene")
         }
         
         return sceneConfiguration

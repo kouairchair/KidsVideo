@@ -79,6 +79,14 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
             self.BDPlayer?.play()
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            // Stop music when app goes to background or player becomes active
+            self.BDPlayer?.pause()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("PlayerDidStartNotification"))) { _ in
+            // Stop menu music when video player starts
+            self.BDPlayer?.stop()
+        }
     }
     
     private func changeBrightness() {

@@ -62,7 +62,7 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
     private func handleExternalDisplayIfConnected() {
         if ExternalDisplayManager.shared.isExternalDisplayConnected {
             // 外部ディスプレイのコンテンツを更新
-            ExternalDisplayManager.shared.updateExternalDisplayContent()
+            ExternalDisplayManager.shared.syncPlayerToExternalDisplay()
             
             // メインディスプレイではコントロールを表示し、動画は外部ディスプレイに表示
             summerPlayerView?.configureForExternalDisplay()
@@ -87,7 +87,8 @@ extension PlayerViewController : SummerPlayerViewDelegate {
     }
     
     func didStartVideo() {
-        
+        // Post notification to stop menu background music
+        NotificationCenter.default.post(name: Notification.Name("PlayerDidStartNotification"), object: nil)
     }
     
     func didChangeSliderValue(_ seekTime: CMTime) {

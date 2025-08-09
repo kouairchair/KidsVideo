@@ -25,7 +25,8 @@ cat /dev/null > $workFile
 
 # process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/シンカリオン" "shinkalion"
 # process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/マイクラ" "minecraft"
-process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/ジョブレイバー" "jobraver"
+#process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/ジョブレイバー" "jobraver"
+process_videos "$HOME/Projects/KidsVideo/Shared/Resources/Movie/恐竜" "dinasaur"
 
 cat $workFile | pbcopy
 rm -rf $workFile

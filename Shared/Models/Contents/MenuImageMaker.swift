@@ -13,7 +13,8 @@ struct MenuImageMaker {
         let menuImages = [
             MenuImage(fileName: "マイクラ", fileExt: "jpeg", channel: .minecraft),
             MenuImage(fileName: "シンカリオン", fileExt: "jpeg", channel: .shinkalion),
-            MenuImage(fileName: "ジョブレイバー", fileExt: "jpeg", channel: .jobraver)
+            MenuImage(fileName: "ジョブレイバー", fileExt: "jpeg", channel: .jobraver),
+            MenuImage(fileName: "恐竜", fileExt: "jpeg", channel: .dinasaur),
         ]
         
         return menuImages

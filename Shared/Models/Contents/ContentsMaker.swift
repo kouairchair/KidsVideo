@@ -18,7 +18,7 @@ struct ContentsMaker {
             Content(fileName: "ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5", fileExt: "mp4", totalTime: "23:30", channel: .minecraft),
             Content(fileName: "【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】", fileExt: "mp4", totalTime: "12:00", channel: .jobraver),
             Content(fileName: "【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】", fileExt: "mp4", totalTime: "12:00", channel: .jobraver),
-
+            Content(fileName: "学研_恐竜", fileExt: "mp4", totalTime: "54:25", channel: .dinasaur),
         ]
         
         return contents

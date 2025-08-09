@@ -1,11 +1,5 @@
-//
-//  SceneDelegate.swift
-//  KidsVideo
-//
-//  Created by AI Assistant on 2025/08/09.
-//
-
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -14,16 +8,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        // メインシーンの場合
-        if session.role == .windowApplication {
-            // 既存のメインウィンドウ設定はそのまま維持
-            return
-        }
+        print("✅ SceneDelegate: willConnectTo (Main Display)")
+        
+        // SwiftUIのContentViewを作成
+        let contentView = ContentView()
+            .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+        
+        // メインウィンドウを作成
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UIHostingController(rootView: contentView)
+        self.window = window
+        window.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
-        // 外部ディスプレイが切断された時の処理
-        ExternalDisplayManager.shared.unregisterMainPlayer()
+        print("✅ SceneDelegate: sceneDidDisconnect (Main Display)")
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -40,5 +39,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
+        PersistenceController.shared.save()
     }
 }

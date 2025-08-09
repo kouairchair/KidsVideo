@@ -187,7 +187,7 @@ public class SummerPlayerView: UIView {
             playerLayer?.isHidden = true
             
             // 外部ディスプレイのコンテンツを更新
-            ExternalDisplayManager.shared.updateExternalDisplayContent()
+            ExternalDisplayManager.shared.syncPlayerToExternalDisplay()
             
             print("SummerPlayerView configured for external display")
         } else {

@@ -62,6 +62,8 @@
 		C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB12E4797F700A80463 /* AppDelegate.swift */; };
 		C43D5EB42E47981B00A80463 /* ExternalSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */; };
 		C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB52E47983D00A80463 /* SceneDelegate.swift */; };
+		C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */; };
+		C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */; };
 		C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */; };
 		C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */; };
 		C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */; };
@@ -140,6 +142,8 @@
 		C43D5EB12E4797F700A80463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSceneDelegate.swift; sourceTree = "<group>"; };
 		C43D5EB52E47983D00A80463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "恐竜.jpeg"; sourceTree = "<group>"; };
+		C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "学研_恐竜.mp4"; sourceTree = "<group>"; };
 		C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KidsVideo--iOS--Info.plist"; sourceTree = "<group>"; };
 		C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
 		C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KidsVideo_(iOS).entitlements"; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		1BAB1E2F270417E0007FBD25 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				C43D5EB72E47A5EB00A80463 /* 恐竜 */,
 				C4348F912E424C400003530B /* シンカリオン */,
 				C4348F952E424C400003530B /* マイクラ */,
 				C451F4D02E44C89D00574C4F /* ジョブレイバー */,
@@ -343,6 +348,7 @@
 				1BAB1E162703DA94007FBD25 /* Music */,
 				1B78A4AB2703689800B2A670 /* Fonts */,
 				C4348F9A2E424E720003530B /* シンカリオン.jpeg */,
+				C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */,
 				C4348F9B2E424E720003530B /* マイクラ.jpeg */,
 				C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */,
 			);
@@ -379,6 +385,14 @@
 				C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */,
 			);
 			path = "マイクラ";
+			sourceTree = "<group>";
+		};
+		C43D5EB72E47A5EB00A80463 /* 恐竜 */ = {
+			isa = PBXGroup;
+			children = (
+				C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */,
+			);
+			path = "恐竜";
 			sourceTree = "<group>";
 		};
 		C451F4D02E44C89D00574C4F /* ジョブレイバー */ = {
@@ -499,11 +513,13 @@
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
 				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
 				1BAB1E252703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
+				C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */,
 				1BAB1E232703DAC2007FBD25 /* baby-game-mane-8780.mp3 in Resources */,
 				C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */,
 				C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */,
 				C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */,
 				C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */,
+				C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */,
 				C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */,
 				C4348F982E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 in Resources */,
 				C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */,

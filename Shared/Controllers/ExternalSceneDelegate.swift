@@ -13,53 +13,35 @@ class ExternalSceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        // 外部ディスプレイ専用のシーン設定
-        if session.role == .windowExternalDisplay {
-            setupExternalDisplayScene(windowScene: windowScene)
-        }
-    }
-    
-    private func setupExternalDisplayScene(windowScene: UIWindowScene) {
-        // 外部ディスプレイ用のウィンドウを作成
-        window = UIWindow(windowScene: windowScene)
-        window?.backgroundColor = .black
-        
-        // 外部ディスプレイ専用のビューコントローラーを設定
+
+        print("✅ ExternalSceneDelegate: willConnectTo")
+
+        // Create the window for the external display
+        self.window = UIWindow(windowScene: windowScene)
+
+        // Create and set up the root view controller
         let externalPlayerVC = ExternalPlayerViewController()
-        window?.rootViewController = externalPlayerVC
-        window?.makeKeyAndVisible()
+        self.window?.rootViewController = externalPlayerVC
         
-        // ExternalDisplayManagerに登録
+        // Store the view controller in the manager for later access
         ExternalDisplayManager.shared.externalPlayerViewController = externalPlayerVC
         
-        // 既にメインプレイヤーが存在する場合は同期
-        ExternalDisplayManager.shared.updateExternalDisplayContent()
-        
-        print("External display scene configured: \(windowScene.screen.bounds)")
+        // Sync the player state if the main player is already running
+        ExternalDisplayManager.shared.syncPlayerToExternalDisplay()
+
+        self.window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
-        // 外部ディスプレイシーンが切断された時の処理
+        print("✅ ExternalSceneDelegate: sceneDidDisconnect")
+        
+        // Clean up resources
         ExternalDisplayManager.shared.externalPlayerViewController = nil
-        window = nil
-        print("External display scene disconnected")
+        self.window = nil
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // 外部ディスプレイがアクティブになった時の処理
-        ExternalDisplayManager.shared.updateExternalDisplayContent()
-    }
-    
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-    }
-    
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-    }
-    
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
+        // When the external screen becomes active, ensure content is synced.
+        ExternalDisplayManager.shared.syncPlayerToExternalDisplay()
     }
 }

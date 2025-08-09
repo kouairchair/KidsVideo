@@ -8,5 +8,5 @@
 import Foundation
 
 public enum Channel {
-    case shinkalion, minecraft, jobraver
+    case shinkalion, minecraft, jobraver, dinasaur
 }

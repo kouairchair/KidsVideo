@@ -246,37 +246,32 @@ class PlayerScreenView: UIView {
     private func setupBottomLayout() {
         
         bottomControlsStackView.addArrangedSubview(playerTimeLabel)
-        
-        playerTimeLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        playerTimeLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        
         bottomControlsStackView.addArrangedSubview(playerSlider)
-        playerSlider.centerYAnchor.constraint(equalTo: bottomControlsStackView.centerYAnchor, constant: 0).isActive = true
-        
         bottomControlsStackView.addArrangedSubview(fullTimeLabel)
+        bottomControlsStackView.spacing = 8
         
+        // Set fixed width for labels, but remove fixed height to prevent conflicts.
+        playerTimeLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
         fullTimeLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        fullTimeLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         NSLayoutConstraint.activate([
-            
-            playButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor),
-            playButton.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 10),
-            
-            
-            bottomControlsStackView.leadingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: 40),
-            bottomControlsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            bottomControlsStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            bottomControlsStackView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor),
-            
-            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor , constant: -25),
+            // Position the bottomView container itself
             bottomView.leadingAnchor.constraint(equalTo: leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -25),
             bottomView.heightAnchor.constraint(equalToConstant: 40),
             
+            // Position the playButton inside the bottomView
+            playButton.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 10),
+            playButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor),
+            playButton.widthAnchor.constraint(equalToConstant: 40),
+            playButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            // Position the stackView inside the bottomView, relative to other controls
+            bottomControlsStackView.leadingAnchor.constraint(equalTo: playButton.trailingAnchor, constant: 10),
+            bottomControlsStackView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -10),
+            bottomControlsStackView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor)
         ])
-        
     }
     
     override class var requiresConstraintBasedLayout: Bool {
@@ -297,4 +292,3 @@ extension PlayerScreenView: UIGestureRecognizerDelegate {
         return true
     }
 }
-
