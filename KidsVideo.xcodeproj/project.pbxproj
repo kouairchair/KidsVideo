@@ -57,6 +57,11 @@
 		C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */; };
 		C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9A2E424E720003530B /* シンカリオン.jpeg */; };
 		C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9B2E424E720003530B /* マイクラ.jpeg */; };
+		C43D5EAE2E4796E800A80463 /* ExternalDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */; };
+		C43D5EB02E47979400A80463 /* ExternalPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EAF2E47979400A80463 /* ExternalPlayerViewController.swift */; };
+		C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB12E4797F700A80463 /* AppDelegate.swift */; };
+		C43D5EB42E47981B00A80463 /* ExternalSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */; };
+		C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB52E47983D00A80463 /* SceneDelegate.swift */; };
 		C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */; };
 		C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */; };
 		C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */; };
@@ -130,6 +135,11 @@
 		C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4"; sourceTree = "<group>"; };
 		C4348F9A2E424E720003530B /* シンカリオン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "シンカリオン.jpeg"; sourceTree = "<group>"; };
 		C4348F9B2E424E720003530B /* マイクラ.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マイクラ.jpeg"; sourceTree = "<group>"; };
+		C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayManager.swift; sourceTree = "<group>"; };
+		C43D5EAF2E47979400A80463 /* ExternalPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalPlayerViewController.swift; sourceTree = "<group>"; };
+		C43D5EB12E4797F700A80463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSceneDelegate.swift; sourceTree = "<group>"; };
+		C43D5EB52E47983D00A80463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KidsVideo--iOS--Info.plist"; sourceTree = "<group>"; };
 		C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
 		C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KidsVideo_(iOS).entitlements"; sourceTree = "<group>"; };
@@ -188,6 +198,8 @@
 				1B73FCB02700539500B6BCE1 /* Persistence.swift */,
 				1B73FCB12700539700B6BCE1 /* Assets.xcassets */,
 				1B73FCAC2700539500B6BCE1 /* KidsVideo.xcdatamodeld */,
+				C43D5EB12E4797F700A80463 /* AppDelegate.swift */,
+				C43D5EB52E47983D00A80463 /* SceneDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -245,6 +257,8 @@
 			children = (
 				1BE696F827005A1D008E7E56 /* PlayerViewController.swift */,
 				1BE696FB27005A95008E7E56 /* PlayerViewControllerWrapper.swift */,
+				C43D5EAF2E47979400A80463 /* ExternalPlayerViewController.swift */,
+				C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +272,7 @@
 				1BE6970A27005BCC008E7E56 /* Delegate */,
 				1BE6970327005BA7008E7E56 /* Config */,
 				1B19049B2709C19D0085E71F /* Constants.swift */,
+				C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -516,7 +531,9 @@
 				1BE6972C27005C19008E7E56 /* PlayerScreenView.swift in Sources */,
 				1BE6971027005BCC008E7E56 /* PlayerScreenViewDelegate.swift in Sources */,
 				1BE6973127005C6E008E7E56 /* ContentsMaker.swift in Sources */,
+				C43D5EB02E47979400A80463 /* ExternalPlayerViewController.swift in Sources */,
 				1B73FCD92700539700B6BCE1 /* KidsVideoApp.swift in Sources */,
+				C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */,
 				1B19049E270A73D50085E71F /* Notification+Name.swift in Sources */,
 				1B19049C2709C19D0085E71F /* Constants.swift in Sources */,
 				1BE6971927005BF8008E7E56 /* SummerPlayerView.swift in Sources */,
@@ -529,12 +546,15 @@
 				1BAB1E2A2703DB3E007FBD25 /* Music.swift in Sources */,
 				1BE6970627005BA7008E7E56 /* InternalConfiguration.swift in Sources */,
 				1BE6971227005BCC008E7E56 /* SummerPlayerViewDelegate.swift in Sources */,
+				C43D5EAE2E4796E800A80463 /* ExternalDisplayManager.swift in Sources */,
 				1B73FCD72700539700B6BCE1 /* KidsVideo.xcdatamodeld in Sources */,
 				1BE6972027005C0D008E7E56 /* CMTime+extension.swift in Sources */,
 				1BE6971527005BEA008E7E56 /* Content.swift in Sources */,
 				1BE6973727005CB3008E7E56 /* ThemeMaker.swift in Sources */,
+				C43D5EB42E47981B00A80463 /* ExternalSceneDelegate.swift in Sources */,
 				1B1903EA270995570085E71F /* Content+URL.swift in Sources */,
 				1B78A4A42703640F00B2A670 /* View+Animation.swift in Sources */,
+				C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */,
 				1BE6971B27005BF8008E7E56 /* SummerPlayerViewTheme.swift in Sources */,
 				1BC9605C270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */,
 				1BAB1E2D2703DBCB007FBD25 /* MusicMaker.swift in Sources */,

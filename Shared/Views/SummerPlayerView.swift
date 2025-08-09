@@ -1,5 +1,3 @@
-
-
 import Foundation
 import AVKit
 
@@ -179,6 +177,35 @@ public class SummerPlayerView: UIView {
             return playerControlView.getAirPlayRoutePicker()
         }
         return nil
+    }
+    
+    // MARK: - External Display Support
+    func configureForExternalDisplay() {
+        // 外部ディスプレイが接続されている場合の設定
+        if ExternalDisplayManager.shared.isExternalDisplayConnected {
+            // メインディスプレイでは動画を非表示にして、コントロールのみ表示
+            playerLayer?.isHidden = true
+            
+            // 外部ディスプレイのコンテンツを更新
+            ExternalDisplayManager.shared.updateExternalDisplayContent()
+            
+            print("SummerPlayerView configured for external display")
+        } else {
+            // 外部ディスプレイが接続されていない場合は通常表示
+            playerLayer?.isHidden = false
+        }
+    }
+    
+    func updateForExternalDisplayConnection() {
+        // 外部ディスプレイの接続状態が変わった時の処理
+        configureForExternalDisplay()
+    }
+    
+    func setVideoGravityForExternalDisplay(_ gravity: AVLayerVideoGravity) {
+        // 外部ディスプレイ用のビデオグラビティ設定
+        if let externalVC = ExternalDisplayManager.shared.externalPlayerViewController {
+            externalVC.updateVideoGravity(gravity)
+        }
     }
     
     private func setupContentsListView(_ wholeRect: CGRect?) {
