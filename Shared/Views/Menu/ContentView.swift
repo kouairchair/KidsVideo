@@ -121,6 +121,7 @@ struct ContentView: View {
         // External monitors should maintain full brightness for proper visibility
         if isMainDeviceScreen(window: window) {
             window.alpha = currentAlphaValue * 0.1
+            print("Main device screen - applying brightness adjustment: \(window.alpha)")
         } else {
             // Ensure external monitors maintain full opacity
             window.alpha = 1.0
@@ -136,12 +137,17 @@ struct ContentView: View {
         // Check if this window is on the main device screen
         guard let windowScene = window.windowScene else { return true }
         
-        // For external displays, the screen bounds will be different from the main screen
+        // Check if this is the main screen by object identity (most reliable)
+        if windowScene.screen === UIScreen.main {
+            return true
+        }
+        
+        // Fallback: For external displays, the screen bounds will be different from the main screen
         let mainScreenBounds = UIScreen.main.bounds
         let windowScreenBounds = windowScene.screen.bounds
         
-        // If the screen bounds match the main screen, it's the main device
-        return mainScreenBounds.size.equalTo(windowScreenBounds.size)
+        // If the screen bounds match the main screen, it's likely the main device
+        return mainScreenBounds.size == windowScreenBounds.size
     }
 }
 
