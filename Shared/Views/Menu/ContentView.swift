@@ -14,6 +14,15 @@ struct ContentView: View {
     private var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 250, maximum: 280), spacing: CGFloat(30.0) ), count: 3)
     @State var isAnimating: Bool = false
     @State private var currentAlphaValue: Double = 3
+    
+    // Get background image from configuration
+    private var backgroundImageName: String {
+        if let configuration = ChildConfigurationManager.loadConfiguration() {
+            return configuration.backgroundImage
+        }
+        // Fallback to default
+        return "menu_background_image_ryoma"
+    }
       
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -29,7 +38,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 // Background image
-                Image("menu_background_image_ryoma")
+                Image(backgroundImageName)
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()

@@ -10,7 +10,21 @@ import Foundation
 
 struct ContentsMaker {
     public static func getContents() -> [Content] {
+        // Try to load from configuration first
+        if let configuration = ChildConfigurationManager.loadConfiguration() {
+            return configuration.videos.compactMap { contentData in
+                guard let channel = channelFromString(contentData.channel) else {
+                    print("Unknown channel: \(contentData.channel)")
+                    return nil
+                }
+                return Content(fileName: contentData.fileName, 
+                             fileExt: contentData.fileExt, 
+                             totalTime: contentData.totalTime, 
+                             channel: channel)
+            }
+        }
         
+        // Fallback to default content if configuration loading fails
         let contents = [
             Content(fileName: "『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」", fileExt: "mp4", totalTime: "24:08", channel: .shinkalion),
             Content(fileName: "マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】", fileExt: "mp4", totalTime: "11:45", channel: .minecraft),
@@ -23,5 +37,22 @@ struct ContentsMaker {
         ]
         
         return contents
+    }
+    
+    private static func channelFromString(_ channelString: String) -> Channel? {
+        switch channelString.lowercased() {
+        case "shinkalion":
+            return .shinkalion
+        case "minecraft":
+            return .minecraft
+        case "jobraver":
+            return .jobraver
+        case "dinasaur":
+            return .dinasaur
+        case "numberblocks":
+            return .numberblocks
+        default:
+            return nil
+        }
     }
 }
