@@ -24,7 +24,7 @@
 # Format: "URL チャンネル番号 子供指定"
 # 子供指定: chonan(長男), jinan(次男), both(両方)
 TARGET_URLS=(
-    "https://youtu.be/byTCfdoa_lI?si=CoR1vBzSUko0KMvi 2 both"
+    "https://youtu.be/QAHgWrE1ko0?si=YKHMvYUs5r_LtM5n 5 chonan"
     # "https://youtu.be/xxxxxxx 1 chonan"
     # 他の組み合わせをここに追加
 )
@@ -46,7 +46,7 @@ get_channel_info() {
             echo "恐竜 dinasaur"
             ;;
         *)
-            echo "ダウンロード download"
+            echo "ナンバーブロックス numberblocks"
             ;;
     esac
 }
@@ -66,10 +66,6 @@ mkdir -p "$DOWNLOAD_DIR"
 
 # Download video from YouTube
 yt-dlp -f "best[height<=720]" -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$SELECTED_URL"
-
-# Directory to save downloaded videos
-DOWNLOAD_DIR="$HOME/Projects/KidsVideo/Shared/Resources/Movie/{TARGET}"
-mkdir -p "$DOWNLOAD_DIR"
 
 # Download videos from YouTube
 for URL in "${TARGET_URLS[@]}"; do

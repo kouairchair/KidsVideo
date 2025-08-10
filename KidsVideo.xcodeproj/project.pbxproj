@@ -77,6 +77,7 @@
 		C47EB6212E48C8F20091337C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB61F2E48C8F20091337C /* Tests_iOS.swift */; };
 		C47EB6222E48C8F20091337C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */; };
 		C47EB6242E48D03A0091337C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6232E48D03A0091337C /* README.md */; };
+		C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_iOSLaunchTests.swift; path = Tests_iOS/Tests_iOSLaunchTests.swift; sourceTree = SOURCE_ROOT; };
 		C47EB6232E48D03A0091337C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C47EB6252E48D0A10091337C /* createContentsStrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createContentsStrings.sh; sourceTree = "<group>"; };
+		C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				C4348F912E424C400003530B /* シンカリオン */,
 				C4348F952E424C400003530B /* マイクラ */,
 				C451F4D02E44C89D00574C4F /* ジョブレイバー */,
+				C47EB6272E48DFB70091337C /* ナンバーブロックス */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -425,6 +428,14 @@
 			path = "ジョブレイバー";
 			sourceTree = "<group>";
 		};
+		C47EB6272E48DFB70091337C /* ナンバーブロックス */ = {
+			isa = PBXGroup;
+			children = (
+				C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */,
+			);
+			path = "ナンバーブロックス";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,6 +545,7 @@
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
 				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
+				C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */,
 				1BAB1E252703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
 				C47EB6242E48D03A0091337C /* README.md in Resources */,
 				C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */,

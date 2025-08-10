@@ -9,7 +9,7 @@ import Foundation
 
 public enum ChildTarget: String, CaseIterable {
     case jinan = "JINAN"     // 次男 (younger son)
-    case chonan = "NIICHAN"   // 長男 (older son)
+    case chonan = "CHONAN"   // 長男 (older son)
 }
 
 public struct VideoConfiguration: Codable {
@@ -49,7 +49,7 @@ public class ChildConfigurationManager {
         // Check build configuration
         #if JINAN
         _currentTarget = .jinan
-        #elseif NIICHAN
+        #elseif CHONAN
         _currentTarget = .chonan
         #else
         // Default fallback - can be changed based on requirements
