@@ -165,6 +165,7 @@
 		C47EB61F2E48C8F20091337C /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_iOS.swift; path = Tests_iOS/Tests_iOS.swift; sourceTree = SOURCE_ROOT; };
 		C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_iOSLaunchTests.swift; path = Tests_iOS/Tests_iOSLaunchTests.swift; sourceTree = SOURCE_ROOT; };
 		C47EB6232E48D03A0091337C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C47EB6252E48D0A10091337C /* createContentsStrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createContentsStrings.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +227,7 @@
 		1B73FCB72700539700B6BCE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				C47EB6252E48D0A10091337C /* createContentsStrings.sh */,
 				1B73FCB62700539700B6BCE1 /* KidsVideo.app */,
 				1B73FCC32700539700B6BCE1 /* Tests iOS.xctest */,
 				1B73FCCF2700539700B6BCE1 /* Tests macOS.xctest */,
