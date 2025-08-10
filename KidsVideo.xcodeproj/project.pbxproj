@@ -44,7 +44,6 @@
 		1BE6972A27005C19008E7E56 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6972527005C19008E7E56 /* ContentListView.swift */; };
 		1BE6972C27005C19008E7E56 /* PlayerScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6972627005C19008E7E56 /* PlayerScreenView.swift */; };
 		1BE6972E27005C19008E7E56 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6972727005C19008E7E56 /* VideoCollectionViewCell.swift */; };
-		1BE6973127005C6E008E7E56 /* ContentsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6973027005C6E008E7E56 /* ContentsMaker.swift */; };
 		1BE6973427005CA6008E7E56 /* SampleThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6973327005CA6008E7E56 /* SampleThemes.swift */; };
 		1BE6973727005CB3008E7E56 /* ThemeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6973627005CB3008E7E56 /* ThemeMaker.swift */; };
 		BF0DE73527028D1A0029CE17 /* MenuImageMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE73427028D1A0029CE17 /* MenuImageMaker.swift */; };
@@ -131,7 +130,6 @@
 		1BE6972527005C19008E7E56 /* ContentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
 		1BE6972627005C19008E7E56 /* PlayerScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerScreenView.swift; sourceTree = "<group>"; };
 		1BE6972727005C19008E7E56 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
-		1BE6973027005C6E008E7E56 /* ContentsMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsMaker.swift; sourceTree = "<group>"; };
 		1BE6973327005CA6008E7E56 /* SampleThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleThemes.swift; sourceTree = "<group>"; };
 		1BE6973627005CB3008E7E56 /* ThemeMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeMaker.swift; sourceTree = "<group>"; };
 		BF0DE73427028D1A0029CE17 /* MenuImageMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuImageMaker.swift; sourceTree = "<group>"; };
@@ -380,7 +378,6 @@
 		BF0DE73027028BE30029CE17 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				1BE6973027005C6E008E7E56 /* ContentsMaker.swift */,
 				1BAB1E312704183C007FBD25 /* Channel.swift */,
 				BF0DE73427028D1A0029CE17 /* MenuImageMaker.swift */,
 				1BAB1E2C2703DBCB007FBD25 /* MusicMaker.swift */,
@@ -574,7 +571,6 @@
 				1BE6972A27005C19008E7E56 /* ContentListView.swift in Sources */,
 				1BE6972C27005C19008E7E56 /* PlayerScreenView.swift in Sources */,
 				1BE6971027005BCC008E7E56 /* PlayerScreenViewDelegate.swift in Sources */,
-				1BE6973127005C6E008E7E56 /* ContentsMaker.swift in Sources */,
 				C43D5EB02E47979400A80463 /* ExternalPlayerViewController.swift in Sources */,
 				1B73FCD92700539700B6BCE1 /* KidsVideoApp.swift in Sources */,
 				C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */,

@@ -39,7 +39,7 @@ class ChildConfigurationTests: XCTestCase {
             XCTAssertFalse(hasNumberblocks, "Jinan configuration should not include numberblocks")
             
             // Verify background image
-            XCTAssertEqual(config.backgroundImage, "menu_background_image_chinan", 
+            XCTAssertEqual(config.backgroundImage, "menu_background_image_chinan",
                           "Jinan should use chinan background")
         }
     }
@@ -82,7 +82,7 @@ class ChildConfigurationTests: XCTestCase {
             if let config = configuration {
                 for commonChannel in commonChannels {
                     let hasCommonChannel = config.menuImages.contains { $0.channel == commonChannel }
-                    XCTAssertTrue(hasCommonChannel, 
+                    XCTAssertTrue(hasCommonChannel,
                                  "\(target.rawValue) should include common channel: \(commonChannel)")
                 }
             }
@@ -90,23 +90,29 @@ class ChildConfigurationTests: XCTestCase {
     }
 
     func testContentsMakerIntegration() throws {
-        // Test ContentsMaker with different configurations
+        // Test content loading with different configurations
         ChildConfigurationManager.setTarget(.jinan)
-        let jinanContents = ContentsMaker.getContents()
+        let jinanContents: [Content] = ChildConfigurationManager.loadConfiguration()?.videos.compactMap { contentData in
+            guard let channel = channelFromString(contentData.channel) else { return nil }
+            return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel)
+        } ?? []
         
         ChildConfigurationManager.setTarget(.chonan)
-        let chonanContents = ContentsMaker.getContents()
+        let chonanContents: [Content] = ChildConfigurationManager.loadConfiguration()?.videos.compactMap { contentData in
+            guard let channel = channelFromString(contentData.channel) else { return nil }
+            return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel)
+        } ?? []
         
         // Verify both return content
         XCTAssertFalse(jinanContents.isEmpty, "Jinan contents should not be empty")
         XCTAssertFalse(chonanContents.isEmpty, "Chonan contents should not be empty")
         
         // Verify jinan has dinosaur content
-        let jinanHasDinosaur = jinanContents.contains { $0.channel == .dinasaur }
+        let jinanHasDinosaur = jinanContents.contains { $0.channel == Channel.dinasaur }
         XCTAssertTrue(jinanHasDinosaur, "Jinan should have dinosaur content")
         
-        // Verify chonan has numberblocks content  
-        let chonanHasNumberblocks = chonanContents.contains { $0.channel == .numberblocks }
+        // Verify chonan has numberblocks content
+        let chonanHasNumberblocks = chonanContents.contains { $0.channel == Channel.numberblocks }
         XCTAssertTrue(chonanHasNumberblocks, "Chonan should have numberblocks content")
     }
 
@@ -121,5 +127,23 @@ class ChildConfigurationTests: XCTestCase {
         // Verify both return images
         XCTAssertFalse(jinanImages.isEmpty, "Jinan menu images should not be empty")
         XCTAssertFalse(chonanImages.isEmpty, "Chonan menu images should not be empty")
+    }
+}
+
+// Helper function to convert string to Channel enum
+private func channelFromString(_ channelString: String) -> Channel? {
+    switch channelString.lowercased() {
+    case "shinkalion":
+        return .shinkalion
+    case "minecraft":
+        return .minecraft
+    case "jobraver":
+        return .jobraver
+    case "dinasaur":
+        return .dinasaur
+    case "numberblocks":
+        return .numberblocks
+    default:
+        return nil
     }
 }
