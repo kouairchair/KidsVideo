@@ -76,6 +76,10 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
             summerPlayerView.setupAirPlayRoutePickerDelegate(self)
         }
     }
+    
+    @objc private func turnOffExternalDisplay() {
+        ExternalDisplayManager.shared.disableExternalDisplayMode()
+    }
 }
 
 extension PlayerViewController : SummerPlayerViewDelegate {

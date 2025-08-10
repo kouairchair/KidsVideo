@@ -7,7 +7,6 @@
 
 import UIKit
 import AVFoundation
-import AVKit
 
 class ExternalDisplayManager: NSObject {
     static let shared = ExternalDisplayManager()
@@ -15,31 +14,61 @@ class ExternalDisplayManager: NSObject {
     var externalPlayerViewController: ExternalPlayerViewController?
     private weak var mainPlayerViewController: PlayerViewController?
     
-    var isExternalDisplayConnected: Bool {
-        return UIScreen.screens.count > 1
-    }
-    
     private override init() {
         super.init()
     }
     
     func registerMainPlayer(_ playerViewController: PlayerViewController) {
-        self.mainPlayerViewController = playerViewController
+        mainPlayerViewController = playerViewController
     }
     
     func unregisterMainPlayer() {
-        self.mainPlayerViewController = nil
+        mainPlayerViewController = nil
     }
     
-    func syncPlayerToExternalDisplay() {
-        guard let mainPlayer = mainPlayerViewController,
-              let externalVC = externalPlayerViewController,
+    func syncPlayerToExternalDisplay(mainPlayer: PlayerViewController) {
+        guard let externalVC = externalPlayerViewController,
               let summerPlayerView = mainPlayer.summerPlayerView else {
-            print("Cannot sync player: mainPlayer, externalVC, or summerPlayerView is nil.")
+            print("Cannot sync player: externalVC or summerPlayerView is nil.")
             return
         }
         
         print("Syncing player state to external display.")
         externalVC.setupPlayerFromMain(summerPlayerView: summerPlayerView)
+    }
+    
+    func syncPlayerToExternalDisplay() {
+        guard let mainPlayer = mainPlayerViewController else {
+            print("Cannot sync player: mainPlayer is nil.")
+            return
+        }
+        syncPlayerToExternalDisplay(mainPlayer: mainPlayer)
+    }
+    
+    func enableExternalDisplayMode() {
+        guard let externalVC = externalPlayerViewController else {
+            print("External display not connected.")
+            return
+        }
+        
+        // Show video on external display
+        externalVC.showVideo()
+        syncPlayerToExternalDisplay()
+        print("External display mode enabled.")
+    }
+    
+    func disableExternalDisplayMode() {
+        guard let externalVC = externalPlayerViewController else {
+            print("External display not connected.")
+            return
+        }
+        
+        // Hide video on external display
+        externalVC.hideVideo()
+        print("External display mode disabled.")
+    }
+    
+    var isExternalDisplayConnected: Bool {
+        return externalPlayerViewController != nil
     }
 }

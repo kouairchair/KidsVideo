@@ -64,6 +64,7 @@
 		C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB52E47983D00A80463 /* SceneDelegate.swift */; };
 		C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */; };
 		C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */; };
+		C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */; };
 		C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */; };
 		C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */; };
 		C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */; };
@@ -144,6 +145,7 @@
 		C43D5EB52E47983D00A80463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "恐竜.jpeg"; sourceTree = "<group>"; };
 		C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "学研_恐竜.mp4"; sourceTree = "<group>"; };
+		C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4"; sourceTree = "<group>"; };
 		C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KidsVideo--iOS--Info.plist"; sourceTree = "<group>"; };
 		C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
 		C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KidsVideo_(iOS).entitlements"; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */,
 				C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */,
 				C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */,
+				C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */,
 			);
 			path = "マイクラ";
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			files = (
 				C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */,
 				C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */,
+				C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */,
 				C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */,
 				C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */,
 				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,

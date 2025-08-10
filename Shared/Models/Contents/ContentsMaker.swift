@@ -13,6 +13,7 @@ struct ContentsMaker {
         
         let contents = [
             Content(fileName: "『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」", fileExt: "mp4", totalTime: "24:08", channel: .shinkalion),
+            Content(fileName: "マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】", fileExt: "mp4", totalTime: "11:45", channel: .minecraft),
             Content(fileName: "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3", fileExt: "mp4", totalTime: "18:58", channel: .minecraft),
             Content(fileName: "ゾンビ_VS_10個のセキュリティ", fileExt: "mp4", totalTime: "27:25", channel: .minecraft),
             Content(fileName: "ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5", fileExt: "mp4", totalTime: "23:30", channel: .minecraft),
