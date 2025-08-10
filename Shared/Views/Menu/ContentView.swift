@@ -21,7 +21,7 @@ struct ContentView: View {
             return configuration.backgroundImage
         }
         // Fallback to default
-        return "menu_background_image_ryoma"
+        return "menu_background_image_jinan"
     }
       
     @Environment(\.managedObjectContext) private var viewContext

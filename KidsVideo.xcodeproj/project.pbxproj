@@ -10,8 +10,6 @@
 		1B1903EA270995570085E71F /* Content+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1903E9270995570085E71F /* Content+URL.swift */; };
 		1B19049C2709C19D0085E71F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19049B2709C19D0085E71F /* Constants.swift */; };
 		1B19049E270A73D50085E71F /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19049D270A73D50085E71F /* Notification+Name.swift */; };
-		1B73FCC82700539700B6BCE1 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73FCC72700539700B6BCE1 /* Tests_iOS.swift */; };
-		1B73FCCA2700539700B6BCE1 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73FCC92700539700B6BCE1 /* Tests_iOSLaunchTests.swift */; };
 		1B73FCD72700539700B6BCE1 /* KidsVideo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B73FCAC2700539500B6BCE1 /* KidsVideo.xcdatamodeld */; };
 		1B73FCD92700539700B6BCE1 /* KidsVideoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73FCAE2700539500B6BCE1 /* KidsVideoApp.swift */; };
 		1B73FCDB2700539700B6BCE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73FCAF2700539500B6BCE1 /* ContentView.swift */; };
@@ -72,6 +70,13 @@
 		C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CE2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 */; };
 		C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CF2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 */; };
 		C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C451F4D32E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg */; };
+		C47EB6172E48C7A50091337C /* videos_jinan.json in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6152E48C7A50091337C /* videos_jinan.json */; };
+		C47EB6182E48C7A50091337C /* videos_chonan.json in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6162E48C7A50091337C /* videos_chonan.json */; };
+		C47EB61A2E48C8640091337C /* Numberblocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6192E48C8640091337C /* Numberblocks.jpg */; };
+		C47EB61C2E48C8A80091337C /* ChildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB61B2E48C8A80091337C /* ChildConfiguration.swift */; };
+		C47EB61E2E48C8DD0091337C /* ChildConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB61D2E48C8DD0091337C /* ChildConfigurationTests.swift */; };
+		C47EB6212E48C8F20091337C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB61F2E48C8F20091337C /* Tests_iOS.swift */; };
+		C47EB6222E48C8F20091337C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +100,6 @@
 		1B73FCB12700539700B6BCE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B73FCB62700539700B6BCE1 /* KidsVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B73FCC32700539700B6BCE1 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B73FCC72700539700B6BCE1 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		1B73FCC92700539700B6BCE1 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
 		1B73FCCF2700539700B6BCE1 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B78A4A32703640F00B2A670 /* View+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Animation.swift"; sourceTree = "<group>"; };
 		1B78A4AC2703689800B2A670 /* PenguinAttack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PenguinAttack.ttf; sourceTree = "<group>"; };
@@ -153,6 +156,13 @@
 		C451F4CE2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4"; sourceTree = "<group>"; };
 		C451F4CF2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4"; sourceTree = "<group>"; };
 		C451F4D32E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg"; sourceTree = "<group>"; };
+		C47EB6152E48C7A50091337C /* videos_jinan.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = videos_jinan.json; sourceTree = "<group>"; };
+		C47EB6162E48C7A50091337C /* videos_chonan.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = videos_chonan.json; sourceTree = "<group>"; };
+		C47EB6192E48C8640091337C /* Numberblocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Numberblocks.jpg; sourceTree = "<group>"; };
+		C47EB61B2E48C8A80091337C /* ChildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildConfiguration.swift; sourceTree = "<group>"; };
+		C47EB61D2E48C8DD0091337C /* ChildConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChildConfigurationTests.swift; path = Tests_iOS/ChildConfigurationTests.swift; sourceTree = SOURCE_ROOT; };
+		C47EB61F2E48C8F20091337C /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_iOS.swift; path = Tests_iOS/Tests_iOS.swift; sourceTree = SOURCE_ROOT; };
+		C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_iOSLaunchTests.swift; path = Tests_iOS/Tests_iOSLaunchTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,8 +233,9 @@
 		1B73FCC62700539700B6BCE1 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1B73FCC72700539700B6BCE1 /* Tests_iOS.swift */,
-				1B73FCC92700539700B6BCE1 /* Tests_iOSLaunchTests.swift */,
+				C47EB61D2E48C8DD0091337C /* ChildConfigurationTests.swift */,
+				C47EB61F2E48C8F20091337C /* Tests_iOS.swift */,
+				C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */,
 			);
 			path = "Tests iOS";
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 				1BE6970027005B65008E7E56 /* DefaultConfig.swift */,
 				1BE6970427005BA7008E7E56 /* InternalConfiguration.swift */,
 				1BE6970527005BA7008E7E56 /* SummerPlayerViewConfig.swift */,
+				C47EB61B2E48C8A80091337C /* ChildConfiguration.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -353,6 +365,9 @@
 				C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */,
 				C4348F9B2E424E720003530B /* マイクラ.jpeg */,
 				C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */,
+				C47EB6152E48C7A50091337C /* videos_jinan.json */,
+				C47EB6162E48C7A50091337C /* videos_chonan.json */,
+				C47EB6192E48C8640091337C /* Numberblocks.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -512,6 +527,7 @@
 				C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */,
 				C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */,
 				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,
+				C47EB61A2E48C8640091337C /* Numberblocks.jpg in Resources */,
 				1B78A4AD2703689800B2A670 /* PenguinAttack.ttf in Resources */,
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
@@ -522,6 +538,8 @@
 				C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */,
 				C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */,
 				C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */,
+				C47EB6172E48C7A50091337C /* videos_jinan.json in Resources */,
+				C47EB6182E48C7A50091337C /* videos_chonan.json in Resources */,
 				C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */,
 				C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */,
 				C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */,
@@ -555,6 +573,7 @@
 				1B73FCD92700539700B6BCE1 /* KidsVideoApp.swift in Sources */,
 				C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */,
 				1B19049E270A73D50085E71F /* Notification+Name.swift in Sources */,
+				C47EB61C2E48C8A80091337C /* ChildConfiguration.swift in Sources */,
 				1B19049C2709C19D0085E71F /* Constants.swift in Sources */,
 				1BE6971927005BF8008E7E56 /* SummerPlayerView.swift in Sources */,
 				1BE696FC27005A95008E7E56 /* PlayerViewControllerWrapper.swift in Sources */,
@@ -592,8 +611,9 @@
 		1B73FCBF2700539700B6BCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				1B73FCCA2700539700B6BCE1 /* Tests_iOSLaunchTests.swift in Sources */,
-				1B73FCC82700539700B6BCE1 /* Tests_iOS.swift in Sources */,
+				C47EB61E2E48C8DD0091337C /* ChildConfigurationTests.swift in Sources */,
+				C47EB6212E48C8F20091337C /* Tests_iOS.swift in Sources */,
+				C47EB6222E48C8F20091337C /* Tests_iOSLaunchTests.swift in Sources */,
 			);
 		};
 		1B73FCCB2700539700B6BCE1 /* Sources */ = {

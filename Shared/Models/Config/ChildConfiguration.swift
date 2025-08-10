@@ -8,8 +8,8 @@
 import Foundation
 
 public enum ChildTarget: String, CaseIterable {
-    case nichan = "NICHAN"     // 次男 (younger son)
-    case niichan = "NIICHAN"   // 長男 (older son)
+    case jinan = "JINAN"     // 次男 (younger son)
+    case chonan = "NIICHAN"   // 長男 (older son)
 }
 
 public struct VideoConfiguration: Codable {
@@ -47,20 +47,20 @@ public class ChildConfigurationManager {
         }
         
         // Check build configuration
-        #if NICHAN
-        _currentTarget = .nichan
+        #if JINAN
+        _currentTarget = .jinan
         #elseif NIICHAN
-        _currentTarget = .niichan
+        _currentTarget = .chonan
         #else
         // Default fallback - can be changed based on requirements
-        _currentTarget = .nichan
+        _currentTarget = .jinan
         #endif
         
         return _currentTarget!
     }
     
     public static func loadConfiguration() -> VideoConfiguration? {
-        let fileName = currentTarget == .nichan ? "videos_nichan" : "videos_niichan"
+        let fileName = currentTarget == .jinan ? "videos_jinan" : "videos_chonan"
         
         guard let path = Bundle.main.path(forResource: fileName, ofType: "json"),
               let data = FileManager.default.contents(atPath: path) else {

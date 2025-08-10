@@ -43,10 +43,10 @@
       "channel": "jobraver"
     },
     {
-      "fileName": "学研_恐竜",
+      "fileName": "Numberblocks - Learn to Count",
       "fileExt": "mp4",
-      "totalTime": "54:25",
-      "channel": "dinasaur"
+      "totalTime": "15:30",
+      "channel": "numberblocks"
     }
   ],
   "menuImages": [
@@ -66,10 +66,10 @@
       "channel": "jobraver"
     },
     {
-      "fileName": "恐竜",
+      "fileName": "Numberblocks",
       "fileExt": "jpeg",
-      "channel": "dinasaur"
+      "channel": "numberblocks"
     }
   ],
-  "backgroundImage": "menu_background_image_ryuichi"
+  "backgroundImage": "menu_background_image_chonan"
 }

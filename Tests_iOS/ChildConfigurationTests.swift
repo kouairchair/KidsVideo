@@ -12,60 +12,60 @@ class ChildConfigurationTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Reset configuration for each test
-        ChildConfigurationManager.setTarget(.nichan)
+        ChildConfigurationManager.setTarget(.jinan)
     }
 
     override func tearDownWithError() throws {
         // Clean up after each test
     }
 
-    func testNichanConfiguration() throws {
-        // Set target to nichan (younger child)
-        ChildConfigurationManager.setTarget(.nichan)
+    func testJinanConfiguration() throws {
+        // Set target to jinan (younger child)
+        ChildConfigurationManager.setTarget(.jinan)
         
         // Load configuration
         let configuration = ChildConfigurationManager.loadConfiguration()
         
         // Verify configuration loaded successfully
-        XCTAssertNotNil(configuration, "Nichan configuration should load successfully")
+        XCTAssertNotNil(configuration, "Jinan configuration should load successfully")
         
         if let config = configuration {
-            // Verify it contains dinosaur videos (specific to nichan)
+            // Verify it contains dinosaur videos (specific to jinan)
             let hasDinosaur = config.menuImages.contains { $0.channel == "dinasaur" }
-            XCTAssertTrue(hasDinosaur, "Nichan configuration should include dinosaur content")
+            XCTAssertTrue(hasDinosaur, "Jinan configuration should include dinosaur content")
             
-            // Verify it doesn't contain numberblocks (specific to niichan)
+            // Verify it doesn't contain numberblocks (specific to chonan)
             let hasNumberblocks = config.menuImages.contains { $0.channel == "numberblocks" }
-            XCTAssertFalse(hasNumberblocks, "Nichan configuration should not include numberblocks")
+            XCTAssertFalse(hasNumberblocks, "Jinan configuration should not include numberblocks")
             
             // Verify background image
-            XCTAssertEqual(config.backgroundImage, "menu_background_image_ryuichi", 
-                          "Nichan should use ryuichi background")
+            XCTAssertEqual(config.backgroundImage, "menu_background_image_chinan", 
+                          "Jinan should use chinan background")
         }
     }
 
-    func testNiichanConfiguration() throws {
-        // Set target to niichan (older child)
-        ChildConfigurationManager.setTarget(.niichan)
+    func testChonanConfiguration() throws {
+        // Set target to chonan (older child)
+        ChildConfigurationManager.setTarget(.chonan)
         
         // Load configuration
         let configuration = ChildConfigurationManager.loadConfiguration()
         
         // Verify configuration loaded successfully
-        XCTAssertNotNil(configuration, "Niichan configuration should load successfully")
+        XCTAssertNotNil(configuration, "Chonan configuration should load successfully")
         
         if let config = configuration {
-            // Verify it contains numberblocks (specific to niichan)
+            // Verify it contains numberblocks (specific to chonan)
             let hasNumberblocks = config.menuImages.contains { $0.channel == "numberblocks" }
-            XCTAssertTrue(hasNumberblocks, "Niichan configuration should include numberblocks")
+            XCTAssertTrue(hasNumberblocks, "Chonan configuration should include numberblocks")
             
-            // Verify it doesn't contain dinosaur (specific to nichan)
+            // Verify it doesn't contain dinosaur (specific to jinan)
             let hasDinosaur = config.menuImages.contains { $0.channel == "dinasaur" }
-            XCTAssertFalse(hasDinosaur, "Niichan configuration should not include dinosaur content")
+            XCTAssertFalse(hasDinosaur, "Chonan configuration should not include dinosaur content")
             
             // Verify background image
-            XCTAssertEqual(config.backgroundImage, "menu_background_image_ryoma", 
-                          "Niichan should use ryoma background")
+            XCTAssertEqual(config.backgroundImage, "menu_background_image_jinan",
+                          "Chonan should use jinan background")
         }
     }
 
@@ -91,35 +91,35 @@ class ChildConfigurationTests: XCTestCase {
 
     func testContentsMakerIntegration() throws {
         // Test ContentsMaker with different configurations
-        ChildConfigurationManager.setTarget(.nichan)
-        let nichanContents = ContentsMaker.getContents()
+        ChildConfigurationManager.setTarget(.jinan)
+        let jinanContents = ContentsMaker.getContents()
         
-        ChildConfigurationManager.setTarget(.niichan)
-        let niichanContents = ContentsMaker.getContents()
+        ChildConfigurationManager.setTarget(.chonan)
+        let chonanContents = ContentsMaker.getContents()
         
         // Verify both return content
-        XCTAssertFalse(nichanContents.isEmpty, "Nichan contents should not be empty")
-        XCTAssertFalse(niichanContents.isEmpty, "Niichan contents should not be empty")
+        XCTAssertFalse(jinanContents.isEmpty, "Jinan contents should not be empty")
+        XCTAssertFalse(chonanContents.isEmpty, "Chonan contents should not be empty")
         
-        // Verify nichan has dinosaur content
-        let nichanHasDinosaur = nichanContents.contains { $0.channel == .dinasaur }
-        XCTAssertTrue(nichanHasDinosaur, "Nichan should have dinosaur content")
+        // Verify jinan has dinosaur content
+        let jinanHasDinosaur = jinanContents.contains { $0.channel == .dinasaur }
+        XCTAssertTrue(jinanHasDinosaur, "Jinan should have dinosaur content")
         
-        // Verify niichan has numberblocks content  
-        let niichanHasNumberblocks = niichanContents.contains { $0.channel == .numberblocks }
-        XCTAssertTrue(niichanHasNumberblocks, "Niichan should have numberblocks content")
+        // Verify chonan has numberblocks content  
+        let chonanHasNumberblocks = chonanContents.contains { $0.channel == .numberblocks }
+        XCTAssertTrue(chonanHasNumberblocks, "Chonan should have numberblocks content")
     }
 
     func testMenuImageMakerIntegration() throws {
         // Test MenuImageMaker with different configurations
-        ChildConfigurationManager.setTarget(.nichan)
-        let nichanImages = MenuImageMaker.getImages()
+        ChildConfigurationManager.setTarget(.jinan)
+        let jinanImages = MenuImageMaker.getImages()
         
-        ChildConfigurationManager.setTarget(.niichan)
-        let niichanImages = MenuImageMaker.getImages()
+        ChildConfigurationManager.setTarget(.chonan)
+        let chonanImages = MenuImageMaker.getImages()
         
         // Verify both return images
-        XCTAssertFalse(nichanImages.isEmpty, "Nichan menu images should not be empty")
-        XCTAssertFalse(niichanImages.isEmpty, "Niichan menu images should not be empty")
+        XCTAssertFalse(jinanImages.isEmpty, "Jinan menu images should not be empty")
+        XCTAssertFalse(chonanImages.isEmpty, "Chonan menu images should not be empty")
     }
 }
