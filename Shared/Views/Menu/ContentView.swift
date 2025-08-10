@@ -64,7 +64,7 @@ struct ContentView: View {
             do {
                 // Delaying brightness change slightly to ensure the window is available.
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    changeBrightness()
+                    adjustBrightnessForAllScreens()
                 }
                 try self.BDPlayer = AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!) /// make the audio player
                 //self.BDPlayer?.volume = 5
@@ -79,28 +79,69 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
             self.BDPlayer?.play()
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIScreen.didConnectNotification)) { _ in
+            // External screen connected - adjust brightness for all screens
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                adjustBrightnessForAllScreens()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIScreen.didDisconnectNotification)) { _ in
+            // External screen disconnected - readjust brightness
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                adjustBrightnessForAllScreens()
+            }
+        }
+    }
+    
+    private func adjustBrightnessForAllScreens() {
+        if #available(iOS 15.0, *) {
+            // Handle all active window scenes
+            for scene in UIApplication.shared.connectedScenes {
+                if let windowScene = scene as? UIWindowScene,
+                   scene.activationState == .foregroundActive {
+                    for window in windowScene.windows {
+                        if window.isKeyWindow {
+                            adjustWindowBrightness(window: window)
+                        }
+                    }
+                }
+            }
+        } else {
+            // Fallback for older iOS versions
+            for window in UIApplication.shared.windows {
+                if window.isKeyWindow {
+                    adjustWindowBrightness(window: window)
+                }
+            }
+        }
+    }
+    
+    private func adjustWindowBrightness(window: UIWindow) {
+        // Only apply brightness adjustment if this is the main device screen
+        // External monitors should maintain full brightness for proper visibility
+        if isMainDeviceScreen(window: window) {
+            window.alpha = currentAlphaValue * 0.1
+        } else {
+            // Ensure external monitors maintain full opacity
+            window.alpha = 1.0
+            print("External monitor detected - maintaining full brightness")
+        }
     }
     
     private func changeBrightness() {
-        let keyWindow: UIWindow?
+        adjustBrightnessForAllScreens()
+    }
+    
+    private func isMainDeviceScreen(window: UIWindow) -> Bool {
+        // Check if this window is on the main device screen
+        guard let windowScene = window.windowScene else { return true }
         
-        if #available(iOS 15.0, *) {
-            keyWindow = UIApplication.shared.connectedScenes
-                .filter({$0.activationState == .foregroundActive})
-                .map({$0 as? UIWindowScene})
-                .compactMap({$0})
-                .first?.keyWindow
-        } else {
-            // Fallback for older iOS versions
-            keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
-        }
+        // For external displays, the screen bounds will be different from the main screen
+        let mainScreenBounds = UIScreen.main.bounds
+        let windowScreenBounds = windowScene.screen.bounds
         
-        guard let window = keyWindow else {
-            print("Warning: Could not get key window, skipping brightness adjustment")
-            return
-        }
-        
-        window.alpha = currentAlphaValue * 0.1
+        // If the screen bounds match the main screen, it's the main device
+        return mainScreenBounds.size.equalTo(windowScreenBounds.size)
     }
 }
 
