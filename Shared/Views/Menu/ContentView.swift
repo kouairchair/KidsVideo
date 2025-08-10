@@ -13,7 +13,6 @@ struct ContentView: View {
     private let menuImages = MenuImageMaker.getImages()
     private var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 250, maximum: 280), spacing: CGFloat(30.0) ), count: 3)
     @State var isAnimating: Bool = false
-    @State var BDPlayer: AVAudioPlayer?
     @State private var currentAlphaValue: Double = 3
       
     @Environment(\.managedObjectContext) private var viewContext
@@ -22,6 +21,9 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+
+    // Use a static/shared player to prevent multiple instances
+    static var sharedBDPlayer: AVAudioPlayer?
 
     var body: some View {
         NavigationView {
@@ -38,7 +40,7 @@ struct ContentView: View {
                     LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
                         ForEach(menuImages) { menuImage in
                             MenuCellView(menuImage: menuImage, isAnimating: isAnimating, onNavigate: {
-                                self.BDPlayer?.stop()
+                                ContentView.sharedBDPlayer?.stop()
                             })
                         }
                     }
@@ -61,23 +63,21 @@ struct ContentView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
         .onAppear {
+            // Stop any existing player before creating/playing a new one
+            ContentView.sharedBDPlayer?.stop()
             do {
-                // Delaying brightness change slightly to ensure the window is available.
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    changeBrightness()
-                }
-                try self.BDPlayer = AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!) /// make the audio player
-                //self.BDPlayer?.volume = 5
-                self.BDPlayer?.play()
+                ContentView.sharedBDPlayer = try AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!)
+                ContentView.sharedBDPlayer?.play()
             } catch {
                 print("Couldn't play audio. Error: \(error)")
             }
         }
-//        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-//
-//        }
+        .onDisappear {
+            // Stop music when leaving the menu
+            ContentView.sharedBDPlayer?.stop()
+        }
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
-            self.BDPlayer?.play()
+            ContentView.sharedBDPlayer?.play()
         }
     }
     

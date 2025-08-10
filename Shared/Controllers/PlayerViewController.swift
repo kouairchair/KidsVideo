@@ -22,6 +22,9 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         
+        // 外部ディスプレイマネージャーに登録
+        ExternalDisplayManager.shared.registerMainPlayer(self)
+        
         let sampleTheme = ThemeMaker.getTheme()
         print("testtest view.frame:\(view.frame)")
         // Remark: 2021/10/5段階では、view.frameは画面全体のframeで、iPad 6thなら(0.0, 0.0, 1024.0, 768.0), 34インチモニタ全画面では(0.0, 0.0, 4468.0, 1871.0)
@@ -39,10 +42,31 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
         
         // AirPlay機能の設定
         setupAirPlay()
+        
+        // 外部ディスプレイが接続されている場合の処理
+        handleExternalDisplayIfConnected()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 外部ディスプレイマネージャーから登録解除
+        ExternalDisplayManager.shared.unregisterMainPlayer()
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    // MARK: - External Display Support
+    private func handleExternalDisplayIfConnected() {
+        if ExternalDisplayManager.shared.isExternalDisplayConnected {
+            // 外部ディスプレイのコンテンツを更新
+            ExternalDisplayManager.shared.syncPlayerToExternalDisplay()
+            
+            // メインディスプレイではコントロールを表示し、動画は外部ディスプレイに表示
+            summerPlayerView?.configureForExternalDisplay()
+        }
     }
     
     // MARK: - AirPlay Setup
@@ -53,9 +77,8 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
         }
     }
     
-    private func setupAirPlayRoutePicker() {
-        // SummerPlayerViewからAVRoutePickerViewにアクセスしてデリゲートを設定
-        // この実装はSummerPlayerViewの構造に依存します
+    @objc private func turnOffExternalDisplay() {
+        ExternalDisplayManager.shared.disableExternalDisplayMode()
     }
 }
 
@@ -68,7 +91,8 @@ extension PlayerViewController : SummerPlayerViewDelegate {
     }
     
     func didStartVideo() {
-        
+        // Post notification to stop menu background music
+        NotificationCenter.default.post(name: Notification.Name("PlayerDidStartNotification"), object: nil)
     }
     
     func didChangeSliderValue(_ seekTime: CMTime) {

@@ -10,6 +10,8 @@ import UIKit
 
 @main
 struct KidsVideoApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

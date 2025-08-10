@@ -57,6 +57,14 @@
 		C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */; };
 		C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9A2E424E720003530B /* シンカリオン.jpeg */; };
 		C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9B2E424E720003530B /* マイクラ.jpeg */; };
+		C43D5EAE2E4796E800A80463 /* ExternalDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */; };
+		C43D5EB02E47979400A80463 /* ExternalPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EAF2E47979400A80463 /* ExternalPlayerViewController.swift */; };
+		C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB12E4797F700A80463 /* AppDelegate.swift */; };
+		C43D5EB42E47981B00A80463 /* ExternalSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */; };
+		C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EB52E47983D00A80463 /* SceneDelegate.swift */; };
+		C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */; };
+		C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */; };
+		C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */; };
 		C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */; };
 		C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */; };
 		C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */; };
@@ -130,6 +138,14 @@
 		C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4"; sourceTree = "<group>"; };
 		C4348F9A2E424E720003530B /* シンカリオン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "シンカリオン.jpeg"; sourceTree = "<group>"; };
 		C4348F9B2E424E720003530B /* マイクラ.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マイクラ.jpeg"; sourceTree = "<group>"; };
+		C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayManager.swift; sourceTree = "<group>"; };
+		C43D5EAF2E47979400A80463 /* ExternalPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalPlayerViewController.swift; sourceTree = "<group>"; };
+		C43D5EB12E4797F700A80463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSceneDelegate.swift; sourceTree = "<group>"; };
+		C43D5EB52E47983D00A80463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "恐竜.jpeg"; sourceTree = "<group>"; };
+		C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "学研_恐竜.mp4"; sourceTree = "<group>"; };
+		C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4"; sourceTree = "<group>"; };
 		C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KidsVideo--iOS--Info.plist"; sourceTree = "<group>"; };
 		C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
 		C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KidsVideo_(iOS).entitlements"; sourceTree = "<group>"; };
@@ -188,6 +204,8 @@
 				1B73FCB02700539500B6BCE1 /* Persistence.swift */,
 				1B73FCB12700539700B6BCE1 /* Assets.xcassets */,
 				1B73FCAC2700539500B6BCE1 /* KidsVideo.xcdatamodeld */,
+				C43D5EB12E4797F700A80463 /* AppDelegate.swift */,
+				C43D5EB52E47983D00A80463 /* SceneDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -233,6 +251,7 @@
 		1BAB1E2F270417E0007FBD25 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				C43D5EB72E47A5EB00A80463 /* 恐竜 */,
 				C4348F912E424C400003530B /* シンカリオン */,
 				C4348F952E424C400003530B /* マイクラ */,
 				C451F4D02E44C89D00574C4F /* ジョブレイバー */,
@@ -245,6 +264,8 @@
 			children = (
 				1BE696F827005A1D008E7E56 /* PlayerViewController.swift */,
 				1BE696FB27005A95008E7E56 /* PlayerViewControllerWrapper.swift */,
+				C43D5EAF2E47979400A80463 /* ExternalPlayerViewController.swift */,
+				C43D5EB32E47981B00A80463 /* ExternalSceneDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +279,7 @@
 				1BE6970A27005BCC008E7E56 /* Delegate */,
 				1BE6970327005BA7008E7E56 /* Config */,
 				1B19049B2709C19D0085E71F /* Constants.swift */,
+				C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,6 +350,7 @@
 				1BAB1E162703DA94007FBD25 /* Music */,
 				1B78A4AB2703689800B2A670 /* Fonts */,
 				C4348F9A2E424E720003530B /* シンカリオン.jpeg */,
+				C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */,
 				C4348F9B2E424E720003530B /* マイクラ.jpeg */,
 				C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */,
 			);
@@ -362,8 +385,17 @@
 				C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */,
 				C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */,
 				C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */,
+				C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */,
 			);
 			path = "マイクラ";
+			sourceTree = "<group>";
+		};
+		C43D5EB72E47A5EB00A80463 /* 恐竜 */ = {
+			isa = PBXGroup;
+			children = (
+				C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */,
+			);
+			path = "恐竜";
 			sourceTree = "<group>";
 		};
 		C451F4D02E44C89D00574C4F /* ジョブレイバー */ = {
@@ -476,6 +508,7 @@
 			files = (
 				C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */,
 				C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */,
+				C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */,
 				C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */,
 				C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */,
 				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,
@@ -484,11 +517,13 @@
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
 				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
 				1BAB1E252703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
+				C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */,
 				1BAB1E232703DAC2007FBD25 /* baby-game-mane-8780.mp3 in Resources */,
 				C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */,
 				C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */,
 				C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */,
 				C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */,
+				C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */,
 				C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */,
 				C4348F982E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 in Resources */,
 				C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */,
@@ -516,7 +551,9 @@
 				1BE6972C27005C19008E7E56 /* PlayerScreenView.swift in Sources */,
 				1BE6971027005BCC008E7E56 /* PlayerScreenViewDelegate.swift in Sources */,
 				1BE6973127005C6E008E7E56 /* ContentsMaker.swift in Sources */,
+				C43D5EB02E47979400A80463 /* ExternalPlayerViewController.swift in Sources */,
 				1B73FCD92700539700B6BCE1 /* KidsVideoApp.swift in Sources */,
+				C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */,
 				1B19049E270A73D50085E71F /* Notification+Name.swift in Sources */,
 				1B19049C2709C19D0085E71F /* Constants.swift in Sources */,
 				1BE6971927005BF8008E7E56 /* SummerPlayerView.swift in Sources */,
@@ -529,12 +566,15 @@
 				1BAB1E2A2703DB3E007FBD25 /* Music.swift in Sources */,
 				1BE6970627005BA7008E7E56 /* InternalConfiguration.swift in Sources */,
 				1BE6971227005BCC008E7E56 /* SummerPlayerViewDelegate.swift in Sources */,
+				C43D5EAE2E4796E800A80463 /* ExternalDisplayManager.swift in Sources */,
 				1B73FCD72700539700B6BCE1 /* KidsVideo.xcdatamodeld in Sources */,
 				1BE6972027005C0D008E7E56 /* CMTime+extension.swift in Sources */,
 				1BE6971527005BEA008E7E56 /* Content.swift in Sources */,
 				1BE6973727005CB3008E7E56 /* ThemeMaker.swift in Sources */,
+				C43D5EB42E47981B00A80463 /* ExternalSceneDelegate.swift in Sources */,
 				1B1903EA270995570085E71F /* Content+URL.swift in Sources */,
 				1B78A4A42703640F00B2A670 /* View+Animation.swift in Sources */,
+				C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */,
 				1BE6971B27005BF8008E7E56 /* SummerPlayerViewTheme.swift in Sources */,
 				1BC9605C270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */,
 				1BAB1E2D2703DBCB007FBD25 /* MusicMaker.swift in Sources */,
