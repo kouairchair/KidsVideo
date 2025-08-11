@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # YouTube動画ダウンロード & Content生成スクリプト（子供ごとの動画リスト対応版）
 #
 # このスクリプトは、YouTube動画をダウンロードして、子供ごとの動画リスト切り替え機能に
@@ -24,10 +24,56 @@
 # Format: "URL チャンネル番号 子供指定"
 # 子供指定: chonan(長男), jinan(次男), both(両方)
 TARGET_URLS=(
-    "https://youtu.be/QAHgWrE1ko0?si=YKHMvYUs5r_LtM5n 5 chonan"
+    "https://youtu.be/jW49VlOfpi8?si=3NNsWYQixWgZlI66 1 chonan"
     # "https://youtu.be/xxxxxxx 1 chonan"
     # 他の組み合わせをここに追加
 )
+
+# Function to process videos in a directory
+process_videos() {
+    local directory=$1
+    local channel=$2
+    local child=$3
+    local fileName filePath durationWork durationMinutes durationSeconds duration jsonEntry
+    
+    for filePath in "$directory"/*.mp4; do
+        [ -f "$filePath" ] || continue
+        fileName=$(basename "$filePath" .mp4)
+        
+        # Check if file already exists in JSON before adding
+        if [ "$child" = "chonan" ] || [ "$child" = "both" ]; then
+            if jq -e --arg fname "$fileName" '.videos[] | select(.fileName == $fname)' "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json" >/dev/null 2>&1; then
+                echo "Skipping duplicate entry for chonan: $fileName"
+            else
+                durationWork=$(mediainfo --Inform="Video;%Duration/String%" "$filePath")
+                durationMinutes=$(echo "$durationWork" | cut -d' ' -f1)
+                durationSeconds=$(echo "$durationWork" | cut -d' ' -f3)
+                durationSeconds=$(printf "%02d" "${durationSeconds}")
+                duration="${durationMinutes}:${durationSeconds}"
+                jsonEntry=$(jq -n --arg fileName "$fileName" --arg fileExt "mp4" --arg totalTime "$duration" --arg channel "$channel" '{fileName: $fileName, fileExt: $fileExt, totalTime: $totalTime, channel: $channel}')
+                jq ".videos += [${jsonEntry}]" "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json" > "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json.tmp" && mv "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json.tmp" "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json"
+                echo "Added to chonan: $fileName"
+            fi
+        fi
+        
+        if [ "$child" = "jinan" ] || [ "$child" = "both" ]; then
+            if jq -e --arg fname "$fileName" '.videos[] | select(.fileName == $fname)' "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json" >/dev/null 2>&1; then
+                echo "Skipping duplicate entry for jinan: $fileName"
+            else
+                if [ ! -v durationWork ]; then
+                    durationWork=$(mediainfo --Inform="Video;%Duration/String%" "$filePath")
+                    durationMinutes=$(echo "$durationWork" | cut -d' ' -f1)
+                    durationSeconds=$(echo "$durationWork" | cut -d' ' -f3)
+                    durationSeconds=$(printf "%02d" "${durationSeconds}")
+                    duration="${durationMinutes}:${durationSeconds}"
+                    jsonEntry=$(jq -n --arg fileName "$fileName" --arg fileExt "mp4" --arg totalTime "$duration" --arg channel "$channel" '{fileName: $fileName, fileExt: $fileExt, totalTime: $totalTime, channel: $channel}')
+                fi
+                jq ".videos += [${jsonEntry}]" "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json" > "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json.tmp" && mv "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json.tmp" "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json"
+                echo "Added to jinan: $fileName"
+            fi
+        fi
+    done
+}
 
 # チャンネル番号とディレクトリ・チャンネル名の対応
 get_channel_info() {
@@ -51,26 +97,10 @@ get_channel_info() {
     esac
 }
 
-# 1つだけ選択して実行（最初の要素）
-SELECTED="${TARGET_URLS[0]}"
-SELECTED_URL=$(echo $SELECTED | awk '{print $1}')
-SELECTED_CHANNEL_NUM=$(echo $SELECTED | awk '{print $2}')
-SELECTED_CHILD=$(echo $SELECTED | awk '{print $3}')
-CHANNEL_INFO=$(get_channel_info $SELECTED_CHANNEL_NUM)
-TARGET_DIR=$(echo $CHANNEL_INFO | awk '{print $1}')
-TARGET_NAME=$(echo $CHANNEL_INFO | awk '{print $2}')
-
-# Directory to save downloaded videos
-DOWNLOAD_DIR="$HOME/Projects/KidsVideo/Shared/Resources/Movie/$TARGET_DIR"
-mkdir -p "$DOWNLOAD_DIR"
-
-# Download video from YouTube
-yt-dlp -f "best[height<=720]" -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$SELECTED_URL"
-
-# Download videos from YouTube
-for URL in "${TARGET_URLS[@]}"; do
-    yt-dlp -f "best[height<=720]" -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$URL"
-done
+# Remove old duplicate entries first (optional cleanup)
+# You can uncomment these lines if you want to clean existing JSON files
+# echo '{"videos":[],"menuImages":[],"backgroundImage":"menu_background_image_chonan"}' > "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json"
+# echo '{"videos":[],"menuImages":[],"backgroundImage":"menu_background_image_jinan"}' > "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json"
 
 ########################################
 # Xcodeプロジェクトに動画ファイルを追加する処理
@@ -81,43 +111,19 @@ done
 add_files_to_xcodeproj() {
     local dir="$1"
     local xcodeproj_path="$HOME/Projects/KidsVideo/KidsVideo.xcodeproj"
-    for f in "$dir"/*.mp4; do
-        if [ -f "$f" ]; then
-            echo "Adding $f to Xcode project..."
-            xcodeproj "$xcodeproj_path" add "$f" --group "Shared/Resources/Movie"
-        fi
-    done
+    if command -v xcodeproj >/dev/null 2>&1; then
+        for f in "$dir"/*.mp4; do
+            if [ -f "$f" ]; then
+                echo "Adding $f to Xcode project..."
+                xcodeproj "$xcodeproj_path" add "$f" --group "Shared/Resources/Movie"
+            fi
+        done
+    else
+        echo "xcodeproj command not found, skipping Xcode project update"
+    fi
 }
 
-# ダウンロード・処理後にXcodeプロジェクトへ追加
-add_files_to_xcodeproj "$DOWNLOAD_DIR"
-
-# Function to process videos in a directory
-process_videos() {
-    local directory=$1
-    local channel=$2
-    local child=$3
-    local fileName filePath durationWork durationMinutes durationSeconds duration jsonEntry
-    for filePath in "$directory"/*.mp4; do
-        [ -f "$filePath" ] || continue
-        fileName=$(basename "$filePath" .mp4)
-        durationWork=$(mediainfo --Inform="Video;%Duration/String%" "$filePath")
-        durationMinutes=$(echo "$durationWork" | cut -d' ' -f1)
-        durationSeconds=$(echo "$durationWork" | cut -d' ' -f3)
-        durationSeconds=$(printf "%02d" "${durationSeconds}")
-        duration="${durationMinutes}:${durationSeconds}"
-        jsonEntry=$(jq -n --arg fileName "$fileName" --arg fileExt "mp4" --arg totalTime "$duration" --arg channel "$channel" '{fileName: $fileName, fileExt: $fileExt, totalTime: $totalTime, channel: $channel}')
-        if [ "$child" = "chonan" ] || [ "$child" = "both" ]; then
-            jq ".videos += [${jsonEntry}]" "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json" > "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json.tmp" && mv "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json.tmp" "$HOME/Projects/KidsVideo/Shared/Resources/videos_chonan.json"
-        fi
-        if [ "$child" = "jinan" ] || [ "$child" = "both" ]; then
-            jq ".videos += [${jsonEntry}]" "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json" > "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json.tmp" && mv "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json.tmp" "$HOME/Projects/KidsVideo/Shared/Resources/videos_jinan.json"
-        fi
-    done
-}
-
-for FILE in *\ *; do mv "$FILE" "${FILE// /_}"; done
-
+# Main processing loop
 for entry in "${TARGET_URLS[@]}"; do
     url=$(echo $entry | awk '{print $1}')
     channel_num=$(echo $entry | awk '{print $2}')
@@ -127,8 +133,24 @@ for entry in "${TARGET_URLS[@]}"; do
     target_name=$(echo $channel_info | awk '{print $2}')
     download_dir="$HOME/Projects/KidsVideo/Shared/Resources/Movie/$target_dir"
     mkdir -p "$download_dir"
+    
+    echo "Processing: $url for $child ($target_name)"
+    
     if [ "$DRY_RUN" != "1" ]; then
         yt-dlp -f "best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
+        add_files_to_xcodeproj "$download_dir"
     fi
+    
     process_videos "$download_dir" "$target_name" "$child"
 done
+
+echo "Processing complete!"
+
+# Rename files with spaces to use underscores
+cd "$HOME/Projects/KidsVideo/Shared/Resources/Movie" 2>/dev/null || true
+for FILE in *\ *; do 
+    if [ -e "$FILE" ]; then
+        mv "$FILE" "${FILE// /_}"
+    fi
+done 2>/dev/null || true
+cd - >/dev/null || true
