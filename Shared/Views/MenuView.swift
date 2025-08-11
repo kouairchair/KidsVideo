@@ -82,6 +82,7 @@ struct MenuCellView: View {
                         .clipShape(Circle())
                         .wiggle(isActive: isAnimating)
                 }
+                .buttonStyle(PlainButtonStyle())
                 
                 Text(menuImage.fileName)
                     .font(.custom("KiwiMaru-Light", size: 22))

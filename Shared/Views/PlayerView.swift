@@ -13,12 +13,22 @@ struct PlayerView: View {
     
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            PlayerViewControllerWrapper(
-                selectedChannel: viewStore.selectedChannel,
-                action: {
-                    // This will be called when navigating to player
+            NavigationView {
+                PlayerViewControllerWrapper(
+                    selectedChannel: viewStore.selectedChannel,
+                    action: {
+                        // This will be called when navigating to player
+                    }
+                )
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Close") {
+                            viewStore.send(.delegate(.didDismiss))
+                        }
+                    }
                 }
-            )
+            }
             .onAppear {
                 viewStore.send(.onAppear)
             }
