@@ -1,0 +1,87 @@
+{
+  "videos": [
+    {
+      "fileName": "『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」",
+      "fileExt": "mp4",
+      "totalTime": "24:08",
+      "channel": "shinkalion"
+    },
+    {
+      "fileName": "マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】",
+      "fileExt": "mp4",
+      "totalTime": "11:45",
+      "channel": "minecraft"
+    },
+    {
+      "fileName": "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3",
+      "fileExt": "mp4",
+      "totalTime": "18:58",
+      "channel": "minecraft"
+    },
+    {
+      "fileName": "ゾンビ_VS_10個のセキュリティ",
+      "fileExt": "mp4",
+      "totalTime": "27:25",
+      "channel": "minecraft"
+    },
+    {
+      "fileName": "ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5",
+      "fileExt": "mp4",
+      "totalTime": "23:30",
+      "channel": "minecraft"
+    },
+    {
+      "fileName": "【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】",
+      "fileExt": "mp4",
+      "totalTime": "12:00",
+      "channel": "jobraver"
+    },
+    {
+      "fileName": "【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】",
+      "fileExt": "mp4",
+      "totalTime": "12:00",
+      "channel": "jobraver"
+    },
+    {
+      "fileName": "Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial.",
+      "fileExt": "mp4",
+      "totalTime": "2:07",
+      "channel": "numberblocks"
+    },
+    {
+      "fileName": "初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】",
+      "fileExt": "mp4",
+      "totalTime": "10:18",
+      "channel": "minecraft"
+    },
+    {
+      "fileName": "シンカリオン ALFA-XとE5はやぶさMKⅡのオーバークロス合体！手順解説レビュー！てれびくん12月号連動動画 アルファエックス",
+      "fileExt": "mp4",
+      "totalTime": "11:22",
+      "channel": "shinkalion"
+    }
+  ],
+  "menuImages": [
+    {
+      "fileName": "マイクラ",
+      "fileExt": "jpeg",
+      "channel": "minecraft"
+    },
+    {
+      "fileName": "シンカリオン",
+      "fileExt": "jpeg",
+      "channel": "shinkalion"
+    },
+    {
+      "fileName": "ジョブレイバー",
+      "fileExt": "jpeg",
+      "channel": "jobraver"
+    },
+    {
+      "fileName": "Numberblocks",
+      "fileExt": "jpg",
+      "channel": "numberblocks"
+    }
+  ],
+  "backgroundImage": "menu_background_image_chonan"
+}
