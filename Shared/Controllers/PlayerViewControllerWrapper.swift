@@ -10,6 +10,7 @@ import SwiftUI
 struct PlayerViewControllerWrapper : UIViewControllerRepresentable {
     let selectedChannel: Channel
     let action: (() -> Void)
+    var onDismiss: (() -> Void)?
     
     func makeUIViewController(context: Context) -> PlayerViewController {
         action()
@@ -19,6 +20,18 @@ struct PlayerViewControllerWrapper : UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: PlayerViewController, context: Context) {
+        // Update the view controller if needed
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(onDismiss: onDismiss)
+    }
+    
+    class Coordinator: NSObject {
+        let onDismiss: (() -> Void)?
         
+        init(onDismiss: (() -> Void)?) {
+            self.onDismiss = onDismiss
+        }
     }
 }

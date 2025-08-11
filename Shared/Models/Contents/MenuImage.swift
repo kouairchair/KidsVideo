@@ -7,7 +7,7 @@
 
 import SwiftUI
  
-public struct MenuImage: Identifiable {
+public struct MenuImage: Identifiable, Equatable {
     public var id = UUID().uuidString
     
     let fileName: String
@@ -23,5 +23,9 @@ public struct MenuImage: Identifiable {
         } else {
             self.image = nil
         }
+    }
+    
+    public static func == (lhs: MenuImage, rhs: MenuImage) -> Bool {
+        return lhs.id == rhs.id && lhs.fileName == rhs.fileName && lhs.channel == rhs.channel
     }
 }

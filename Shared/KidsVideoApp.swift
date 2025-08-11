@@ -7,16 +7,21 @@
 
 import SwiftUI
 import UIKit
+import ComposableArchitecture
 
 @main
 struct KidsVideoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     let persistenceController = PersistenceController.shared
+    
+    static let store = Store(initialState: AppFeature.State()) {
+        AppFeature()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView(store: KidsVideoApp.store)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didReceiveMemoryWarningNotification)) { _ in
                     // メモリ警告時にサムネイルキャッシュをクリア
