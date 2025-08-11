@@ -2,7 +2,8 @@
 
 import Foundation
 
-public struct Content {
+public struct Content: Equatable, Hashable, Identifiable {
+    public let id = UUID()
     let fileName: String
     let fileExt: String
     let channel: Channel

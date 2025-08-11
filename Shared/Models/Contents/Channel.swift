@@ -7,6 +7,6 @@
 
 import Foundation
 
-public enum Channel {
-    case shinkalion, minecraft, jobraver, dinasaur, numberblocks
+public enum Channel: Equatable, Hashable, CaseIterable {
+    case shinkalion, minecraft, jobraver, dinasaur, numberblocks, jinan, chonan
 }
