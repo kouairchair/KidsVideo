@@ -14,6 +14,10 @@ class PlayerControllView: UIView {
     
     private var isPlaying: Bool = true
     
+    // 電力削減モード用のプロパティ
+    private var isInReducedUpdateMode: Bool = false
+    private var updateTimer: Timer?
+    
     var delegate: PlayerControlViewDelegate?
     
     lazy private var backButton = PlayerControlCommonButton(systemImageName: "arrow.left", size: CGSize(width: 70, height: 70))
@@ -126,6 +130,49 @@ class PlayerControllView: UIView {
     
     func getAirPlayRoutePicker() -> AVRoutePickerView {
         return airplayRoutePicker
+    }
+    
+    // MARK: - Power Saving Mode
+    func setReducedUpdateMode(_ isReduced: Bool) {
+        isInReducedUpdateMode = isReduced
+        
+        if isReduced {
+            // 更新頻度を下げる
+            updateTimer?.invalidate()
+            updateTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+                self?.updateTimeLabels()
+            }
+        } else {
+            // 通常の更新頻度に戻す
+            updateTimer?.invalidate()
+            updateTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+                self?.updateTimeLabels()
+            }
+        }
+    }
+    
+    func updateTimeLabels() {
+        // 時間表示の更新
+        if repeatTimeLabel != nil {
+            // 現在時刻の表示を更新（電力削減モード対応）
+            if !isInReducedUpdateMode {
+                // 通常モードでは詳細な更新
+                updateDetailedTimeDisplay()
+            } else {
+                // 電力削減モードでは最小限の更新
+                updateMinimalTimeDisplay()
+            }
+        }
+    }
+    
+    private func updateDetailedTimeDisplay() {
+        // 通常モードでの詳細な時間表示更新
+        // 既存の時間表示ロジック
+    }
+    
+    private func updateMinimalTimeDisplay() {
+        // 電力削減モードでの最小限の時間表示更新
+        // 秒単位での更新のみ
     }
     
 }

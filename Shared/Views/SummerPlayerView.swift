@@ -11,6 +11,11 @@ public class SummerPlayerView: UIView {
     
     public var delegate: SummerPlayerViewDelegate?
     
+    // 電力削減モード用のプロパティ
+    private var isInPowerSavingMode: Bool = false
+    private var originalVideoQuality: String?
+    var displayLink: CADisplayLink?
+    
     public var totalDuration: CMTime? {
         return self.queuePlayer.currentItem?.asset.duration
     }
@@ -229,6 +234,97 @@ public class SummerPlayerView: UIView {
         
     }
     
+    // MARK: - Power Saving Mode
+    public func enterPowerSavingMode() {
+        guard !isInPowerSavingMode else { return }
+        
+        isInPowerSavingMode = true
+        
+        // ビデオ品質を下げる
+        reduceVideoQuality()
+        
+        // フレームレートを下げる
+        reduceFrameRate()
+        
+        // 不要なUI更新を停止
+        pauseNonEssentialUpdates()
+        
+        print("SummerPlayerView: Entered power saving mode")
+    }
+    
+    public func exitPowerSavingMode() {
+        guard isInPowerSavingMode else { return }
+        
+        isInPowerSavingMode = false
+        
+        // ビデオ品質を元に戻す
+        restoreVideoQuality()
+        
+        // フレームレートを元に戻す
+        restoreFrameRate()
+        
+        // UI更新を再開
+        resumeNormalUpdates()
+        
+        print("SummerPlayerView: Exited power saving mode")
+    }
+    
+    private func reduceVideoQuality() {
+        guard let currentItem = queuePlayer.currentItem else { return }
+        
+        // ビットレートを低く設定（電力削減）
+        currentItem.preferredPeakBitRate = 500000 // 500kbps
+        
+        // 解像度を下げる
+        currentItem.preferredMaximumResolution = CGSize(width: 480, height: 270) // 480p
+    }
+    
+    private func restoreVideoQuality() {
+        guard let currentItem = queuePlayer.currentItem else { return }
+        
+        // 元の品質設定に戻す
+        currentItem.preferredPeakBitRate = 0 // 自動選択
+        currentItem.preferredMaximumResolution = CGSize.zero // 制限なし
+    }
+    
+    private func reduceFrameRate() {
+        // CADisplayLinkのフレームレートを下げる
+        if displayLink == nil {
+            displayLink = CADisplayLink(target: self, selector: #selector(updatePlayerTime))
+            displayLink?.add(to: .main, forMode: .common)
+        }
+        displayLink?.preferredFramesPerSecond = 15 // 15fps
+    }
+    
+    private func restoreFrameRate() {
+        // CADisplayLinkのフレームレートを元に戻す
+        displayLink?.preferredFramesPerSecond = 60 // 60fps
+    }
+    
+    @objc private func updatePlayerTime() {
+        // 時間表示の更新のみ（電力削減モード用）
+        updateTimeDisplay()
+    }
+    
+    public func pauseNonEssentialUpdates() {
+        // 不要なアニメーションを停止
+        layer.removeAllAnimations()
+        playerControlView?.layer.removeAllAnimations()
+        contentsListView.layer.removeAllAnimations()
+        
+        // UI更新頻度を下げる
+        playerControlView?.setReducedUpdateMode(true)
+    }
+    
+    public func resumeNormalUpdates() {
+        // 通常のUI更新を再開
+        playerControlView?.setReducedUpdateMode(false)
+    }
+    
+    public func updateTimeDisplay() {
+        // 最小限の時間表示更新
+        playerControlView?.updateTimeLabels()
+    }
 }
 
 extension SummerPlayerView: PlayerControlViewDelegate {

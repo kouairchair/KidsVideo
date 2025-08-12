@@ -13,6 +13,11 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
     
     let defaultConfig = DefaultConfig()
     var summerPlayerView: SummerPlayerView?
+    
+    // 電力削減モード用のプロパティ
+    private var isInPowerSavingMode: Bool = false
+    private var powerSavingTimer: Timer?
+    
     var contents: [Content] {
         if let configuration = ChildConfigurationManager.loadConfiguration() {
             return configuration.videos.compactMap { contentData in
@@ -86,6 +91,87 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
     
     @objc private func turnOffExternalDisplay() {
         ExternalDisplayManager.shared.disableExternalDisplayMode()
+    }
+    
+    // MARK: - Power Saving Mode
+    func enterPowerSavingMode() {
+        guard !isInPowerSavingMode else { return }
+        
+        isInPowerSavingMode = true
+        
+        // 動画再生の品質を下げる
+        summerPlayerView?.enterPowerSavingMode()
+        
+        // 不要なタイマーやアニメーションを停止
+        stopUnnecessaryProcesses()
+        
+        // フレームレートを下げる
+        reduceDsiplayRefreshRate()
+        
+        print("PlayerViewController: Entered power saving mode")
+    }
+    
+    func exitPowerSavingMode() {
+        guard isInPowerSavingMode else { return }
+        
+        isInPowerSavingMode = false
+        
+        // 動画再生の品質を元に戻す
+        summerPlayerView?.exitPowerSavingMode()
+        
+        // 必要なタイマーやアニメーションを再開
+        resumeNecessaryProcesses()
+        
+        // フレームレートを元に戻す
+        restoreDisplayRefreshRate()
+        
+        print("PlayerViewController: Exited power saving mode")
+    }
+    
+    private func stopUnnecessaryProcesses() {
+        // UI更新タイマーを停止
+        powerSavingTimer?.invalidate()
+        powerSavingTimer = nil
+        
+        // アニメーションを一時停止
+        view.layer.removeAllAnimations()
+        
+        // 不要なビューの更新を停止
+        summerPlayerView?.pauseNonEssentialUpdates()
+    }
+    
+    private func resumeNecessaryProcesses() {
+        // 必要なタイマーを再開
+        setupUIUpdateTimer()
+        
+        // ビューの更新を再開
+        summerPlayerView?.resumeNormalUpdates()
+    }
+    
+    private func reduceDsiplayRefreshRate() {
+        // CADisplayLinkの優先度を下げる
+        if let displayLink = summerPlayerView?.displayLink {
+            displayLink.preferredFramesPerSecond = 30 // 60fps -> 30fps
+        }
+    }
+    
+    private func restoreDisplayRefreshRate() {
+        // CADisplayLinkの優先度を元に戻す
+        if let displayLink = summerPlayerView?.displayLink {
+            displayLink.preferredFramesPerSecond = 60 // 元の60fpsに戻す
+        }
+    }
+    
+    private func setupUIUpdateTimer() {
+        powerSavingTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            // 必要最小限のUI更新のみ実行
+            self?.updateEssentialUI()
+        }
+    }
+    
+    private func updateEssentialUI() {
+        // 電力削減モード中の最小限のUI更新
+        summerPlayerView?.updateTimeDisplay()
     }
 }
 
@@ -170,23 +256,5 @@ extension PlayerViewController {
     fileprivate func goBackViewController() {
         self.navigationController?.popViewController(animated: true)
         NotificationCenter.default.post(name: .backToMenuNotification, object: nil)
-    }
-}
-
-// Helper function to convert string to Channel enum
-private func channelFromString(_ channelString: String) -> Channel? {
-    switch channelString.lowercased() {
-    case "shinkalion":
-        return .shinkalion
-    case "minecraft":
-        return .minecraft
-    case "jobraver":
-        return .jobraver
-    case "dinasaur":
-        return .dinasaur
-    case "numberblocks":
-        return .numberblocks
-    default:
-        return nil
     }
 }

@@ -32,21 +32,4 @@ struct MenuImageMaker {
         
         return menuImages
     }
-    
-    private static func channelFromString(_ channelString: String) -> Channel? {
-        switch channelString.lowercased() {
-        case "shinkalion":
-            return .shinkalion
-        case "minecraft":
-            return .minecraft
-        case "jobraver":
-            return .jobraver
-        case "dinasaur":
-            return .dinasaur
-        case "numberblocks":
-            return .numberblocks
-        default:
-            return nil
-        }
-    }
 }
