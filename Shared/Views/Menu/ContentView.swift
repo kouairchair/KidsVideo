@@ -35,59 +35,60 @@ struct ContentView: View {
     static var sharedBDPlayer: AVAudioPlayer?
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                // Background image
-                Image(backgroundImageName)
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                    .opacity(0.2)
-                
-                // Content
-                ScrollView(.vertical) {
-                    LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                        ForEach(menuImages) { menuImage in
-                            MenuCellView(menuImage: menuImage, isAnimating: isAnimating, onNavigate: {
-                                ContentView.sharedBDPlayer?.stop()
-                            })
-                        }
-                    }
-                    .onAppear {
-                        isAnimating = true
-                    }
-#if targetEnvironment(macCatalyst)
-                    // macOS環境でのみアプリ全体の明るさを調整できるようにする
-                    Spacer()
-                    Slider(value: $currentAlphaValue,
-                           in: 1...10,
-                           onEditingChanged: { _ in
-                               changeBrightness()
-                           })
-                        .frame(width: 500, alignment: .center)
-#endif
-                }
-            }
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarHidden(true)
-        .onAppear {
-            // Stop any existing player before creating/playing a new one
-            ContentView.sharedBDPlayer?.stop()
-            do {
-                ContentView.sharedBDPlayer = try AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!)
-                ContentView.sharedBDPlayer?.play()
-            } catch {
-                print("Couldn't play audio. Error: \(error)")
-            }
-        }
-        .onDisappear {
-            // Stop music when leaving the menu
-            ContentView.sharedBDPlayer?.stop()
-        }
-        .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
-            ContentView.sharedBDPlayer?.play()
-        }
+        EmptyView()
+//        NavigationView {
+//            ZStack {
+//                // Background image
+//                Image(backgroundImageName)
+//                    .resizable()
+//                    .scaledToFill()
+//                    .ignoresSafeArea()
+//                    .opacity(0.2)
+//                
+//                // Content
+//                ScrollView(.vertical) {
+//                    LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
+//                        ForEach(menuImages) { menuImage in
+//                            MenuCellView(menuImage: menuImage, isAnimating: isAnimating, onTap: {
+//                                ContentView.sharedBDPlayer?.stop()
+//                            })
+//                        }
+//                    }
+//                    .onAppear {
+//                        isAnimating = true
+//                    }
+//#if targetEnvironment(macCatalyst)
+//                    // macOS環境でのみアプリ全体の明るさを調整できるようにする
+//                    Spacer()
+//                    Slider(value: $currentAlphaValue,
+//                           in: 1...10,
+//                           onEditingChanged: { _ in
+//                               changeBrightness()
+//                           })
+//                        .frame(width: 500, alignment: .center)
+//#endif
+//                }
+//            }
+//        }
+//        .navigationViewStyle(StackNavigationViewStyle())
+//        .navigationBarHidden(true)
+//        .onAppear {
+//            // Stop any existing player before creating/playing a new one
+//            ContentView.sharedBDPlayer?.stop()
+//            do {
+//                ContentView.sharedBDPlayer = try AVAudioPlayer(contentsOf: MusicMaker.getTodayMusic().fileUrl!)
+//                ContentView.sharedBDPlayer?.play()
+//            } catch {
+//                print("Couldn't play audio. Error: \(error)")
+//            }
+//        }
+//        .onDisappear {
+//            // Stop music when leaving the menu
+//            ContentView.sharedBDPlayer?.stop()
+//        }
+//        .onReceive(NotificationCenter.default.publisher(for: Notification.Name.backToMenuNotification)) { _ in
+//            ContentView.sharedBDPlayer?.play()
+//        }
     }
     
     private func changeBrightness() {
@@ -113,29 +114,29 @@ struct ContentView: View {
     }
 }
 
-struct MenuCellView: View {
-    let menuImage: MenuImage
-    let isAnimating: Bool
-    var onNavigate: () -> Void
-
-    var body: some View {
-        if let image = menuImage.image {
-            VStack {
-                NavigationLink(destination: PlayerViewControllerWrapper(selectedChannel: menuImage.channel, action: onNavigate)) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 280, height: 280)
-                        .clipShape(Circle())
-                        .wiggle(isActive: isAnimating)
-                }
-                
-                Text(menuImage.fileName)
-                    .font(.custom("KiwiMaru-Light", size: 22))
-            }
-        }
-    }
-}
+//struct MenuCellView: View {
+//    let menuImage: MenuImage
+//    let isAnimating: Bool
+//    var onTap: () -> Void
+//
+//    var body: some View {
+//        if let image = menuImage.image {
+//            VStack {
+//                NavigationLink(destination: PlayerViewControllerWrapper(selectedChannel: menuImage.channel, action: onTap)) {
+//                    Image(uiImage: image)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fill)
+//                        .frame(width: 280, height: 280)
+//                        .clipShape(Circle())
+//                        .wiggle(isActive: isAnimating)
+//                }
+//                
+//                Text(menuImage.fileName)
+//                    .font(.custom("KiwiMaru-Light", size: 22))
+//            }
+//        }
+//    }
+//}
 //
 //private let itemFormatter: DateFormatter = {
 //    let formatter = DateFormatter()

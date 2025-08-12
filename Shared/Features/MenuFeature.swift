@@ -8,6 +8,9 @@
 import ComposableArchitecture
 import Foundation
 import AVFAudio
+#if canImport(UIKit)
+                import UIKit
+#endif
 
 // MARK: - Menu Feature
 
@@ -69,7 +72,7 @@ struct MenuFeature {
                 state.isAnimating = true
                 return .none
                 
-            case .didTapChannel(let channel):
+            case .didTapChannel( _):
                 return .send(.stopBackgroundMusic)
                 
             case .playBackgroundMusic:
@@ -126,8 +129,8 @@ extension BackgroundMusicClient: DependencyKey {
         },
         changeBrightness: { value in
             await MainActor.run {
+#if canImport(UIKit)
                 let keyWindow: UIWindow?
-                
                 if #available(iOS 15.0, *) {
                     keyWindow = UIApplication.shared.connectedScenes
                         .filter({$0.activationState == .foregroundActive})
@@ -137,13 +140,12 @@ extension BackgroundMusicClient: DependencyKey {
                 } else {
                     keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
                 }
-                
                 guard let window = keyWindow else {
                     print("Warning: Could not get key window, skipping brightness adjustment")
                     return
                 }
-                
                 window.alpha = value * 0.1
+#endif
             }
         }
     )

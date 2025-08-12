@@ -48,6 +48,7 @@
 		1BE6973727005CB3008E7E56 /* ThemeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6973627005CB3008E7E56 /* ThemeMaker.swift */; };
 		BF0DE73527028D1A0029CE17 /* MenuImageMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE73427028D1A0029CE17 /* MenuImageMaker.swift */; };
 		BF0DE73827028D480029CE17 /* MenuImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE73727028D480029CE17 /* MenuImage.swift */; };
+		C41365072E4A3A470014D1FE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C41365062E4A3A470014D1FE /* ComposableArchitecture */; };
 		C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */; };
 		C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F902E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 */; };
 		C4348F982E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */; };
@@ -78,6 +79,12 @@
 		C47EB6222E48C8F20091337C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */; };
 		C47EB6242E48D03A0091337C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6232E48D03A0091337C /* README.md */; };
 		C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */; };
+		C47EB62C2E4A36530091337C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6292E4A36530091337C /* AppView.swift */; };
+		C47EB62D2E4A36530091337C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB62A2E4A36530091337C /* MenuView.swift */; };
+		C47EB62E2E4A36530091337C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB62B2E4A36530091337C /* PlayerView.swift */; };
+		C47EB6352E4A36910091337C /* MenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6322E4A36910091337C /* MenuFeature.swift */; };
+		C47EB6362E4A36910091337C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6312E4A36910091337C /* AppFeature.swift */; };
+		C47EB6372E4A36910091337C /* PlayerFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6332E4A36910091337C /* PlayerFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,12 +173,20 @@
 		C47EB6232E48D03A0091337C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C47EB6252E48D0A10091337C /* createContentsStrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createContentsStrings.sh; sourceTree = "<group>"; };
 		C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4"; sourceTree = "<group>"; };
+		C47EB6292E4A36530091337C /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		C47EB62A2E4A36530091337C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		C47EB62B2E4A36530091337C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		C47EB62F2E4A36730091337C /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		C47EB6312E4A36910091337C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		C47EB6322E4A36910091337C /* MenuFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFeature.swift; sourceTree = "<group>"; };
+		C47EB6332E4A36910091337C /* PlayerFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B73FCB32700539700B6BCE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				C41365072E4A3A470014D1FE /* ComposableArchitecture in Frameworks */,
 			);
 		};
 		1B73FCC02700539700B6BCE1 /* Frameworks */ = {
@@ -202,8 +217,10 @@
 				1B73FCC62700539700B6BCE1 /* Tests iOS */,
 				1B73FCB72700539700B6BCE1 /* Products */,
 				C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */,
+				C47EB62F2E4A36730091337C /* Package.swift */,
 				C47EB6232E48D03A0091337C /* README.md */,
 				C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */,
+				C41365052E4A3A470014D1FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +237,7 @@
 				1B73FCAC2700539500B6BCE1 /* KidsVideo.xcdatamodeld */,
 				C43D5EB12E4797F700A80463 /* AppDelegate.swift */,
 				C43D5EB52E47983D00A80463 /* SceneDelegate.swift */,
+				C47EB6342E4A36910091337C /* Features */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -313,6 +331,9 @@
 				1BE6971727005BF8008E7E56 /* SummerPlayerView.swift */,
 				1BE6971827005BF8008E7E56 /* SummerPlayerViewTheme.swift */,
 				1B78A4A32703640F00B2A670 /* View+Animation.swift */,
+				C47EB6292E4A36530091337C /* AppView.swift */,
+				C47EB62A2E4A36530091337C /* MenuView.swift */,
+				C47EB62B2E4A36530091337C /* PlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +412,13 @@
 			path = Contents;
 			sourceTree = "<group>";
 		};
+		C41365052E4A3A470014D1FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4348F912E424C400003530B /* シンカリオン */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +464,16 @@
 			path = "ナンバーブロックス";
 			sourceTree = "<group>";
 		};
+		C47EB6342E4A36910091337C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C47EB6312E4A36910091337C /* AppFeature.swift */,
+				C47EB6322E4A36910091337C /* MenuFeature.swift */,
+				C47EB6332E4A36910091337C /* PlayerFeature.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -450,6 +488,9 @@
 			buildRules = (
 			);
 			name = "KidsVideo (iOS)";
+			packageProductDependencies = (
+				C41365062E4A3A470014D1FE /* ComposableArchitecture */,
+			);
 			productName = "KidsVideo (iOS)";
 			productReference = 1B73FCB62700539700B6BCE1 /* KidsVideo.app */;
 			productType = "com.apple.product-type.application";
@@ -518,6 +559,9 @@
 				Base,
 			);
 			mainGroup = 1B73FCA62700539500B6BCE1;
+			packageReferences = (
+				C47EB6382E4A380D0091337C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 1B73FCB72700539700B6BCE1 /* Products */;
 			projectDirPath = "";
@@ -587,8 +631,14 @@
 				1B73FCD92700539700B6BCE1 /* KidsVideoApp.swift in Sources */,
 				C43D5EB22E4797F700A80463 /* AppDelegate.swift in Sources */,
 				1B19049E270A73D50085E71F /* Notification+Name.swift in Sources */,
+				C47EB62C2E4A36530091337C /* AppView.swift in Sources */,
+				C47EB62D2E4A36530091337C /* MenuView.swift in Sources */,
+				C47EB62E2E4A36530091337C /* PlayerView.swift in Sources */,
 				C47EB61C2E48C8A80091337C /* ChildConfiguration.swift in Sources */,
 				1B19049C2709C19D0085E71F /* Constants.swift in Sources */,
+				C47EB6352E4A36910091337C /* MenuFeature.swift in Sources */,
+				C47EB6362E4A36910091337C /* AppFeature.swift in Sources */,
+				C47EB6372E4A36910091337C /* PlayerFeature.swift in Sources */,
 				1BE6971927005BF8008E7E56 /* SummerPlayerView.swift in Sources */,
 				1BE696FC27005A95008E7E56 /* PlayerViewControllerWrapper.swift in Sources */,
 				1BC9605F270C9A3F00DF2E69 /* ToastMessageShadow.swift in Sources */,
@@ -967,6 +1017,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C47EB6382E4A380D0091337C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C41365062E4A3A470014D1FE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C47EB6382E4A380D0091337C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B73FCAC2700539500B6BCE1 /* KidsVideo.xcdatamodeld */ = {

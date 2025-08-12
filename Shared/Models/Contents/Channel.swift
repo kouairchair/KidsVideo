@@ -8,5 +8,5 @@
 import Foundation
 
 public enum Channel: Equatable, Hashable, CaseIterable {
-    case shinkalion, minecraft, jobraver, dinasaur, numberblocks, jinan, chonan
+    case shinkalion, minecraft, jobraver, dinasaur, numberblocks
 }

@@ -40,7 +40,7 @@ struct PlayerView: View {
 }
 
 #Preview {
-    PlayerView(store: Store(initialState: PlayerFeature.State(selectedChannel: .jinan)) {
+    PlayerView(store: Store(initialState: PlayerFeature.State(selectedChannel: .minecraft)) {
         PlayerFeature()
     })
 }

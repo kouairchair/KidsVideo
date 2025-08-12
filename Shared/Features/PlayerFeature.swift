@@ -65,7 +65,7 @@ struct PlayerFeature {
                 }
                 
             case .loadContents:
-                let contents = contentClient.getContents(for: state.selectedChannel)
+                let contents = contentClient.getContents(state.selectedChannel)
                 return .send(.contentsLoaded(contents))
                 
             case .contentsLoaded(let contents):
@@ -100,7 +100,7 @@ struct PlayerFeature {
             case .seek(let time):
                 state.currentTime = time
                 return .run { _ in
-                    await playerClient.seek(to: time)
+                    await playerClient.seek(time)
                 }
                 
             case .volumeChanged(let volume):

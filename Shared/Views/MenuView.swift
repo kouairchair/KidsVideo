@@ -10,11 +10,15 @@ import ComposableArchitecture
 import CoreData
 import AVFAudio
 
-struct MenuView: View {
+public struct MenuView: View {
     let store: StoreOf<MenuFeature>
     private var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 250, maximum: 280), spacing: CGFloat(30.0) ), count: 3)
     
-    var body: some View {
+    init(store: StoreOf<MenuFeature>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ZStack {
                 // Background image

@@ -47,10 +47,6 @@ public func channelFromString(_ channelString: String) -> Channel? {
         return .dinasaur
     case "numberblocks":
         return .numberblocks
-    case "jinan":
-        return .jinan
-    case "chonan":
-        return .chonan
     default:
         return nil
     }
