@@ -24,8 +24,7 @@
 # Format: "URL チャンネル番号 子供指定"
 # 子供指定: chonan(長男), jinan(次男), both(両方)
 TARGET_URLS=(
-    "https://www.youtube.com/watch?v=1D5B5CRg3r0 2 jinan"
-    # "https://youtu.be/xxxxxxx 1 chonan"
+    "https://www.youtube.com/watch?v=JvQf41ZThMc 3 jinan"
     # 他の組み合わせをここに追加
 )
 
@@ -112,11 +111,13 @@ add_files_to_xcodeproj() {
     local dir="$1"
     local xcodeproj_path="$HOME/Projects/KidsVideo/KidsVideo.xcodeproj"
     if command -v xcodeproj >/dev/null 2>&1; then
-        for f in "$dir"/*.mp4; do
-            if [ -f "$f" ]; then
-                echo "Adding $f to Xcode project..."
-                xcodeproj "$xcodeproj_path" add "$f" --group "Shared/Resources/Movie"
-            fi
+        for ext in mp4 jpg; do
+            for f in "$dir"/*.${ext}; do
+                if [ -f "$f" ]; then
+                    echo "Adding $f to Xcode project..."
+                    xcodeproj "$xcodeproj_path" add "$f" --group "Shared/Resources/Movie"
+                fi
+            done
         done
     else
         echo "xcodeproj command not found, skipping Xcode project update"
@@ -137,7 +138,7 @@ for entry in "${TARGET_URLS[@]}"; do
     echo "Processing: $url for $child ($target_name)"
     
     if [ "$DRY_RUN" != "1" ]; then
-        yt-dlp -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
+        yt-dlp --cookies www.youtube.com_cookies.txt -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
         add_files_to_xcodeproj "$download_dir"
         # .webmファイルがあればmp4に変換（映像ストリームがある場合のみ）し、元の.webmを削除
         for file in "$download_dir"/*.webm; do
@@ -151,6 +152,9 @@ for entry in "${TARGET_URLS[@]}"; do
                 echo "映像ストリームなし: $file (変換しません)"
             fi
         done
+    # 動画のサムネイル画像を同じフォルダに同じファイル名で.jpgとして保存
+    # yt-dlpの--write-thumbnailでダウンロード、--convert-thumbnailsでjpg変換
+    yt-dlp --cookies www.youtube.com_cookies.txt --skip-download --write-thumbnail --convert-thumbnails jpg -o "$download_dir/%(title)s.%(ext)s" "$url"
     fi
     
     process_videos "$download_dir" "$target_name" "$child"

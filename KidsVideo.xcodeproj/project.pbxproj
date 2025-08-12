@@ -48,10 +48,7 @@
 		1BE6973727005CB3008E7E56 /* ThemeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6973627005CB3008E7E56 /* ThemeMaker.swift */; };
 		BF0DE73527028D1A0029CE17 /* MenuImageMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE73427028D1A0029CE17 /* MenuImageMaker.swift */; };
 		BF0DE73827028D480029CE17 /* MenuImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE73727028D480029CE17 /* MenuImage.swift */; };
-		C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */; };
 		C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F902E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 */; };
-		C4348F982E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */; };
-		C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */; };
 		C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9A2E424E720003530B /* シンカリオン.jpeg */; };
 		C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4348F9B2E424E720003530B /* マイクラ.jpeg */; };
 		C43D5EAE2E4796E800A80463 /* ExternalDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */; };
@@ -79,6 +76,18 @@
 		C47EB6242E48D03A0091337C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6232E48D03A0091337C /* README.md */; };
 		C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */; };
 		C4E120FA2E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E120F92E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 */; };
+		C4E120FC2E4B9761009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E120FB2E4B9761009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.jpg */; };
+		C4E120FE2E4B97FA009FB873 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E120FD2E4B97FA009FB873 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg */; };
+		C4E121012E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E120FF2E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.jpg */; };
+		C4E121022E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E121002E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.mp4 */; };
+		C4E121042E4BA02A009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E121032E4BA02A009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.jpg */; };
+		C4E121062E4BA035009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E121052E4BA035009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.mp4 */; };
+		C4E121092E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E121072E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.jpg */; };
+		C4E1210A2E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E121082E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.mp4 */; };
+		C4E1210C2E4BA0C4009FB873 /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E1210B2E4BA0C4009FB873 /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.jpg */; };
+		C4E1210E2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E1210D2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg */; };
+		C4E121112E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E121102E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 */; };
+		C4E121122E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E1210F2E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,9 +146,6 @@
 		BF0DE73427028D1A0029CE17 /* MenuImageMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuImageMaker.swift; sourceTree = "<group>"; };
 		BF0DE73727028D480029CE17 /* MenuImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuImage.swift; sourceTree = "<group>"; };
 		C4348F902E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4"; sourceTree = "<group>"; };
-		C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ゾンビ_VS_10個のセキュリティ.mp4"; sourceTree = "<group>"; };
-		C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4"; sourceTree = "<group>"; };
-		C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4"; sourceTree = "<group>"; };
 		C4348F9A2E424E720003530B /* シンカリオン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "シンカリオン.jpeg"; sourceTree = "<group>"; };
 		C4348F9B2E424E720003530B /* マイクラ.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マイクラ.jpeg"; sourceTree = "<group>"; };
 		C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayManager.swift; sourceTree = "<group>"; };
@@ -168,6 +174,18 @@
 		C47EB6252E48D0A10091337C /* createContentsStrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createContentsStrings.sh; sourceTree = "<group>"; };
 		C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4"; sourceTree = "<group>"; };
 		C4E120F92E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4"; sourceTree = "<group>"; };
+		C4E120FB2E4B9761009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.jpg"; sourceTree = "<group>"; };
+		C4E120FD2E4B97FA009FB873 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg"; sourceTree = "<group>"; };
+		C4E120FF2E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.jpg"; sourceTree = "<group>"; };
+		C4E121002E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.mp4"; sourceTree = "<group>"; };
+		C4E121032E4BA02A009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.jpg"; sourceTree = "<group>"; };
+		C4E121052E4BA035009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.mp4"; sourceTree = "<group>"; };
+		C4E121072E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.jpg"; sourceTree = "<group>"; };
+		C4E121082E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.mp4"; sourceTree = "<group>"; };
+		C4E1210B2E4BA0C4009FB873 /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.jpg"; sourceTree = "<group>"; };
+		C4E1210D2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg"; sourceTree = "<group>"; };
+		C4E1210F2E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg"; sourceTree = "<group>"; };
+		C4E121102E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				C4348F902E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 */,
+				C4E1210B2E4BA0C4009FB873 /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.jpg */,
 			);
 			path = "シンカリオン";
 			sourceTree = "<group>";
@@ -404,11 +423,16 @@
 		C4348F952E424C400003530B /* マイクラ */ = {
 			isa = PBXGroup;
 			children = (
-				C4348F922E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 */,
-				C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */,
-				C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */,
 				C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */,
 				C4E120F92E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 */,
+				C4E120FB2E4B9761009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.jpg */,
+				C4E120FD2E4B97FA009FB873 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg */,
+				C4E120FF2E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.jpg */,
+				C4E121002E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.mp4 */,
+				C4E121032E4BA02A009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.jpg */,
+				C4E121052E4BA035009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.mp4 */,
+				C4E121072E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.jpg */,
+				C4E121082E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.mp4 */,
 			);
 			path = "マイクラ";
 			sourceTree = "<group>";
@@ -427,6 +451,9 @@
 				C451F4CE2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 */,
 				C451F4CF2E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 */,
 				C451F4D32E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg */,
+				C4E1210D2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg */,
+				C4E1210F2E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg */,
+				C4E121102E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 */,
 			);
 			path = "ジョブレイバー";
 			sourceTree = "<group>";
@@ -537,6 +564,9 @@
 		1B73FCB42700539700B6BCE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				C4E121092E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.jpg in Resources */,
+				C4E1210A2E4BA079009FB873 /* ゾンビ VS 10個のセキュリティ【まいくら・マインクラフト・マイクラ】.mp4 in Resources */,
+				C4E120FC2E4B9761009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.jpg in Resources */,
 				C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */,
 				C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */,
 				C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */,
@@ -544,26 +574,32 @@
 				C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */,
 				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,
 				C47EB61A2E48C8640091337C /* Numberblocks.jpg in Resources */,
+				C4E121042E4BA02A009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.jpg in Resources */,
 				1B78A4AD2703689800B2A670 /* PenguinAttack.ttf in Resources */,
 				C4E120FA2E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 in Resources */,
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
+				C4E1210E2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg in Resources */,
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
 				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
+				C4E120FE2E4B97FA009FB873 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg in Resources */,
 				C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */,
 				1BAB1E252703DAC2007FBD25 /* fanny-stories-main-7231.mp3 in Resources */,
+				C4E1210C2E4BA0C4009FB873 /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.jpg in Resources */,
 				C47EB6242E48D03A0091337C /* README.md in Resources */,
 				C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */,
 				1BAB1E232703DAC2007FBD25 /* baby-game-mane-8780.mp3 in Resources */,
 				C451F4D12E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.mp4 in Resources */,
+				C4E121112E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 in Resources */,
+				C4E121122E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg in Resources */,
 				C451F4D22E44C89D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.mp4 in Resources */,
-				C4348F962E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 in Resources */,
 				C47EB6172E48C7A50091337C /* videos_jinan.json in Resources */,
 				C47EB6182E48C7A50091337C /* videos_chonan.json in Resources */,
 				C4348F972E424C400003530B /* 『シンカリオン チェンジ ザ ワールド』特別編「戦いの記録」.mp4 in Resources */,
+				C4E121012E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.jpg in Resources */,
+				C4E121022E4B9D15009FB873 /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3【マインクラフト】.mp4 in Resources */,
 				C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */,
+				C4E121062E4BA035009FB873 /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5【マインクラフト】.mp4 in Resources */,
 				C451F4D42E44D86D00574C4F /* 【特装合体ロボ ジョブレイバー 第5話】スーパーアンビュランスとレッドサラマンダー【トミカ】.jpg in Resources */,
-				C4348F982E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 in Resources */,
-				C4348F992E424C400003530B /* ゾンビ_VS_10個のセキュリティ.mp4 in Resources */,
 			);
 		};
 		1B73FCC12700539700B6BCE1 /* Resources */ = {
