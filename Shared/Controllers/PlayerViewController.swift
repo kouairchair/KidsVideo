@@ -15,9 +15,9 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate, AVRou
     var summerPlayerView: SummerPlayerView?
     var contents: [Content] {
         if let configuration = ChildConfigurationManager.loadConfiguration() {
-            return configuration.videos.compactMap { contentData in
+            return configuration.videos.enumerated().compactMap { (index, contentData) in
                 guard let channel = channelFromString(contentData.channel) else { return nil }
-                return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel)
+                return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel, videoIndex: index)
             }.filter { $0.channel == selectedChannel }
         } else {
             return []
@@ -170,23 +170,5 @@ extension PlayerViewController {
     fileprivate func goBackViewController() {
         self.navigationController?.popViewController(animated: true)
         NotificationCenter.default.post(name: .backToMenuNotification, object: nil)
-    }
-}
-
-// Helper function to convert string to Channel enum
-private func channelFromString(_ channelString: String) -> Channel? {
-    switch channelString.lowercased() {
-    case "shinkalion":
-        return .shinkalion
-    case "minecraft":
-        return .minecraft
-    case "jobraver":
-        return .jobraver
-    case "dinasaur":
-        return .dinasaur
-    case "numberblocks":
-        return .numberblocks
-    default:
-        return nil
     }
 }

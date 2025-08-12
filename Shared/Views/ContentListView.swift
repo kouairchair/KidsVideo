@@ -1,5 +1,3 @@
-
-
 import UIKit
 import AVKit
 
@@ -70,6 +68,8 @@ class ContentListView: UIView {
     
     private var cellId = "videoCellId"
     
+    private var sortedContents: [Content] = []
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -81,7 +81,54 @@ class ContentListView: UIView {
     func setPlayList(currentItem: Content, items: [Content]) {
         contents = items
         self.currentContent = currentItem
+        sortedContents = sortVideosForDisplay(allVideos: items, currentVideo: currentItem)
         collectionView.reloadData()
+    }
+    
+    // MARK: - Video Sorting Logic
+    private func sortVideosForDisplay(allVideos: [Content], currentVideo: Content) -> [Content] {
+        // 1. Filter out the currently playing video
+        let availableVideos = allVideos.filter { $0.id != currentVideo.id }
+        
+        guard !availableVideos.isEmpty else { return [] }
+        
+        // 2. Get the last played video (excluding current video)
+        let lastPlayedVideo = getLastPlayedVideo(from: availableVideos)
+        
+        // 3. Get remaining videos and sort by total playback time (descending)
+        let remainingVideos = availableVideos.filter { video in
+            if let lastPlayed = lastPlayedVideo {
+                return video.id != lastPlayed.id
+            }
+            return true
+        }.sorted { video1, video2 in
+            return video1.getTotalPlaybackTime() > video2.getTotalPlaybackTime()
+        }
+        
+        // 4. Combine: last played first, then sorted by playback time
+        var sortedList: [Content] = []
+        if let lastPlayed = lastPlayedVideo {
+            sortedList.append(lastPlayed)
+        }
+        sortedList.append(contentsOf: remainingVideos)
+        
+        return sortedList
+    }
+    
+    private func getLastPlayedVideo(from videos: [Content]) -> Content? {
+        var lastPlayedVideo: Content?
+        var latestDate: Date?
+        
+        for video in videos {
+            if let lastPlayed = video.getLastPlayedDate() {
+                if latestDate == nil || lastPlayed > latestDate! {
+                    latestDate = lastPlayed
+                    lastPlayedVideo = video
+                }
+            }
+        }
+        
+        return lastPlayedVideo
     }
     
     func createOverlayViewWith(wholeViewWidth: CGFloat,configuration: SummerPlayerViewConfig, theme: SummerPlayerViewTheme) {
@@ -165,7 +212,7 @@ class ContentListView: UIView {
 extension ContentListView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return contents?.count ?? 0
+        return sortedContents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -176,32 +223,31 @@ extension ContentListView: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? VideoCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.setData(contents?[indexPath.row], theme: self.theme)
+            cell.setData(sortedContents[indexPath.row], theme: self.theme)
             
-            if contents?[indexPath.row].fileName == currentContent?.fileName {
-                // TODO: 「次へ」「前へ」ボタンを何回も押したときに機能しない
-                cell.videoThumbnail.addRainbowBorderAnimation()
-            }
+            // Since current video is filtered out from sortedContents, no need for rainbow border
             
             return cell
         }
     }
-    
-    
 }
 
 extension ContentListView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectItem(indexPath.row)
-        if let item = contents?[indexPath.row], let url = item.getUrl() {
+        let selectedVideo = sortedContents[indexPath.row]
+        
+        // Find the original index of this video in the contents array
+        guard let contents = contents,
+              let originalIndex = contents.firstIndex(where: { $0.id == selectedVideo.id }) else {
+            return
+        }
+        
+        delegate?.didSelectItem(originalIndex)
+        if let url = selectedVideo.getUrl() {
             delegate?.didLoadVideo(url)
-            delegate?.currentVideoIndex(indexPath.row,url)
-            // TODO: 「次へ」「前へ」ボタンを押したときに機能しない
+            delegate?.currentVideoIndex(originalIndex, url)
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
-    
 }
-
-

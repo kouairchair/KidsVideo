@@ -92,15 +92,15 @@ class ChildConfigurationTests: XCTestCase {
     func testContentsMakerIntegration() throws {
         // Test content loading with different configurations
         ChildConfigurationManager.setTarget(.jinan)
-        let jinanContents: [Content] = ChildConfigurationManager.loadConfiguration()?.videos.compactMap { contentData in
+        let jinanContents: [Content] = ChildConfigurationManager.loadConfiguration()?.videos.enumerated().compactMap { (index, contentData) in
             guard let channel = channelFromString(contentData.channel) else { return nil }
-            return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel)
+            return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel, videoIndex: index)
         } ?? []
         
         ChildConfigurationManager.setTarget(.chonan)
-        let chonanContents: [Content] = ChildConfigurationManager.loadConfiguration()?.videos.compactMap { contentData in
+        let chonanContents: [Content] = ChildConfigurationManager.loadConfiguration()?.videos.enumerated().compactMap { (index, contentData) in
             guard let channel = channelFromString(contentData.channel) else { return nil }
-            return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel)
+            return Content(fileName: contentData.fileName, fileExt: contentData.fileExt, totalTime: contentData.totalTime, channel: channel, videoIndex: index)
         } ?? []
         
         // Verify both return content

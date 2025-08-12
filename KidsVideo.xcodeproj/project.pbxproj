@@ -62,7 +62,6 @@
 		C43D5EBC2E47A68D00A80463 /* 恐竜.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBB2E47A68D00A80463 /* 恐竜.jpeg */; };
 		C43D5EBE2E47A89300A80463 /* 学研_恐竜.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBD2E47A89300A80463 /* 学研_恐竜.mp4 */; };
 		C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */; };
-		C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D41572E43A958001407C8 /* KidsVideo--iOS--Info.plist */; };
 		C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C44D41592E43AD4C001407C8 /* KiwiMaru-Light.ttf */; };
 		C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CA2E44C5EE00574C4F /* KidsVideo_(iOS).entitlements */; };
 		C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C451F4CC2E44C88000574C4F /* ジョブレイバー.jpeg */; };
@@ -78,6 +77,8 @@
 		C47EB6222E48C8F20091337C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */; };
 		C47EB6242E48D03A0091337C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6232E48D03A0091337C /* README.md */; };
 		C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */; };
+		C4E120F42E4B852B009FB873 /* VideoPlaybackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E120F32E4B852B009FB873 /* VideoPlaybackManager.swift */; };
+		C4E120F62E4B854B009FB873 /* VideoPlaybackTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E120F52E4B854B009FB873 /* VideoPlaybackTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,8 @@
 		C47EB6232E48D03A0091337C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C47EB6252E48D0A10091337C /* createContentsStrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createContentsStrings.sh; sourceTree = "<group>"; };
 		C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4"; sourceTree = "<group>"; };
+		C4E120F32E4B852B009FB873 /* VideoPlaybackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackManager.swift; sourceTree = "<group>"; };
+		C4E120F52E4B854B009FB873 /* VideoPlaybackTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +300,8 @@
 				1BE6970327005BA7008E7E56 /* Config */,
 				1B19049B2709C19D0085E71F /* Constants.swift */,
 				C43D5EAD2E4796E800A80463 /* ExternalDisplayManager.swift */,
+				C4E120F32E4B852B009FB873 /* VideoPlaybackManager.swift */,
+				C4E120F52E4B854B009FB873 /* VideoPlaybackTracker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,7 +500,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					1B73FCB52700539700B6BCE1 = {
 						CreatedOnToolsVersion = 13.0;
@@ -537,7 +542,6 @@
 				C451F4CB2E44C68100574C4F /* KidsVideo_(iOS).entitlements in Resources */,
 				C4348F9C2E424E720003530B /* シンカリオン.jpeg in Resources */,
 				C43D5EC02E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 in Resources */,
-				C44D41582E43A958001407C8 /* KidsVideo--iOS--Info.plist in Resources */,
 				C4348F9D2E424E720003530B /* マイクラ.jpeg in Resources */,
 				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,
 				C47EB61A2E48C8640091337C /* Numberblocks.jpg in Resources */,
@@ -609,6 +613,7 @@
 				1B78A4A42703640F00B2A670 /* View+Animation.swift in Sources */,
 				C43D5EB62E47983D00A80463 /* SceneDelegate.swift in Sources */,
 				1BE6971B27005BF8008E7E56 /* SummerPlayerViewTheme.swift in Sources */,
+				C4E120F62E4B854B009FB873 /* VideoPlaybackTracker.swift in Sources */,
 				1BC9605C270C99F200DF2E69 /* UIViewController+Toast.swift in Sources */,
 				1BAB1E2D2703DBCB007FBD25 /* MusicMaker.swift in Sources */,
 				1BE6970827005BA7008E7E56 /* SummerPlayerViewConfig.swift in Sources */,
@@ -616,6 +621,7 @@
 				1BE6972227005C0D008E7E56 /* Utills.swift in Sources */,
 				1B73FCDB2700539700B6BCE1 /* ContentView.swift in Sources */,
 				1BE6970127005B65008E7E56 /* DefaultConfig.swift in Sources */,
+				C4E120F42E4B852B009FB873 /* VideoPlaybackManager.swift in Sources */,
 				1BE6970E27005BCC008E7E56 /* PlayerControlViewDelegate.swift in Sources */,
 				1BE696F927005A1D008E7E56 /* PlayerViewController.swift in Sources */,
 				1BE6973427005CA6008E7E56 /* SampleThemes.swift in Sources */,
@@ -680,9 +686,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -700,6 +708,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "";
@@ -740,9 +749,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -753,6 +764,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "";
@@ -833,7 +845,6 @@
 		1B73FCEA2700539700B6BCE1 /* Debug configuration for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N9L2U78Y64;
@@ -858,7 +869,6 @@
 		1B73FCEB2700539700B6BCE1 /* Release configuration for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N9L2U78Y64;
@@ -884,10 +894,10 @@
 		1B73FCED2700539700B6BCE1 /* Debug configuration for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = N9L2U78Y64;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -909,10 +919,10 @@
 		1B73FCEE2700539700B6BCE1 /* Release configuration for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = N9L2U78Y64;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

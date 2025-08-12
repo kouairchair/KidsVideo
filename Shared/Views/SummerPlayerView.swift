@@ -322,6 +322,9 @@ extension SummerPlayerView: PlayerControlViewDelegate {
     }
     
     private func finishVideo() {
+        // Stop tracking when video finishes
+        VideoPlaybackTracker.shared.stopTracking(player: queuePlayer)
+        
         self.queuePlayer.pause()
         self.playerLayer?.removeFromSuperlayer()
         
@@ -394,6 +397,9 @@ extension SummerPlayerView: PlayerScreenViewDelegate {
             playerControlView?.changeRepeatStatus(isRepeatMode: false, repeatTime: nil)
         }
         
+        // Stop tracking previous video if any
+        VideoPlaybackTracker.shared.stopTracking(player: queuePlayer)
+        
         queuePlayer.removeAllItems()
         
         let playerItem = AVPlayerItem(url: url)
@@ -402,9 +408,16 @@ extension SummerPlayerView: PlayerScreenViewDelegate {
         
         queuePlayer.play()
         
+        // Start tracking the new video
+        if let currentContent = contents?[currentVideoIndex] {
+            VideoPlaybackTracker.shared.startTracking(content: currentContent, player: queuePlayer)
+        }
+        
         if let title = self.contents?[currentVideoIndex].fileName {
             playerScreenView.videoDidStart(title: title)
         }
+        
+        delegate?.didStartVideo()
     }
     
     @objc private func playerItemDidPlayToEndTime() {

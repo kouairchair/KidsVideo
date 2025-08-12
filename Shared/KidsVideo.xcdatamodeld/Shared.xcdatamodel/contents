@@ -3,7 +3,14 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="VideoPlayback" representedClassName="VideoPlayback" syncable="YES" codeGenerationType="class">
+        <attribute name="channel" optional="NO" attributeType="String"/>
+        <attribute name="videoIndex" optional="NO" attributeType="Integer 32" defaultValue="0" usesScalarValueType="YES"/>
+        <attribute name="totalPlaybackTime" optional="NO" attributeType="Double" defaultValue="0.0" usesScalarValueType="YES"/>
+        <attribute name="lastPlayedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="VideoPlayback" positionX="-54" positionY="9" width="128" height="89"/>
     </elements>
 </model>
