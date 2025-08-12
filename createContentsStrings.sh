@@ -24,7 +24,7 @@
 # Format: "URL チャンネル番号 子供指定"
 # 子供指定: chonan(長男), jinan(次男), both(両方)
 TARGET_URLS=(
-    "https://youtu.be/jW49VlOfpi8?si=3NNsWYQixWgZlI66 1 chonan"
+    "https://www.youtube.com/watch?v=1D5B5CRg3r0 2 jinan"
     # "https://youtu.be/xxxxxxx 1 chonan"
     # 他の組み合わせをここに追加
 )
@@ -137,8 +137,20 @@ for entry in "${TARGET_URLS[@]}"; do
     echo "Processing: $url for $child ($target_name)"
     
     if [ "$DRY_RUN" != "1" ]; then
-        yt-dlp -f "best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
+        yt-dlp -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
         add_files_to_xcodeproj "$download_dir"
+        # .webmファイルがあればmp4に変換（映像ストリームがある場合のみ）し、元の.webmを削除
+        for file in "$download_dir"/*.webm; do
+            [ -f "$file" ] || continue
+            # 映像ストリームがあるか判定
+            has_video=$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_type -of csv=p=0 "$file")
+            if [ "$has_video" = "video" ]; then
+                ffmpeg -i "$file" -c:v libx264 -c:a aac "${file%.webm}.mp4"
+                rm "$file"
+            else
+                echo "映像ストリームなし: $file (変換しません)"
+            fi
+        done
     fi
     
     process_videos "$download_dir" "$target_name" "$child"

@@ -78,6 +78,7 @@
 		C47EB6222E48C8F20091337C /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB6202E48C8F20091337C /* Tests_iOSLaunchTests.swift */; };
 		C47EB6242E48D03A0091337C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6232E48D03A0091337C /* README.md */; };
 		C47EB6282E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */; };
+		C4E120FA2E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E120F92E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		C47EB6232E48D03A0091337C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C47EB6252E48D0A10091337C /* createContentsStrings.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = createContentsStrings.sh; sourceTree = "<group>"; };
 		C47EB6262E48DFB70091337C /* Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ogolding Grounds Gargoogol BIG NUMBERS @WonderlandOfficial..mp4"; sourceTree = "<group>"; };
+		C4E120F92E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +408,7 @@
 				C4348F932E424C400003530B /* ダイヤ大量発見!!レア鉱石を掘りまくれ!!マイクラ実況Part5.mp4 */,
 				C4348F942E424C400003530B /* ついに家が完成!!めっちゃ大変だった…マイクラ実況Part3.mp4 */,
 				C43D5EBF2E489C4300A80463 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.mp4 */,
+				C4E120F92E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 */,
 			);
 			path = "マイクラ";
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				C44D415A2E43AD4C001407C8 /* KiwiMaru-Light.ttf in Resources */,
 				C47EB61A2E48C8640091337C /* Numberblocks.jpg in Resources */,
 				1B78A4AD2703689800B2A670 /* PenguinAttack.ttf in Resources */,
+				C4E120FA2E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 in Resources */,
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
 				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
