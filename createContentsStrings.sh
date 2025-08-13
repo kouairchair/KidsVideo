@@ -24,7 +24,7 @@
 # Format: "URL チャンネル番号 子供指定"
 # 子供指定: chonan(長男), jinan(次男), both(両方)
 TARGET_URLS=(
-    "https://www.youtube.com/watch?v=JvQf41ZThMc 3 jinan"
+    "https://www.youtube.com/watch?v=KE42WeKrPE0&pp=ygUebWsg44Oe44Kk44Kv44Op44CA6aOb6KGM5qmf5aC0 2 jinan"
     # 他の組み合わせをここに追加
 )
 
@@ -138,7 +138,7 @@ for entry in "${TARGET_URLS[@]}"; do
     echo "Processing: $url for $child ($target_name)"
     
     if [ "$DRY_RUN" != "1" ]; then
-        yt-dlp --cookies www.youtube.com_cookies.txt -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
+        yt_dlp_output=$(yt-dlp --cookies www.youtube.com_cookies.txt -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url" --print "%(title)s.%(ext)s")
         add_files_to_xcodeproj "$download_dir"
         # .webmファイルがあればmp4に変換（映像ストリームがある場合のみ）し、元の.webmを削除
         for file in "$download_dir"/*.webm; do
@@ -152,6 +152,12 @@ for entry in "${TARGET_URLS[@]}"; do
                 echo "映像ストリームなし: $file (変換しません)"
             fi
         done
+        # TARGET_URLSで指定された動画だけ再エンコード
+        mp4_file="$download_dir/$yt_dlp_output"
+        if [ -f "$mp4_file" ]; then
+            ffmpeg -y -i "$mp4_file" -c:v libx264 -c:a aac "${mp4_file%.mp4}_fixed.mp4"
+            mv "${mp4_file%.mp4}_fixed.mp4" "$mp4_file"
+        fi
     # 動画のサムネイル画像を同じフォルダに同じファイル名で.jpgとして保存
     # yt-dlpの--write-thumbnailでダウンロード、--convert-thumbnailsでjpg変換
     yt-dlp --cookies www.youtube.com_cookies.txt --skip-download --write-thumbnail --convert-thumbnails jpg -o "$download_dir/%(title)s.%(ext)s" "$url"
