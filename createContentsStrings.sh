@@ -24,9 +24,10 @@
 # Format: "URL チャンネル番号 子供指定"
 # 子供指定: chonan(長男), jinan(次男), both(両方)
 TARGET_URLS=(
-    "https://www.youtube.com/watch?v=KE42WeKrPE0&pp=ygUebWsg44Oe44Kk44Kv44Op44CA6aOb6KGM5qmf5aC0 2 jinan"
+    "https://www.youtube.com/watch?v=QLeEaT1t7ew 3 jinan"
     # 他の組み合わせをここに追加
 )
+COOKIE_FILE="www.youtube.com_cookies.txt"
 
 # Function to process videos in a directory
 process_videos() {
@@ -138,7 +139,8 @@ for entry in "${TARGET_URLS[@]}"; do
     echo "Processing: $url for $child ($target_name)"
     
     if [ "$DRY_RUN" != "1" ]; then
-        yt_dlp_output=$(yt-dlp --cookies www.youtube.com_cookies.txt -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url" --print "%(title)s.%(ext)s")
+        yt-dlp --cookies "$COOKIE_FILE" -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url"
+        yt_dlp_output=$(yt-dlp --cookies "$COOKIE_FILE" -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o "$download_dir/%(title)s.%(ext)s" "$url" --print "%(title)s.%(ext)s")
         add_files_to_xcodeproj "$download_dir"
         # .webmファイルがあればmp4に変換（映像ストリームがある場合のみ）し、元の.webmを削除
         for file in "$download_dir"/*.webm; do
@@ -160,7 +162,7 @@ for entry in "${TARGET_URLS[@]}"; do
         fi
     # 動画のサムネイル画像を同じフォルダに同じファイル名で.jpgとして保存
     # yt-dlpの--write-thumbnailでダウンロード、--convert-thumbnailsでjpg変換
-    yt-dlp --cookies www.youtube.com_cookies.txt --skip-download --write-thumbnail --convert-thumbnails jpg -o "$download_dir/%(title)s.%(ext)s" "$url"
+    yt-dlp --cookies "$COOKIE_FILE" --skip-download --write-thumbnail --convert-thumbnails jpg -o "$download_dir/%(title)s.%(ext)s" "$url"
     fi
     
     process_videos "$download_dir" "$target_name" "$child"

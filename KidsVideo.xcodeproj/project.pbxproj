@@ -90,6 +90,8 @@
 		C4E121122E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E1210F2E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg */; };
 		C4E121152E4C0F29009FB873 /* ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E121132E4C0F29009FB873 /* ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.jpg */; };
 		C4E121162E4C0F29009FB873 /* ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E121142E4C0F29009FB873 /* ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.mp4 */; };
+		C4E121192E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4E121182E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.mp4 */; };
+		C4E1211A2E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E121172E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +192,8 @@
 		C4E121102E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4"; sourceTree = "<group>"; };
 		C4E121132E4C0F29009FB873 /* ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.jpg"; sourceTree = "<group>"; };
 		C4E121142E4C0F29009FB873 /* ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ニワトリ飛行機で空を飛ぼう!!モブが乗り物になっちゃった!？マイクラでマケプレ実況Part42【マインクラフト】.mp4"; sourceTree = "<group>"; };
+		C4E121172E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.jpg"; sourceTree = "<group>"; };
+		C4E121182E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +464,8 @@
 				C4E1210D2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg */,
 				C4E1210F2E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.jpg */,
 				C4E121102E4BA157009FB873 /* 【特装合体ロボ ジョブレイバー 第2話】激走！ユナイトポリスブレイバー【トミカ】.mp4 */,
+				C4E121172E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.jpg */,
+				C4E121182E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.mp4 */,
 			);
 			path = "ジョブレイバー";
 			sourceTree = "<group>";
@@ -585,6 +591,8 @@
 				C4E120FA2E4B91D8009FB873 /* 初めての家作り!!道具と素材を使いこなせ!!マイクラ実況Part2【マインクラフト】.mp4 in Resources */,
 				1B73FCDF2700539700B6BCE1 /* Assets.xcassets in Resources */,
 				C4E1210E2E4BA107009FB873 /* 【特装合体ロボ ジョブレイバー 第1話】出動せよ！ポリスブレイバー【トミカ】.jpg in Resources */,
+				C4E121192E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.mp4 in Resources */,
+				C4E1211A2E4CB74B009FB873 /* 【ジョブレイバー】トミカヒーローズ ジョブレイバー 特装合体ロボ 1～15話 イッキ見‼NISSAN GT-R パトロールカー他【トミカ】.jpg in Resources */,
 				1BAB1E272703DAC2007FBD25 /* happy-children-8770.mp3 in Resources */,
 				C451F4CD2E44C88000574C4F /* ジョブレイバー.jpeg in Resources */,
 				C4E120FE2E4B97FA009FB873 /* マイクラ生活始まります!!いきなりアレを発見!!マイクラ実況Part1【マインクラフト】.jpg in Resources */,
